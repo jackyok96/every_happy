@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* 所有變數集合 */
 @font-face {
   font-family: sui generis rg;
   src: url("../webfonts/sui generis rg.otf");
@@ -25,6 +24,7 @@
   src: url("../webfonts/entsani.ttf") format("opentype");
   src: url("../webfonts/entsani.ttf") format("opentype");
 }
+/* 所有變數集合 */
 /* 每個區段的尺寸和背景圖片設定 */
 /* 零件集合 */
 /* 動畫功能 */
