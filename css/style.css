@@ -1,0 +1,3140 @@
+@charset "UTF-8";
+/* 所有變數集合 */
+@font-face {
+  font-family: sui generis rg;
+  src: url("../webfonts/sui generis rg.otf");
+  src: url("../webfonts/sui generis rg.otf");
+}
+@font-face {
+  font-family: LairaItalic;
+  src: url("../webfonts/LairaItalic-MVo6n.otf");
+  src: url("../webfonts/LairaItalic-MVo6n.otf");
+}
+@font-face {
+  font-family: Laira-rgoBL;
+  src: url("../webfonts/Laira-rgoBL.otf");
+  src: url("../webfonts/Laira-rgoBL.otf");
+}
+@font-face {
+  font-family: OPTIFranklinGothic-Medium;
+  src: url("../webfonts/OPTIFranklinGothic-Medium.otf");
+  src: url("../webfonts/OPTIFranklinGothic-Medium.otf");
+}
+@font-face {
+  font-family: Enter Sansman;
+  src: url("../webfonts/entsani.ttf") format("opentype");
+  src: url("../webfonts/entsani.ttf") format("opentype");
+}
+/* 每個區段的尺寸和背景圖片設定 */
+/* 零件集合 */
+/* 動畫功能 */
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* 共用樣式 */
+* {
+  font-family: sui generis rg;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffffff;
+}
+
+.row-cols-7 > * {
+  flex: 0 0 auto;
+  width: 14.2%;
+}
+
+.slick-slide.slick-center {
+  transform: scale(1.2);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 79px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 47px;
+  height: 70px;
+}
+
+.offcanvas-body ul li {
+  list-style: none;
+}
+.offcanvas-body ul li a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000000;
+  line-height: 2.5rem;
+}
+.offcanvas-body ul li a:hover {
+  color: rgb(255, 208, 0);
+}
+
+/* 共用網頁主體 */
+body .wrapper {
+  /* 主體 */
+}
+body .wrapper .header-section {
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  width: 100%;
+  height: 100vh;
+}
+body .wrapper .header-section .back-video {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .wrapper .header-section main .components_icon {
+  float: left;
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+}
+body .wrapper .header-section main .components_icon ul {
+  display: inline-block;
+}
+body .wrapper .header-section main .components_icon ul li {
+  list-style-type: none;
+}
+body .wrapper .header-section main .components_icon ul li a {
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+}
+body .wrapper .header-section main .components_icon ul li a span {
+  writing-mode: vertical-lr;
+}
+body .wrapper .header-section main .components_icon ul {
+  padding: 0;
+}
+body .wrapper .header-section main .components_icon ul li {
+  margin-left: -100px;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .components_icon ul li:nth-child(1):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .components_icon ul li:nth-child(2):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .components_icon ul li:nth-child(3):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .components_icon ul li:nth-child(4):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .components_icon ul li:nth-child(5):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .header-section main .content {
+  float: left;
+  width: 600px;
+  margin: 30vh 0 0 30vh;
+}
+body .wrapper .header-section main .content .video-section-title {
+  color: #ffffff;
+  font-size: 3rem;
+}
+body .wrapper .header-section main .content .video-section-descript {
+  width: 350px;
+  color: #ffffff;
+  font-size: 0.7rem;
+}
+body .wrapper .header-section main aside {
+  float: right;
+}
+body .wrapper .header-section main aside .social_icon {
+  margin-bottom: 30%;
+}
+body .wrapper .header-section main aside .social_icon ul {
+  padding-right: 40px;
+  text-align: right;
+}
+body .wrapper .header-section main aside .social_icon ul li {
+  list-style-type: none;
+  margin: 5vh 0;
+}
+body .wrapper .header-section main aside .social_icon ul li a img {
+  width: 40px;
+}
+body .wrapper .header-section main aside .social_icon ul li:nth-child(1):hover img {
+  opacity: 0.5;
+}
+body .wrapper .header-section main aside .social_icon ul li:nth-child(2):hover img {
+  opacity: 0.5;
+}
+body .wrapper .header-section main aside .social_icon ul li:nth-child(3):hover img {
+  opacity: 0.5;
+}
+body .wrapper .header-section main aside .social_icon ul li:nth-child(4):hover img {
+  opacity: 0.5;
+}
+body .wrapper .header-section main aside .run-area {
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+body .wrapper .header-section main aside .run-area .d2_run {
+  width: 205px;
+  height: 205px;
+  margin: 20px 50px;
+  background-image: url(../images/D2_run.png);
+  background-repeat: no-repeat;
+  transform: rotate(360deg);
+  animation: rotation 3s linear infinite;
+}
+body .wrapper .header-section main aside .run-area .D2-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .company-section {
+  background-color: #000000;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .company-section__frame {
+  background-image: url(../images/company_frame_house.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 90% 90%;
+  padding: 35vh 15vw;
+}
+body .wrapper .company-section__frame iframe {
+  width: 30vw;
+  height: 40vh;
+}
+body .wrapper .company-section__frame .text-background {
+  margin-top: -5vh;
+  padding: 5vw 10vh;
+  font-size: 0.5rem;
+  background-image: url(../images/text-background-img.png);
+  background-size: cover;
+  filter: drop-shadow(-10px 10px 5px #000000);
+}
+body .wrapper .suspension-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+}
+body .wrapper .suspension-section__title-h1 {
+  color: #e4d628;
+  font-family: LairaItalic;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  font-style: italic;
+}
+body .wrapper .suspension-section__title-h1 span {
+  font-family: LairaItalic;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  border-bottom: 3px solid #e4d628;
+  margin-right: 1rem;
+}
+body .wrapper .suspension-section__movie-img {
+  position: relative;
+}
+body .wrapper .suspension-section__movie-img-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .suspension-section__movie-img-play:hover {
+  opacity: 0.7;
+}
+body .wrapper .brake-system-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+  position: relative;
+}
+body .wrapper .brake-system-section__products {
+  position: relative;
+  max-width: 80%;
+  padding-left: 5%;
+}
+body .wrapper .brake-system-section__products-movie-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .brake-system-section__products-movie-play:hover {
+  opacity: 0.7;
+}
+body .wrapper .brake-system-section .description {
+  margin-left: -5%;
+  z-index: 5;
+  position: relative;
+}
+body .wrapper .brake-system-section .description h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+body .wrapper .brake-system-section .description h6 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: absolute;
+  color: yellow;
+  width: 160px;
+  right: 0;
+  background-color: #000000;
+  text-align: right;
+  z-index: 5;
+}
+body .wrapper .brake-system-section .description hr {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  color: yellow;
+  border-width: 3px;
+  opacity: 1;
+  width: 70%;
+  float: right;
+}
+body .wrapper .wheels-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+}
+body .wrapper .wheels-section__list {
+  font-size: 0.9vw;
+}
+body .wrapper .wheels-section .row {
+  position: relative;
+}
+body .wrapper .wheels-section__products {
+  position: relative;
+}
+body .wrapper .wheels-section__products-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .wheels-section__products-play:hover {
+  opacity: 0.8;
+}
+body .wrapper .air-suspension-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/air_suspension_bg.png);
+  background-size: contain;
+  background-position: -180px 0px;
+  position: relative;
+}
+body .wrapper .air-suspension-section .row {
+  height: 100vh;
+}
+body .wrapper .air-suspension-section__description {
+  margin-right: -50px;
+  margin-top: 100px;
+}
+body .wrapper .air-suspension-section__description h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+body .wrapper .air-suspension-section__description h5 {
+  font-size: 1rem;
+  color: yellow;
+  font-weight: bolder;
+}
+body .wrapper .air-suspension-section__products {
+  position: relative;
+  margin-left: -150px;
+}
+body .wrapper .air-suspension-section__products-pic {
+  position: absolute;
+}
+body .wrapper .air-suspension-section__products-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .air-suspension-section__products-play:hover {
+  opacity: 0.8;
+}
+body .wrapper .air-suspension-section__smoke {
+  position: absolute;
+  bottom: 8vh;
+}
+body .wrapper .motorcycle-suspension-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+  background-image: url(../images/motorcycle_suspension_bg.png);
+}
+body .wrapper .motorcycle-suspension-section .row {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .motorcycle-suspension-section__products {
+  position: relative;
+  height: 100vh;
+}
+body .wrapper .motorcycle-suspension-section__products-pic {
+  position: absolute;
+}
+body .wrapper .motorcycle-suspension-section__products-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .motorcycle-suspension-section__products-play:hover {
+  opacity: 0.8;
+}
+body .wrapper .motorcycle-suspension-section__description {
+  background-image: url(../images/description_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  font-weight: 700;
+  color: #000000;
+}
+body .wrapper .motorcycle-suspension-section__description:hover {
+  color: #ffffff;
+}
+body .wrapper .quarter-section {
+  background: #000000 url(../images/date_time_bg.png) no-repeat 100% 0/33%;
+  padding: 50px 0;
+}
+body .wrapper .quarter-section h2 {
+  font-family: OPTIFranklinGothic-Medium;
+}
+body .wrapper .quarter-section .datetime {
+  position: relative;
+}
+body .wrapper .quarter-section .datetime dl {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+body .wrapper .quarter-section .datetime dl dt {
+  float: left;
+}
+body .wrapper .quarter-section__description-content h3 {
+  font-family: Enter Sansman;
+  font-style: italic;
+}
+body .wrapper .news-section {
+  background-image: url(../images/car_bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .news-section__frame {
+  background-image: url(../images/car_line_bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .news-section__frame-title {
+  padding-top: 15vh;
+  padding-left: 7vw;
+}
+body .wrapper .news-section__frame-video-group {
+  margin-left: 3vw;
+  padding: 50px;
+}
+body .wrapper .news-section__frame-video-group-pic {
+  margin-bottom: 5vh;
+}
+body .wrapper .news-section__frame-text-title {
+  font-size: 3rem;
+}
+body .wrapper .news-section__frame-text-content p:nth-child(1) {
+  padding: 2rem 0;
+  letter-spacing: 0.15rem;
+  font-size: 1.3rem;
+}
+body .wrapper .news-section__frame-text-content p:nth-child(2) {
+  padding-right: 25vw;
+}
+body .wrapper .certificate-section {
+  background-image: url(../images/certificate-bg.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 30vh 8vw;
+}
+body .wrapper .certificate-section-description h5 {
+  color: #b79332;
+  font-weight: bolder;
+}
+body .wrapper .certificate-section-description h2 {
+  margin: 2rem 0;
+}
+body .wrapper .certificate-section-description p {
+  line-height: 3rem;
+}
+body .wrapper .race-movie-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(5, 2, 17, 0.2), rgba(12, 3, 51, 0.2));
+}
+body .wrapper .trademark-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+body .wrapper .trademark-section__title {
+  position: absolute;
+}
+body .wrapper .trademark-section__title h3 {
+  width: 380px;
+  height: 80px;
+  margin: 80px 0;
+  background: #000000 url(../images/trademark_title_bg.png) no-repeat center/contain;
+}
+body .wrapper .trademark-section__content {
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .trademark-section__content p {
+  padding: 30px;
+}
+body .wrapper .media-library-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .media-library-section__title {
+  width: 450px;
+  color: #000000;
+  font-weight: bolder;
+  padding: 15px 0 15px 150px;
+  background: url(../images/media_library_title_bg.png) no-repeat center;
+  margin-bottom: 50px;
+}
+body .wrapper .media-library-section video {
+  border: 2px solid #ffffff;
+}
+body .wrapper .gallery-header-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: #000000 url(../images/company_house.png) no-repeat center/contain;
+}
+body .wrapper .news-banner-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: #000000 url(../images/news_banner.png) no-repeat center center/cover;
+}
+body .wrapper .news-banner-section main .components_icon {
+  float: left;
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+}
+body .wrapper .news-banner-section main .components_icon ul {
+  display: inline-block;
+}
+body .wrapper .news-banner-section main .components_icon ul li {
+  list-style-type: none;
+}
+body .wrapper .news-banner-section main .components_icon ul li a {
+  color: #ffffff;
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+}
+body .wrapper .news-banner-section main .components_icon ul li a span {
+  writing-mode: vertical-lr;
+}
+body .wrapper .news-banner-section main .components_icon ul {
+  padding: 0;
+}
+body .wrapper .news-banner-section main .components_icon ul li {
+  margin-left: -100px;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .components_icon ul li:nth-child(1):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .components_icon ul li:nth-child(2):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .components_icon ul li:nth-child(3):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .components_icon ul li:nth-child(4):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .components_icon ul li:nth-child(5):hover {
+  margin-left: 0;
+  transition: 0.8s;
+}
+body .wrapper .news-banner-section main .content {
+  float: left;
+  width: 900px;
+  margin: 60vh 0 0 70vh;
+}
+body .wrapper .news-banner-section main .content .video-section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+body .wrapper .news-banner-section main .content .video-section-descript {
+  width: 100%;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+body .wrapper .news-banner-section main aside {
+  float: right;
+}
+body .wrapper .news-banner-section main aside .social_icon ul {
+  padding-right: 40px;
+  text-align: right;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li {
+  list-style-type: none;
+  margin: 50px 0;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li a img {
+  width: 40px;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li:nth-child(1):hover img {
+  opacity: 0.5;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li:nth-child(2):hover img {
+  opacity: 0.5;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li:nth-child(3):hover img {
+  opacity: 0.5;
+}
+body .wrapper .news-banner-section main aside .social_icon ul li:nth-child(4):hover img {
+  opacity: 0.5;
+}
+body .wrapper .news-banner-section main aside .run-area {
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+body .wrapper .news-banner-section main aside .run-area .d2_run {
+  width: 205px;
+  height: 205px;
+  margin: 20px 50px;
+  background-image: url(../images/D2_run.png);
+  background-repeat: no-repeat;
+  transform: rotate(360deg);
+  animation: rotation 3s linear infinite;
+}
+body .wrapper .news-banner-section main aside .run-area .D2-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .all-the-news-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: #000000 url(../images/all_the_news_bg_02.png) no-repeat center/contain;
+}
+body .wrapper .all-the-news-section__title {
+  font-size: 3rem;
+  padding: 18vh 30px;
+  color: yellow;
+  font-style: italic;
+  font-weight: bolder;
+}
+body .wrapper .all-the-news-section__content {
+  padding: 20px 0;
+}
+body .wrapper .news-video-list-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: #000000;
+}
+body .wrapper .news-video-list-section table thead tr th {
+  color: yellow;
+  line-height: 10vh;
+  font-size: 1.5rem;
+}
+body .wrapper .news-video-list-section table tbody tr td {
+  line-height: 10vh;
+  border: 0px;
+}
+body .wrapper .news-video-spect-section {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .news-video-spect-section__moive iframe {
+  border: 3px solid yellow;
+  width: 100%;
+  height: 250px;
+}
+body .wrapper .news-video-spect-section__moive-title {
+  color: yellow;
+  line-height: 3rem;
+}
+body .wrapper .news-video-spect-section__moive-content {
+  font-size: 1rem;
+}
+body .wrapper .news-video-spect-section .spec-media-librery__title {
+  width: 25vw;
+  background: #000000 url(../images/spec_media_librery.png) no-repeat 50% 50%;
+  margin: 4rem 0;
+}
+body .wrapper .news-video-spect-section .spec-media-librery img {
+  filter: drop-shadow(-20px 2px 0 yellow);
+}
+body .wrapper .videos-collection-section .row:first-child {
+  padding: 50px 0;
+}
+body .wrapper .videos-collection-section__title {
+  position: relative;
+  height: 110px;
+}
+body .wrapper .videos-collection-section__title img {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+}
+body .wrapper .videos-collection-section__title h1 {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+body .wrapper .videos-collection-section__videos {
+  margin-bottom: 80px;
+}
+body .wrapper .videos-collection-section__videos-title {
+  padding: 3% 0;
+}
+body .wrapper .videos-collection-section select {
+  /* styling */
+  background-color: white;
+  border: thin solid white;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  /* reset */
+  margin: 0;
+  box-sizing: border-box;
+}
+body .wrapper .videos-collection-section select.classic {
+  background-image: linear-gradient(45deg, transparent 50%, rgb(255, 255, 255) 50%), linear-gradient(135deg, rgb(248, 248, 248) 50%, transparent 50%), linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+body .wrapper .videos-collection-section select.classic:focus {
+  background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(135deg, transparent 50%, white 50%), linear-gradient(to right, gray, gray);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+body .wrapper .videos-collection-section__videos {
+  --bs-gutter-x: 6rem;
+}
+body .wrapper .videos-collection-section__videos-movie iframe {
+  height: 30vh;
+}
+body .wrapper .videos-collection-section__videos-title {
+  background: url(../images/videos_title_bg.png) no-repeat center/contain;
+}
+body .wrapper .videos-collection-section__videos-title h2 {
+  font-size: 1.5rem;
+  text-align: right;
+  line-height: 60px;
+}
+body .wrapper .videos-collection-section__videos-title h4 {
+  font-size: 0.8rem;
+  text-align: right;
+  line-height: 60px;
+}
+body .wrapper .racelist-section {
+  background: #000;
+}
+body .wrapper .racelist-section__title {
+  position: relative;
+  margin: 7% 0 3% 5%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff;
+}
+body .wrapper .racelist-section__title img {
+  position: absolute;
+  bottom: -1.1px;
+  left: -26px;
+}
+body .wrapper .racelist-section .col h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+}
+body .wrapper .racelist-section .col .container {
+  padding: 30px 0;
+}
+body .wrapper .racelist-section .col .container .numb {
+  font-size: 3rem;
+  padding: 0 50px;
+}
+body .wrapper .racelist-section__desc {
+  width: 50%;
+}
+body .wrapper .racelist-section__spec {
+  width: 50%;
+}
+body .wrapper .racelist-section__spec dt {
+  float: left;
+}
+body .wrapper .racing-car-section {
+  background: #000;
+}
+body .wrapper .racing-car-section__nav {
+  height: 200px;
+  background: #000000 url(../images/racing_car_line.png) no-repeat left bottom/contain;
+}
+body .wrapper .racing-car-section__nav--content {
+  font-size: 0.8rem;
+}
+body .wrapper .racing-car-section__nav--content-text p {
+  margin-bottom: 0;
+}
+body .wrapper .racing-car-section__nav--content-text p:nth-child(2) {
+  color: yellow;
+}
+body .wrapper .racing-car-section__show {
+  padding-top: 100px;
+  background: #000 url(../images/racing_car_bg.png) no-repeat 80% 10%;
+}
+body .wrapper .racing-car-section__show--content-text h2 {
+  font-size: 2.5rem;
+}
+body .wrapper .racing-car-section__show--content-img img {
+  max-width: 45%;
+}
+body .wrapper .racing-car-section__show--info {
+  padding: 100px 0;
+}
+body .wrapper .racing-car-section__show--info ul {
+  display: block;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+body .wrapper .racing-car-section__show--info ul li img {
+  width: 310px;
+}
+body .wrapper .racing-car-section__movie h4 {
+  margin: 30px 0;
+  margin: 30px 0;
+  font-size: 2rem;
+}
+body .wrapper .racing-car-section__movie-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+body .wrapper .racing-car-section__movie-content iframe {
+  width: 100%;
+  height: auto;
+}
+body .wrapper .partners-section__global-search-row {
+  padding: 10px 0;
+}
+body .wrapper .partners-section__global-search-partner {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 200px;
+}
+body .wrapper .partners-section__global-search-list li {
+  list-style: none;
+  padding: 20px 0;
+}
+body .wrapper .partners-section__global-search-list li a {
+  text-decoration: none;
+}
+body .wrapper .partners-section__global-search-list li a:hover {
+  color: yellow;
+}
+body .wrapper .partners-section__global-search-list li a h5 {
+  color: yellow;
+}
+body .wrapper .partners-section__global-search .partner-map-photo {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .wrapper .partners-section .search-container {
+  width: 20vw;
+  display: block;
+  margin: 0 auto;
+}
+body .wrapper .partners-section input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #d0cfce;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d0cfce;
+}
+body .wrapper .partners-section input#search-bar:focus {
+  border: 1px solid #008abf;
+  transition: 0.35s ease;
+  color: #caa607;
+}
+body .wrapper .partners-section input#search-bar:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+body .wrapper .partners-section input#search-bar:focus::-moz-placeholder {
+  -moz-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+body .wrapper .partners-section input#search-bar:focus:-ms-placeholder {
+  -ms-transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+body .wrapper .partners-section .search-icon {
+  position: relative;
+  float: left;
+  width: 75px;
+  height: 75px;
+  top: -32px;
+  left: 3px;
+}
+body .wrapper .partners-brand-section .col {
+  padding: 80px 50px;
+}
+body .wrapper .partners-brand-section__line {
+  border-right: 1px solid #ffffff;
+}
+body .wrapper .patent-section {
+  padding: 15vh 0;
+}
+body .wrapper .patent-section img {
+  width: 20vw;
+}
+body .wrapper .patent-products-section__suspension {
+  background: url(../images/patent_border_top_bar.png) no-repeat 0 0;
+  background-size: 100% 10%;
+}
+body .wrapper .patent-products-section__suspension-photo {
+  width: 20vw;
+  margin: -260px;
+}
+body .wrapper .patent-products-section__components {
+  margin: 120px 0;
+  height: 70vh;
+}
+body .wrapper .patent-products-section__brake {
+  background: url(../images/patent_border_top_bar.png) no-repeat 0 0;
+}
+body .wrapper .patent-products-section__brake-block {
+  position: relative;
+}
+body .wrapper .patent-products-section__brake-block-title-1 {
+  position: absolute;
+  font-weight: bolder;
+  top: 130px;
+  left: 0;
+}
+body .wrapper .patent-products-section__brake-block-title-1 span {
+  color: yellow;
+}
+body .wrapper .patent-products-section__brake-block-title-2 {
+  position: absolute;
+  font-weight: bolder;
+  top: 130px;
+  right: 0;
+}
+body .wrapper .patent-products-section__brake-block-title-2 span {
+  color: yellow;
+}
+body .wrapper .patent-products-section__brake-block-title-3 {
+  position: absolute;
+  font-weight: bolder;
+  top: 130px;
+  left: 0;
+}
+body .wrapper .patent-products-section__brake-block-title-3 span {
+  color: yellow;
+}
+body .wrapper .patent-products-section__brake-block-title-4 {
+  position: absolute;
+  font-weight: bolder;
+  top: 30px;
+  right: 0;
+}
+body .wrapper .patent-products-section__brake-block-title-4 span {
+  color: yellow;
+}
+body .wrapper .patent-products-section__brake-block-title-5 {
+  position: absolute;
+  font-weight: bolder;
+  top: 130px;
+  left: 0;
+}
+body .wrapper .patent-products-section__brake-block-title-5 span {
+  color: yellow;
+}
+body .wrapper .photo-media-section {
+  padding: 15vh 0;
+}
+body .wrapper .photo-media-section__header {
+  background: url(../images/photo_media_bg.png) no-repeat 50% 100%/cover;
+  background: url(../images/photo_media_bg.png) no-repeat 50% 100%/cover;
+  padding: 3vh 0;
+}
+body .wrapper .photo-media-section__header-icon {
+  width: 60%;
+}
+body .wrapper .photo-media-section__header-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.2rem;
+  margin: 0 3% 0 0;
+}
+body .wrapper .photo-media-section__graph-header {
+  background: url(../images/photo_media_tag_bg.png) no-repeat center/contain;
+  font-weight: bolder;
+  color: #000;
+  width: 60%;
+}
+body .wrapper .photo-media-section__graph-header--white {
+  margin-bottom: 0;
+  line-height: 4rem;
+  text-align: center;
+}
+body .wrapper .photo-media-section__graph-header--yellow {
+  margin-bottom: 0;
+  line-height: 4rem;
+  text-align: center;
+}
+body .wrapper .photo-media-section__graph-area1-text {
+  left: 20px;
+  bottom: 0;
+}
+body .wrapper .photo-media-section__graph-area1-text p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+body .wrapper .photo-media-section__graph-area3 p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 10px;
+  bottom: 0;
+}
+body .wrapper .photo-media-section__list {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+body .wrapper .photo-media-section__list #content {
+  padding-left: 0;
+}
+body .wrapper .photo-media-section__list-li {
+  transition: all 0.5s linear;
+  list-style: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+body .wrapper .photo-media-section__list-li.image-fadeout {
+  transition: all 0.5s linear;
+  visibility: visible;
+  opacity: 1;
+}
+body .wrapper .photo-media-section__list-box {
+  overflow-y: scroll;
+  height: 68vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+body .wrapper .photo-media-section__list-box::-webkit-scrollbar {
+  display: none;
+}
+body .wrapper .photo-media-section__list-box ul {
+  padding-left: 0;
+}
+body .wrapper .photo-media-section__list-box ul li {
+  list-style: none;
+}
+body .wrapper .photo-media-section__list-box ul li.tab-1 {
+  background: url(../images/photo_media_show_tag_hover.png) no-repeat center/cover;
+}
+body .wrapper .photo-media-section__list-box ul li a {
+  display: block;
+  background: url(../images/photo_media_show_tag_icon.png) no-repeat center/cover;
+  text-decoration: none;
+  height: 100px;
+  padding: 10px 50px;
+}
+body .wrapper .photo-media-section__list-box ul li a h6 {
+  font-size: 1.5rem;
+}
+body .wrapper .photo-media-section__list-box ul li a:hover {
+  display: block;
+  background: url(../images/photo_media_show_tag_hover.png) no-repeat center/cover;
+  color: yellow;
+}
+body .wrapper .photo-media-section__list-dropdown {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  margin-left: -10%;
+}
+body .wrapper .photo-media-section__video .slider {
+  padding: 100px 0;
+}
+body .wrapper .photo-media-section__video .slider a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+body .wrapper .photo-media-section__video .slider a:hover {
+  color: yellow;
+}
+body .wrapper .photo-media-section__video .slider a iframe {
+  width: 90%;
+  height: 250px;
+}
+body .wrapper .photo-media-section__video .slider a h6 {
+  display: inline-block;
+  padding: 20px 0;
+}
+body .wrapper .photos-sharing-header {
+  background: #000000 url(../images/title_car_bg.png) no-repeat top right/contain;
+}
+body .wrapper .photos-sharing-header__content {
+  padding: 100px 0;
+}
+body .wrapper .photos-sharing-header__content img {
+  width: 40%;
+  padding: 20px 0;
+}
+body .wrapper .photos-sharing-header__content h5 {
+  font-size: 1.5rem;
+}
+body .wrapper .photos-sharing-section a {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+}
+body .wrapper .photos-sharing-section a:first-child:hover {
+  border: 1px solid yellow;
+}
+body .wrapper .photos-sharing-section a:first-child:hover img {
+  transform: scale(1.5);
+  transition: 0.8s;
+  opacity: 0.5;
+}
+body .wrapper .photos-sharing-section a:first-child img {
+  transform: scale(1);
+  transition: 0.8s;
+}
+body .wrapper .photos-sharing-section a h6 {
+  padding: 16px;
+}
+body .wrapper .photos-sharing-section__pagination ul {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+body .wrapper .photos-sharing-section__pagination ul li {
+  list-style: none;
+  padding: 0 20;
+}
+body .wrapper .photos-sharing-section__pagination ul li a {
+  text-decoration: none;
+  padding: 10px;
+}
+body .wrapper .photos-sharing-section__pagination ul li a:hover {
+  background-color: yellow;
+  color: #000000;
+}
+body .wrapper .d2-staffs-header {
+  background: #000000 url("https://picsum.photos/1800/400") no-repeat center/cover;
+  height: 45vh;
+}
+body .wrapper .d2-staffs-section__photo h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 30px;
+}
+body .wrapper .d2-staffs-section__photo-content a {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+body .wrapper .d2-staffs-section__photo-content a:first-child:hover {
+  border: 1px solid yellow;
+}
+body .wrapper .d2-staffs-section__photo-content a:first-child:hover img {
+  transform: scale(1.5);
+  transition: 0.8s;
+  opacity: 0.5;
+}
+body .wrapper .d2-staffs-section__photo-content a:first-child:hover i {
+  transition: 0.5s;
+  opacity: 1;
+}
+body .wrapper .d2-staffs-section__photo-content a:first-child img {
+  transform: scale(1);
+  transition: 0.8s;
+}
+body .wrapper .d2-staffs-section__photo-content a:first-child i {
+  position: absolute;
+  transition: 0.5s;
+  font-size: 2rem;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .d2-staffs-section__photo-content a h6 {
+  padding: 16px;
+}
+body .wrapper .d2-staffs-section__media h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 30px;
+}
+body .wrapper .d2-staffs-section__media-content a {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+body .wrapper .d2-staffs-section__media-content a:first-child:hover {
+  border: 1px solid yellow;
+}
+body .wrapper .d2-staffs-section__media-content a:first-child:hover img {
+  transform: scale(1.5);
+  transition: 0.8s;
+  opacity: 0.5;
+}
+body .wrapper .d2-staffs-section__media-content a:first-child:hover i {
+  transition: 0.5s;
+  opacity: 1;
+}
+body .wrapper .d2-staffs-section__media-content a:first-child img {
+  transform: scale(1);
+  transition: 0.8s;
+}
+body .wrapper .d2-staffs-section__media-content a:first-child i {
+  position: absolute;
+  transition: 0.5s;
+  font-size: 2rem;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .d2-staffs-section__media-content a h6 {
+  padding: 16px;
+}
+body .wrapper .exhibitions-section {
+  background: #000000 url(../images/exhibitions_section_bg.png) repeat-y center/100%;
+}
+body .wrapper .exhibitions-section__content {
+  display: flex;
+  padding: 5vw;
+}
+body .wrapper .exhibitions-section__content-photo {
+  width: 330px;
+}
+body .wrapper .exhibitions-section__content-text {
+  padding: 3vw;
+  position: relative;
+}
+body .wrapper .exhibitions-section__content-text-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body .wrapper .exhibitions-section__content-text-btn img {
+  width: 4vw;
+}
+body .wrapper .warranty-header {
+  background: #000000 url(../images/warranty_bg.png) no-repeat top right/contain;
+}
+body .wrapper .warranty-header__content {
+  padding-bottom: 100px;
+}
+body .wrapper .warranty-header__content img {
+  width: 40%;
+  padding: 20px 0;
+}
+body .wrapper .warranty-header__content h5 {
+  font-size: 1.5rem;
+}
+body .wrapper .warranty-section h3 {
+  margin-bottom: 30px;
+}
+body .wrapper .warranty-section table {
+  border: 1px solid #ffffff;
+  border-collapse: separate;
+  margin-bottom: 50px;
+}
+body .wrapper .warranty-section table th {
+  padding: 30px;
+}
+body .wrapper .warranty-section table td {
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+body .wrapper .warranty-section table .bd-n {
+  border: none;
+}
+body .wrapper .content-us-header {
+  background: #000000 url("https://picsum.photos/1800/400") no-repeat center/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section {
+  /* 共用網頁主體 */
+}
+body .wrapper .content-us-section__title {
+  margin: 100px 0;
+}
+body .wrapper .content-us-section__content .col {
+  background: none;
+}
+body .wrapper .content-us-section__content .col:nth-last-child(1) {
+  border-bottom: none;
+  padding: 50px 25px;
+}
+body .wrapper .content-us-section__content .col .content-us-header {
+  background: #000000 url("https://picsum.photos/1800/400") no-repeat center/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .content-us-section__title {
+  margin: 100px 0;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col {
+  background: none;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col:nth-last-child(1) {
+  border-bottom: none;
+  padding: 50px 25px;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col label {
+  display: block;
+  float: left;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col input {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid #ffffff;
+  margin: 30px 80px;
+  color: white;
+  border-radius: 0;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col input::-moz-placeholder {
+  color: white;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content .col input::placeholder {
+  color: white;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit {
+  padding: 30px 80px;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit label {
+  display: block;
+  float: left;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit input {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid #ffffff;
+  margin: 30px 80px;
+  color: white;
+  border-radius: 0;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit input::-moz-placeholder {
+  color: white;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit input::placeholder {
+  color: white;
+}
+body .wrapper .content-us-section__content .col .content-us-section__content-submit {
+  padding: 30px 80px;
+}
+body .wrapper .content-us-section__content .col .qa-header {
+  background: #000000 url("../images/qa_title_bg.png") no-repeat 50% 80%/35%;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .qa-section {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion label {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  background: linear-gradient(135deg, transparent 15px, #ffffff 0);
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content p {
+  padding: 20px;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down {
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-ul {
+  display: inline-block;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-ul li {
+  display: block;
+  color: #ffffff;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-more a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-more a:hover {
+  opacity: 0.5;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-down-more a img {
+  width: 50px;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-drawing {
+  margin: 40px 0 80px 0;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-drawing li {
+  list-style: none;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-drawing li h6 {
+  text-align: center;
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-dl {
+  padding: 30px;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion .content-dl dt {
+  font-weight: bold;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion input[type=checkbox] {
+  display: none;
+}
+body .wrapper .content-us-section__content .col .qa-section .accordion input[type=checkbox]:checked + .content {
+  max-height: 1500px;
+  transition: max-height 0.5s ease-in;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section {
+  background-color: #000000;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__titile-slogen {
+  padding: 30px;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__titile-slogen span {
+  color: #e2d527;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__show-tag {
+  text-align: right;
+  padding: 30px 0;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__show-tag-text {
+  display: inline-block;
+  width: 30vw;
+  line-height: 100px;
+  text-align: center;
+  font-size: 2rem;
+  background: #000 url(../images/wheels_show_title_bg.png) no-repeat center/contain;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__description {
+  background: #000000 url(../images/wheels_titile_bg.png) no-repeat center/cover;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__description p {
+  font-size: 1.3rem;
+  padding: 50px 20vw;
+  margin-bottom: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__list h2 {
+  padding: 20px 0;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__list-box a {
+  display: block;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .wheels-series-section__list-box a:hover {
+  color: yellow;
+  border: 1px solid yellow;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__row {
+  background: #000000 url(../images/wheels_products_section_bg.png) no-repeat top left/cover;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section h4 {
+  font-style: italic;
+  font-size: 2rem;
+  margin: 2.3vw 12vw;
+  text-shadow: 5px 5px 4px #000;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__spec {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.32), rgba(0, 0, 0, 0.5) 99%) no-repeat center/cover;
+  padding: 10px;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__spec p {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro {
+  padding: 3vw 18vw;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro a img {
+  width: 90%;
+  transition: 0.5s;
+  transform: scale(70%);
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro a p {
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__pro a:hover img {
+  transform: scale(100%);
+}
+body .wrapper .content-us-section__content .col .wheels-products-section__car img {
+  width: 100%;
+}
+body .wrapper .content-us-section__content .col .brakes-section {
+  background-color: #000000;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title {
+  padding: 0 10vw;
+  font-size: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-slogon {
+  text-align: center;
+  line-height: 5rem;
+  padding: 10px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-list {
+  list-style-type: square;
+  font-size: 1.2rem;
+  padding: 80px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-list li {
+  line-height: 2.5rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-btns {
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-btns a {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-btns a:hover {
+  color: #ffffff;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-btns-dark {
+  color: #000000;
+  background: #000000 url(../images/brakes_btn.png) no-repeat center/80% 80%;
+  line-height: 5rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title-btns-light {
+  color: #ffe100;
+  background: #000000 url(../images/brakes_btn_light.png) no-repeat center/90% 80%;
+  line-height: 5rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__title span {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--1 {
+  height: 41vw;
+  background: #000000 url(../images/brakes_customized_1_bg.png) no-repeat center/contain;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--1-text {
+  text-transform: uppercase;
+  position: absolute;
+  right: 27vw;
+  bottom: 20vw;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--1-text p {
+  font-style: italic;
+  font-size: 2vw;
+  margin-bottom: -10px;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--2 {
+  height: 41vw;
+  background: #000000 url(../images/brakes_customized_2_bg.png) no-repeat center/contain;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--2-text {
+  text-transform: uppercase;
+  position: absolute;
+  left: 27vw;
+  bottom: 20vw;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--2-text p {
+  font-style: italic;
+  font-size: 2vw;
+  margin-bottom: -10px;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--3 {
+  height: 41vw;
+  background: #000000 url(../images/brakes_customized_3_bg.png) no-repeat center/contain;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--3-text {
+  text-transform: uppercase;
+  position: absolute;
+  right: 30vw;
+  bottom: 20vw;
+}
+body .wrapper .content-us-section__content .col .brakes-section__content--3-text p {
+  font-style: italic;
+  font-size: 2vw;
+  margin-bottom: -10px;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro {
+  border: 1px solid red;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--1 {
+  text-align: center;
+  padding: 8vw 10vw;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--1 .col {
+  margin: 50px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--1 .col a {
+  display: block;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--1 .col a img {
+  -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  -moz-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  -ms-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  -o-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2 {
+  padding: 6vw 10vw;
+  text-align: center;
+  font-size: 0.8rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp1 {
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp1 .col {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp1 .col a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp1 .col a p {
+  text-align: left;
+  float: right;
+  margin-right: 5px;
+  word-spacing: wrap;
+  width: 60%;
+  display: block;
+  color: #ffffff;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp2 .col {
+  padding: 30px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp2 .col a {
+  vertical-align: middle;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp2 .col a img {
+  width: 30%;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp2 .col a p {
+  padding: 30px;
+  background: #000000 url(../images/brakes_btn_7.png) no-repeat center/contain;
+  display: inline-block;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--2-comp2 .col a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3 {
+  padding: 6vw 10vw;
+  text-align: center;
+  font-size: 0.8rem;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp1 {
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp1 .col {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp1 .col a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp1 .col a p {
+  text-align: left;
+  float: right;
+  margin-right: 5px;
+  word-spacing: wrap;
+  width: 60%;
+  display: block;
+  color: #ffffff;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp2 .col {
+  padding: 30px 0;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp2 .col a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp2 .col a img {
+  width: 30%;
+  vertical-align: middle;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp2 .col a p {
+  padding: 30px;
+  background: #000000 url(../images/brakes_btn_7.png) no-repeat center/contain;
+  display: inline-block;
+}
+body .wrapper .content-us-section__content .col .brakes-section__pro--3-comp2 .col a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section {
+  background: #000000;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section .line-photo {
+  width: 20%;
+  margin-left: -13px;
+  vertical-align: top;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0 10vw;
+  font-size: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-slogon {
+  text-align: center;
+  line-height: 5rem;
+  padding: 10px 0;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-list {
+  list-style-type: square;
+  font-size: 1.2rem;
+  padding: 80px 150px;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-list li {
+  line-height: 2.5rem;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns {
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns a {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns-dark-1 {
+  background: #000000 url(../images/brakes_btn_4.png) no-repeat center/100% 80%;
+  line-height: 5rem;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns-dark-2 {
+  background: #000000 url(../images/brakes_btn_5.png) no-repeat center/100% 80%;
+  line-height: 5rem;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title-btns-dark-3 {
+  background: #000000 url(../images/brakes_btn_6.png) no-repeat center/100% 80%;
+  line-height: 5rem;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__title span {
+  color: #5f00ff;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__part-photo {
+  width: 60vw;
+  display: block;
+  float: right;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__basic {
+  position: relative;
+  background: #000000 url(../images/air-suspension-page-section_line_photo.png) no-repeat top left/20%;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__basic-content-word {
+  width: 27vw;
+  position: absolute;
+  left: 15vw;
+  bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__basic-content-word-title {
+  font-size: 3vw;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__deluxe {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background: #000000 url(../images/air-suspension-page-section_deluxe_part_photo.png) no-repeat 10% 15%/25%;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__deluxe-content {
+  position: relative;
+  height: 100%;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__deluxe-content--part h3 {
+  font-size: 3vw;
+  margin-top: 50px;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content {
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content-text {
+  position: absolute;
+  z-index: 1;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content-text h2 {
+  background: linear-gradient(to top, #7531a2, transparent);
+  font-size: 3vw;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content-text p {
+  text-align: center;
+  font-size: 1.47vw;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content-photo {
+  position: absolute;
+  right: 0;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__4-wheel--content-photo img:nth-child(2) {
+  position: absolute;
+  width: 30vw;
+  top: 40vh;
+  left: 20vw;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__gold {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__gold-photo {
+  width: 60vw;
+  height: 100%;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__gold-photo--1 {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__gold-photo--2 {
+  width: 30%;
+  position: absolute;
+  right: 50px;
+  bottom: 100px;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__gold--text {
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__diamond {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__diamond--text {
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__components {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__components--photo {
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__components--photo-2 {
+  position: absolute;
+  width: 18vw;
+  left: 40vw;
+  top: 25vh;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__components--text {
+  font-size: 2.7vw;
+  letter-spacing: 8px;
+  margin-right: 10vw;
+  text-align: right;
+}
+body .wrapper .content-us-section__content .col .air-suspension-page-section__satisfied h2 {
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section {
+  background: #000000;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section h5 {
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__content {
+  background: #000000 url(../images/camber_kit_bg.png) no-repeat;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__content-col {
+  padding: 50px;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__content-col h2 {
+  font-size: 3vw;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__content-col img {
+  width: 30vw;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__slider-content {
+  padding: 30px;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__slider-content--bg {
+  background: #333333;
+  padding: 30px;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__slider-content--bg img {
+  width: 100%;
+}
+body .wrapper .content-us-section__content .col .camber-kit-page-section__slider-content p {
+  background: #999999;
+  text-align: center;
+  padding: 15px 0;
+}
+body .wrapper .content-us-section__content .col .other-page-section {
+  background: #000;
+  box-sizing: border-box;
+}
+body .wrapper .content-us-section__content .col .other-page-section__title-h5 {
+  padding: 30px 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+body .wrapper .content-us-section__content .col .other-page-section__title-h3 {
+  background: url(../images/other_title_bg.png) no-repeat center/cover;
+  text-transform: uppercase;
+  padding-left: 15vw;
+  color: #fccf00;
+}
+body .wrapper .content-us-section__content .col .other-page-section__row {
+  margin: 5vw 0;
+}
+body .wrapper .content-us-section__content .col .other-page-section__row-next {
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+body .wrapper .content-us-section__content .col .other-page-section__row-next a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .other-page-section__row-next a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .other-page-section__content {
+  background-color: #333333;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  height: 310px;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .other-page-section__content img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+body .wrapper .content-us-section__content .col .other-page-section__content-text {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+body .wrapper .content-us-section__content .col .other-page-section__list {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list #content {
+  padding-left: 0;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-li {
+  transition: all 0.5s linear;
+  list-style: none;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-li.image-fadeout {
+  transition: all 0.5s linear;
+  visibility: visible;
+  opacity: 1;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box {
+  overflow-y: scroll;
+  height: 68vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box::-webkit-scrollbar {
+  display: none;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul {
+  padding-left: 0;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul li {
+  list-style: none;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul li.tab-1 {
+  background: url(../images/photo_media_show_tag_hover.png) no-repeat center/cover;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul li a {
+  display: block;
+  background: url(../images/photo_media_show_tag_icon.png) no-repeat center/cover;
+  text-decoration: none;
+  height: 100px;
+  padding: 10px 50px;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul li a h6 {
+  font-size: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-box ul li a:hover {
+  display: block;
+  background: url(../images/photo_media_show_tag_hover.png) no-repeat center/cover;
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .other-page-section__list-dropdown {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  margin-left: -10%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section {
+  background: #000000;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__title {
+  margin: 50px 0;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__title span {
+  color: #fccf00;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__group h2 {
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__group--short {
+  margin: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__group--short h2 {
+  background: url(../images/brakes_btn_9.png) no-repeat center/100% 100%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__group--long {
+  margin: 1.5rem;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__group--long h2 {
+  background: url(../images/brakes_btn_10.png) no-repeat center/100% 100%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro {
+  margin-top: 80px;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro:nth-of-type(1) {
+  background: url(../images/motorcycle_suspension_new_bg.png) no-repeat 100% 70%/60% 70%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-1 {
+  max-width: 100%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-1 img {
+  width: 100%;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-2-content {
+  width: 50%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-2-content img {
+  width: 50%;
+  clear: both;
+  margin-bottom: 20px;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-2-content hr {
+  width: 30px;
+  color: yellow;
+  border-width: 3px;
+  opacity: 1;
+}
+body .wrapper .content-us-section__content .col .motorcycle-suspension-page-section__btn--pro-2-content h6 {
+  width: 80%;
+  font-size: 1.4rem;
+  color: yellow;
+  margin-top: -30px;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-header {
+  background: #000000 url("../images/wheel_examination_title_bg.png") no-repeat 50% 80%/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-section {
+  margin-top: 80px;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-section__text {
+  padding: 100px 0;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-section__text p span {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-section__jia-logo {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-banner-section a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-banner-section a:hover {
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.8);
+}
+body .wrapper .content-us-section__content .col .wheel-examination-banner-section a:hover p {
+  opacity: 1;
+  font-size: 1.5rem;
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-banner-section a:hover img {
+  transform: ease-in-out;
+  transition: 0.8s;
+  opacity: 0.5;
+}
+body .wrapper .content-us-section__content .col .wheel-examination-banner-section a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  transition: 0.5;
+  opacity: 0.5;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-header {
+  background: #000000 url("../images/wheels_gallery_banner_bg.png") no-repeat 50% 80%/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section {
+  --bs-gutter-x: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo {
+  flex-grow: 1;
+  overflow: hidden;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo a:hover {
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo a:hover i {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo a img {
+  width: 100%;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__photo a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__pagination {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__pagination a {
+  text-decoration: none;
+  line-height: 1rem;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__pagination ul {
+  width: 350px;
+  display: inline-block;
+  padding-left: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-gallery-section__pagination ul li {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+body .wrapper .content-us-section__content .col .wheels-other-header {
+  background: #000000 url("../images/wheels_other_bg.png") no-repeat 50% 80%/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section {
+  padding: 60px;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section h3 {
+  text-transform: uppercase;
+  padding-bottom: 80px;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section a {
+  text-decoration: none;
+  display: block;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section a:hover .mask {
+  overflow: hidden;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section a:hover .mask img {
+  transition: all 0.5s;
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section a:hover p {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheels-other-section a p {
+  text-transform: uppercase;
+  padding: 30px;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-header {
+  background: #000000 url("../images/wheels_spec_bg.png") no-repeat 50% 80%/cover;
+  height: 45vh;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section h3 {
+  margin: 50px;
+  width: 460px;
+  line-height: 3rem;
+  text-align: center;
+  background: url(../images/brakes_btn_7.png) no-repeat center/100% 100%;
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper .swiper-slide img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper-pagination {
+  bottom: -50px;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 0;
+  width: 30px;
+  height: 5px;
+  background: #ffffff;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__content .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__spec {
+  margin: 100px 0;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__spec a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__spec a:hover p {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__spec a:hover img {
+  transform: translatey(-30px);
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__spec a img {
+  transition: 0.5s ease-in-out;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__text {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__text p {
+  font-size: 1.3rem;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__text p span {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__color img {
+  width: 100%;
+  height: 100%;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__color-two {
+  height: auto;
+  gap: 20px;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__color-two img {
+  width: 100%;
+  height: 97%;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__bg {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__bg ul {
+  display: inline-block;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__bg ul li {
+  list-style: none;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul {
+  padding: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li {
+  list-style: none;
+  position: relative;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li a:hover img {
+  transform: scale(1.5);
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li a:hover .mask {
+  opacity: 1;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li a:hover .mask i {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-spec-section__car ul li .mask i {
+  opacity: 0;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__prod {
+  padding: 50px 0;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__prod .flexslider {
+  background: none;
+  border: none;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__center {
+  padding-bottom: 100px;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__center-title {
+  padding: 10px 0 30px 170px;
+  background: #000000 url(../images/wheels_detail_title_bg.png) no-repeat center/contain;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__size {
+  background: #000000 url(../images/wheels_detail_size_bg.png);
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl dt {
+  float: left;
+  margin-right: 50px;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl dd, body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl dt {
+  border-bottom: 1px solid #ffffff;
+  line-height: 3rem;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__size-content ol {
+  list-style-type: style;
+  padding-left: 0;
+  list-style-position: inside;
+}
+body .wrapper .content-us-section__content .col .wheels-detail-section__size-content ol li {
+  line-height: 2rem;
+}
+body .wrapper .content-us-section__content .col .coilover-circuit-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-circuit-section h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-circuit-section__prod3 {
+  margin: 50px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-circuit-section__prod3 img {
+  display: block;
+}
+body .wrapper .content-us-section__content .col .coilover-circuit-section__prod3 p {
+  font-size: 1rem;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section h4 {
+  margin: 50px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section ol {
+  display: block;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section ol li {
+  list-style-type: square;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section ol li span {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__tag {
+  width: 600px;
+  height: 50px;
+  background: #000000 url(../images/coilover_page_title_bg.png) no-repeat center/100% 100%;
+  margin: 80px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__tag p:nth-child(1) {
+  padding-top: 8px;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__tag p:nth-child(2) {
+  padding-top: 20px;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content .col {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content .col:hover img {
+  transform: scale(1.3);
+  transition: 0.5s ease-in-out;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text {
+  display: block;
+  text-decoration: none;
+  width: 40%;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text:hover h5,
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text:hover p,
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text:hover hr {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text h5 {
+  font-size: 1rem;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text hr {
+  opacity: 1;
+  width: 20%;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content-text p {
+  margin-top: -25px;
+  background: #000;
+  width: 130px;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-left: 20px;
+  z-index: 9;
+}
+body .wrapper .content-us-section__content .col .coilover-page-section__content img {
+  width: 60%;
+}
+body .wrapper .content-us-section__content .col .coilover-drag-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-drag-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-drag-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-drag-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-drag-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-drift-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-drift-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-drift-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-drift-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-drift-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-electronic-damping-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-electronic-damping-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-electronic-damping-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-electronic-damping-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-electronic-damping-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-row img {
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-row h5 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj ul {
+  font-size: 1.3rem;
+  margin: 50px 0;
+  display: inline-block;
+  list-style-type: square;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj h4 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 10px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-content {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-content--text {
+  padding-top: 50px;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-content--text p {
+  line-height: 3rem;
+  width: 300px;
+  border: 1px solid #ffffff;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-color {
+  padding: 30px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-color img {
+  width: 100%;
+  height: 100%;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-color-two {
+  height: auto;
+  gap: 20px;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__pro-obj-color-two img {
+  width: 100%;
+  height: 97%;
+}
+body .wrapper .content-us-section__content .col .coilover-hydraulic-lift-system-page-section__text p {
+  font-style: italic;
+}
+body .wrapper .content-us-section__content .col .coilover-pro-racing-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-pro-racing-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-pro-racing-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-pro-racing-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-pro-racing-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-asphalt-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-asphalt-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-asphalt-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-asphalt-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-asphalt-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-gravel-snow-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-gravel-snow-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-gravel-snow-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-gravel-snow-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-rally-gravel-snow-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-street-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-street-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-street-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-street-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-street-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-super-racing-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-super-racing-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-super-racing-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-super-racing-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-super-racing-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .coilover-super-sport-page-section {
+  background: #000;
+}
+body .wrapper .content-us-section__content .col .coilover-super-sport-page-section__pro h3 {
+  margin: 80px auto;
+  width: 480px;
+  background: url(../images/coilover_circuit_title_bg.png) no-repeat left/100% 100%;
+  line-height: 4rem;
+}
+body .wrapper .content-us-section__content .col .coilover-super-sport-page-section__pro-row {
+  margin: 150px 0;
+}
+body .wrapper .content-us-section__content .col .coilover-super-sport-page-section__info {
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center/100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
+}
+body .wrapper .content-us-section__content .col .coilover-super-sport-page-section__info .row {
+  width: 100%;
+  text-align: left;
+}
+body .wrapper .content-us-section__content .col .brake-caliper-strength-test-header {
+  background: #000000 url("https://picsum.photos/1800/400") no-repeat center/cover;
+  height: 45vh;
+  margin-bottom: 50px;
+}
+body .wrapper .content-us-section__content .col .brake-caliper-strength-test-section h5 {
+  margin: 50px 0;
+  text-align: center;
+}
+body .wrapper .content-us-section__content .col .footer-section {
+  z-index: 99;
+  font-size: 0.8rem;
+}
+body .wrapper .content-us-section__content .col .footer-section .logo {
+  margin: 5% 0;
+}
+body .wrapper .content-us-section__content .col .footer-section .logo img {
+  width: 15%;
+}
+body .wrapper .content-us-section__content .col .footer-section__map-link li {
+  list-style: none;
+}
+body .wrapper .content-us-section__content .col .footer-section__map-link li a {
+  padding: 5px;
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .footer-section__map-link li a:hover {
+  color: yellow;
+  border: 1px solid yellow;
+}
+body .wrapper .content-us-section__content .col .footer-section-contact-us__info {
+  padding: 0;
+}
+body .wrapper .content-us-section__content .col .footer-section-contact-us__info dd, body .wrapper .content-us-section__content .col .footer-section-contact-us__info .wheels-detail-section__size-content dl dt, body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl .footer-section-contact-us__info dt {
+  padding: 15px;
+}
+body .wrapper .content-us-section__content .col .footer-section-contact-us__info dd a, body .wrapper .content-us-section__content .col .footer-section-contact-us__info .wheels-detail-section__size-content dl dt a, body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl .footer-section-contact-us__info dt a {
+  text-decoration: none;
+}
+body .wrapper .content-us-section__content .col .footer-section-contact-us__info dd a:hover, body .wrapper .content-us-section__content .col .footer-section-contact-us__info .wheels-detail-section__size-content dl dt a:hover, body .wrapper .content-us-section__content .col .wheels-detail-section__size-content dl .footer-section-contact-us__info dt a:hover {
+  color: yellow;
+}
+body .wrapper .content-us-section__content .col .footer-section__social .social_icon img {
+  width: 50%;
+}
+body .wrapper .content-us-section__content .col .footer-section__social .social_icon li:nth-child(1):hover img {
+  content: url(/images/IG_icon.png);
+}
+body .wrapper .content-us-section__content .col .footer-section__social .social_icon li:nth-child(2):hover img {
+  content: url(/images/FB_icon.png);
+}
+body .wrapper .content-us-section__content .col .footer-section__social .social_icon li:nth-child(3):hover img {
+  content: url(/images/Titok_icon.png);
+}
+body .wrapper .content-us-section__content .col .footer-section__social .social_icon li:nth-child(4):hover img {
+  content: url(/images/Youtube_icon.png);
+}
+@media only screen and (max-width: 1400px) {
+  body .wrapper .content-us-section body .wrapper .header-section .nav-bar {
+    padding: 5vw;
+  }
+  body .wrapper .content-us-section body .wrapper .header-section .nav-bar .lang {
+    padding: 20px 5vw 20px 5vw;
+  }
+  body .wrapper .content-us-section body .wrapper .header-section main .components_icon {
+    width: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame {
+    padding: 25vw 15vh;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section {
+    background-size: 100% 100%;
+    padding: 30vh 15vw;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section-description h5 {
+    color: #b79332;
+    font-weight: bolder;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section-description h2 {
+    margin: 1rem 0;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section-description p {
+    line-height: 2rem;
+  }
+  body .wrapper .content-us-section body .wrapper .products-section {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  body .wrapper .content-us-section body .wrapper .nav-bar .lang {
+    white-space: nowrap;
+    padding: 15px;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame {
+    padding: 25vw 18vh;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame .text-background {
+    padding: 10vw 1vw 5vw 5vw;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame .text-background p {
+    margin-bottom: 0.5rem;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title {
+    padding: 0 2vw 0 2vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title img {
+    width: 100%;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-video-group {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 2vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-title {
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: bolder;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content {
+    padding: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(1) {
+    padding: 0;
+    letter-spacing: 0.15rem;
+    font-size: 1.3rem;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(2) {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  body .wrapper .content-us-section body .wrapper .header-section .nav-bar .lang {
+    padding: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame {
+    padding: 25vh 10vw;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame iframe {
+    width: 100%;
+    height: 30vh;
+  }
+  body .wrapper .content-us-section body .wrapper .company-section__frame .text-background {
+    margin-top: 2vw;
+    padding: 8vw 3vw 5vw 8vw;
+    font-size: 0.5rem;
+    background-image: url(../images/text-background-img.png);
+    background-size: cover;
+    filter: drop-shadow(-10px 10px 5px #000000);
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title {
+    padding: 15px;
+    text-align: center;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title img {
+    width: 30%;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-video-group {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 3vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-title {
+    font-size: 2rem;
+    margin-top: 0;
+    font-weight: bolder;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content {
+    padding: 3vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(1) {
+    padding: 0;
+    letter-spacing: 0.15rem;
+    font-size: 1.3rem;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(2) {
+    padding-right: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .products-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body .wrapper .content-us-section body .wrapper .nav-bar {
+    padding: 20px 10px;
+  }
+  body .wrapper .content-us-section body .wrapper .nav-bar .lang {
+    padding: 10px 30px;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title img {
+    width: 30%;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-video-group {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 3vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-title {
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: bolder;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content {
+    padding: 3vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(1) {
+    padding: 2rem 0;
+    letter-spacing: 0.15rem;
+    font-size: 1.3rem;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(2) {
+    padding-right: 25vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  body .wrapper .content-us-section body .wrapper .header-section .nav-bar .lang {
+    padding: 0 0 0 0;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-title img {
+    width: 30%;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-video-group {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 5vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-title {
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: bolder;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content {
+    padding: 5vw;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(1) {
+    padding: 2rem 0;
+    letter-spacing: 0.15rem;
+    font-size: 1.3rem;
+  }
+  body .wrapper .content-us-section body .wrapper .news-section__frame-text-content p:nth-child(2) {
+    padding-right: 25vw;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section {
+    background-size: 100% 100%;
+    padding: 30vh 15vw;
+  }
+  body .wrapper .content-us-section body .wrapper .certificate-section-description p {
+    overflow: scroll;
+    line-height: 2rem;
+  }
+  body .wrapper .content-us-section body .wrapper .footer-section-contact-us__info {
+    padding: 15% 0;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  body .wrapper .content-us-section body .wrapper .header-section .back-video {
+    width: 100vw;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  body .wrapper .content-us-section body .wrapper .header-section .back-video {
+    width: auto;
+    height: 100vh;
+  }
+}

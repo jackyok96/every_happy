@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container login d-flex flex-column justify-content-center">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-5">
+                    <div class="d-flex flex-column align-items-center login__logo mb-3">
+                        <img src="images/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <select class="form-control w-50 my-3 dropdown-toggle login__lang" name="">
+                        <option  value="">繁體中文</option>
+                        <option value="">English</option>
+                        <option value="">日本語</option>
+                    </select>
+                    <div class="login__member">
+                        <input type="text" class="form-control login__member-account">
+                        <input type="text" class="form-control login__member-password">
+                        <input type="text" class="form-control login__member-check_password">
+                        <div class="d-flex justify-content-between login__member-password-section">
+                            <div class="login__member-password_section-rem">
+                                <input type="checkbox" id="remeber" checked>
+                                <label for="remeber" class="text-white">記住密碼</label>
+                            </div>
+                            <a href="" class="text-decoration-none text-white">忘記密碼</a>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary">登入</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
