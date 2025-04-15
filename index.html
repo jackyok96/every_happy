@@ -12,28 +12,32 @@
     <div class="wrapper">
         <div class="container login">
             <div class="row justify-content-center align-items-center">
-                <div class="col-5">
-                    <div class="login__logo">
-                        <img src="images/logo.png" alt="" class="img-fluid">
+                <div class="col-4">
+                    <div class="login__logo d-flex justify-content-center">
+                        <img src="images/logo.png" alt="">
                     </div>
-                    <select class="form-control w-50 my-3 dropdown-toggle login__lang" name="">
-                        <option  value="">繁體中文</option>
-                        <option value="">English</option>
-                        <option value="">日本語</option>
-                    </select>
+                    <div class="login__select d-flex justify-content-center">
+                        <select class="form-control w-50 my-3 dropdown-toggle login__select-lang" name="">
+                            <option class="option-1" value="">繁體中文</option>
+                            <option value="">English</option>
+                            <option value="">日本語</option>
+                        </select>
+                    </div>
                     <div class="login__member">
-                        <input type="text" class="form-control login__member-account">
-                        <input type="text" class="form-control login__member-password">
-                        <input type="text" class="form-control login__member-check_password">
+                        <input type="text" class="form-control login__member-account" placeholder="請輸入會員帳號">
+                        <input type="text" class="form-control login__member-password" placeholder="請輸入密碼">
+                        <input type="text" class="form-control login__member-check_password" placeholder="請輸入驗証碼">
                         <div class="d-flex justify-content-between login__member-password-section">
                             <div class="login__member-password_section-rem">
-                                <input type="checkbox" id="remeber" checked>
-                                <label for="remeber" class="text-white">記住密碼</label>
+                                <label for="remeber" class="text-white">
+                                    <input type="checkbox" id="remeber" checked>
+                                    <span>記住密碼</span>
+                                </label>
                             </div>
-                            <a href="" class="text-decoration-none text-white">忘記密碼</a>
+                            <a href="#" class="text-decoration-none text-white">忘記密碼</a>
                         </div>
                         <div class="d-grid">
-                            <button class="btn btn-primary">登入</button>
+                            <button class="btn login__member-btn">登入</button>
                         </div>
                     </div>
                 </div>
