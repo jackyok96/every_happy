@@ -1,0 +1,169 @@
+//==================================================
+// global settings
+//==================================================
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+*,
+*:focus,
+*:active,
+*:hover {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Serathine';
+    src: url('../fonts/serathine-bwrgg.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    color: #000;
+    font-size: 16px;
+    font-family: $web_font_noto;
+    //font-family: $web_font_outfit;
+    line-height: 1.5;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none; //清除文字在iphone的預設大小
+    transition: padding-top .4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &.noscroll {
+        overflow-y: hidden;
+    }
+
+}
+
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.texteditor ol,
+.texteditor ul {
+    list-style-type: decimal;
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    backface-visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1.seo,
+h2.seo {
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $web_color_2;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: unset;
+    appearance: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+    letter-spacing: 1px;
+    padding: 7px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    appearance: none;
+
+    &::placeholder {
+        color: inherit;
+    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.del {
+    text-decoration: line-through;
+}
+
+.break-all {
+    word-break: break-all;
+}

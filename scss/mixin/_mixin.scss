@@ -1,0 +1,82 @@
+/* 每個區段的尺寸和背景圖片設定 */
+@mixin section_public {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* 零件集合 */
+// 撐開區段
+@mixin components_pubic {
+    ul {
+        display: inline-block;
+
+        li {
+            list-style-type: none;
+
+            a {
+                color: #ffffff;
+                display: flex;
+                text-decoration: none;
+                text-align: center;
+
+                span {
+                    -webkit-writing-mode: vertical-lr;
+                    writing-mode: vertical-lr;
+                }
+            }
+        }
+    }
+}
+
+// 圖片分割
+@mixin image_segmentation {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-two {
+        height: auto;
+        gap: 20px;
+
+        img {
+            width: 100%;
+            height: 97%;
+        }
+    }
+}
+
+// 資訊標題
+@mixin info {
+    height: 100px;
+    background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center / 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px;
+    padding-top: 30px;
+
+    .row {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@mixin content_page {
+    background: #000;
+
+    &__pro {
+        h3 {
+            margin: 80px auto;
+            width: 480px;
+            background: url(../images/coilover_circuit_title_bg.png) no-repeat left / 100% 100%;
+            line-height: 4rem;
+        }
+
+        &-row {
+            margin: 150px 0;
+        }
+    }
+}

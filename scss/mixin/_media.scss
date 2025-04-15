@@ -1,0 +1,467 @@
+
+// 中型螢幕-xxl-小於1920
+@media only screen and (max-width: 1920px) {
+    // ========================= 首頁 start =========================
+
+    // ========================= 首頁 end ===========================
+
+    // ========================= 關於我們 start =========================
+
+    // ========================= 關於我們 end ===========================
+
+    // ========================= 最新消息 start =========================
+
+    // ========================= 最新消息 end ===========================
+}
+
+// 小型螢幕或大型平板-xl-小於1400
+@media only screen and (max-width: 1400px) {
+    body {
+        .wrapper {
+
+            // ========================= 首頁 start =======================
+            .header-section {
+
+                // 導覽列
+                .nav-bar {
+                    padding: 5vw;
+
+                    .lang {
+                        padding: 20px 5vw 20px 5vw;
+                    }
+                }
+
+                main {
+                    .components_icon {
+                        width: 0;
+                    }
+                }
+            }
+
+            // 公司區
+            .company-section {
+                &__frame {
+                    padding: 25vw 15vh;
+                }
+            }
+
+            // 獲獎區
+            .certificate-section {
+                background-size: 100% 100%;
+                padding: 30vh 15vw;
+
+                &-description {
+                    h5 {
+                        color: #b79332;
+                        font-weight: bolder;
+                    }
+
+                    h2 {
+                        margin: 1rem 0;
+                    }
+
+                    p {
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            // 產品區
+            .products-section {
+                @include section_public;
+            }
+
+            // 賽事區
+            // .race-team-section {
+            //   background-image: url(../images/race_team_bg.png);
+            //   @include section_public;
+            //   height: 100%;
+            //   padding: 5% 15%;
+            // }
+
+            //  賽事影片區
+
+            // ========================= 首頁 end =========================
+
+            // ========================= 關於我們 start =========================
+
+            // ========================= 關於我們 end ===========================
+
+            // ========================= 最新消息 start =========================
+
+            // ========================= 最新消息 end ===========================
+        }
+    }
+}
+
+// 中型平板-lg-最大於等於1200
+@media only screen and (max-width: 1200px) {
+    body {
+        .wrapper {
+
+            // ========================= 首頁 start =========================
+            // 播放區
+            .nav-bar {
+                .lang {
+                    white-space: nowrap;
+                    padding: 15px;
+                }
+            }
+
+            // 公司區
+            .company-section {
+                &__frame {
+                    padding: 25vw 18vh;
+
+                    .text-background {
+                        padding: 10vw 1vw 5vw 5vw;
+
+                        p {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            // 最新消息區
+            .news-section {
+                &__frame {
+                    &-title {
+                        padding: 0 2vw 0 2vw;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &-video-group {
+                        margin-top: 0;
+                        margin-left: 0;
+                        padding: 2vw;
+                    }
+
+                    &-text-title {
+                        font-size: 1rem;
+                        margin-top: 0;
+                        font-weight: bolder;
+                    }
+
+                    &-text-content {
+                        padding: 0;
+
+                        p {
+                            &:nth-child(1) {
+                                padding: 0;
+                                letter-spacing: 0.15rem;
+                                font-size: 1.3rem;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ========================= 首頁 end =========================
+        }
+    }
+}
+
+// 小型平板-md-最大於等於992
+@media only screen and (max-width: 992px) {
+    body {
+        .wrapper {
+
+            // ========================= 首頁 start =========================
+            // 播放區
+            .header-section {
+                .nav-bar {
+                    .lang {
+                        padding: 0;
+                    }
+                }
+            }
+
+            // 公司區
+            .company-section {
+                &__frame {
+                    padding: 25vh 10vw;
+
+                    iframe {
+                        width: 100%;
+                        height: 30vh;
+                    }
+
+                    .text-background {
+                        margin-top: 2vw;
+                        padding: 8vw 3vw 5vw 8vw;
+                        font-size: 0.5rem;
+                        background-image: url(../images/text-background-img.png);
+                        background-size: cover;
+                        filter: drop-shadow(-10px 10px 5px #000000);
+                    }
+                }
+            }
+
+            // 最新消息區
+            .news-section {
+                &__frame {
+                    &-title {
+                        padding: 15px;
+                        text-align: center;
+
+                        img {
+                            width: 30%;
+                        }
+                    }
+
+                    &-video-group {
+                        margin-top: 0;
+                        margin-left: 0;
+                        padding: 3vw;
+                    }
+
+                    &-text-title {
+                        font-size: 2rem;
+                        margin-top: 0;
+                        font-weight: bolder;
+                    }
+
+                    &-text-content {
+                        padding: 3vw;
+
+                        p {
+                            &:nth-child(1) {
+                                padding: 0;
+                                letter-spacing: 0.15rem;
+                                font-size: 1.3rem;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 產品區
+            .products-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            // ========================= 首頁 end =========================
+
+            // ========================= 關於我們 start =========================
+
+            // ========================= 關於我們 end ===========================
+        }
+    }
+}
+
+// 大型手機-sm-最大於等於768
+@media only screen and (max-width: 768px) {
+    body {
+        .wrapper {
+
+            // ========================= 首頁 start =========================
+            // 播放區
+            .nav-bar {
+                padding: 20px 10px;
+
+                .lang {
+                    padding: 10px 30px;
+                }
+            }
+
+            // 最新消息區
+            .news-section {
+                &__frame {
+                    &-title {
+                        padding-top: 0;
+                        padding-left: 0;
+
+                        img {
+                            width: 30%;
+                        }
+                    }
+
+                    &-video-group {
+                        margin-top: 0;
+                        margin-left: 0;
+                        padding: 3vw;
+                    }
+
+                    &-text-title {
+                        font-size: 1rem;
+                        margin-top: 0;
+                        font-weight: bolder;
+                    }
+
+                    &-text-content {
+                        padding: 3vw;
+
+                        p {
+                            &:nth-child(1) {
+                                padding: 2rem 0;
+                                letter-spacing: 0.15rem;
+                                font-size: 1.3rem;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 25vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ========================= 首頁 end =========================
+
+            // ========================= 關於我們 start =========================
+
+            // ========================= 關於我們 end ===========================
+        }
+    }
+}
+
+// 中型手機-xs-最大於等於576
+@media only screen and (max-width: 576px) {
+    body {
+        .wrapper {
+
+            // ========================= 首頁 start =========================
+            // 播放區
+            .header-section {
+                .nav-bar {
+                    .lang {
+                        padding: 0 0 0 0;
+                    }
+                }
+            }
+
+            // 最新消息區
+            .news-section {
+                &__frame {
+                    &-title {
+                        padding-top: 0;
+                        padding-left: 0;
+
+                        img {
+                            width: 30%;
+                        }
+                    }
+
+                    &-video-group {
+                        margin-top: 0;
+                        margin-left: 0;
+                        padding: 5vw;
+                    }
+
+                    &-text-title {
+                        font-size: 1rem;
+                        margin-top: 0;
+                        font-weight: bolder;
+                    }
+
+                    &-text-content {
+                        padding: 5vw;
+
+                        p {
+                            &:nth-child(1) {
+                                padding: 2rem 0;
+                                letter-spacing: 0.15rem;
+                                font-size: 1.3rem;
+                            }
+
+                            &:nth-child(2) {
+                                padding-right: 25vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 獲獎區
+            .certificate-section {
+                background-size: 100% 100%;
+                padding: 30vh 15vw;
+
+                &-description {
+                    p {
+                        overflow: scroll;
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            // 賽事區
+            // .race-team-section {
+            //   &__photo {
+            //     div {
+            //       margin-bottom: 15px;
+            //       img {
+            //         max-height: 100%;
+            //         max-width: 100%;
+            //       }
+            //     }
+            //   }
+            // }
+            // ========================= 首頁 end =========================
+
+            // ========================= 關於我們 start =========================
+
+            // ========================= 關於我們 end ===========================
+
+            // 共用頁尾
+            .footer-section {
+                &-contact-us {
+                    &__info {
+                        padding: 15% 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 共用網頁主體 */
+// 只要寬高比大於等於16/9，就會執行
+@media (min-aspect-ratio: 16/9) {
+    body {
+        .wrapper {
+
+            // 播放區
+            .header-section {
+
+                // 影片區
+                .back-video {
+                    width: 100vw;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+// 只要寬高比小於等於16/9，就會執行
+@media (max-aspect-ratio: 16/9) {
+    body {
+        .wrapper {
+
+            // 播放區
+            .header-section {
+
+                // 影片區
+                .back-video {
+                    width: auto;
+                    height: 100vh;
+                }
+            }
+        }
+    }
+}

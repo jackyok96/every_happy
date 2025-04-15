@@ -1,0 +1,17 @@
+//==================================================
+// slick setting
+//==================================================
+.slick-slide.slick-center {
+    transform: scale(1.2);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 79px;
+}
+
+.slick-prev,
+.slick-next {
+    width: 47px;
+    height: 70px;
+}
