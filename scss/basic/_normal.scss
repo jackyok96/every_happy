@@ -1,3 +1,4 @@
+@use 'varsetting' as *;
 //==================================================
 // global settings
 //==================================================
@@ -21,10 +22,8 @@
 }
 
 body {
-    color: #000;
+    color: #fff;
     font-size: 16px;
-    font-family: $web_font_noto;
-    //font-family: $web_font_outfit;
     line-height: 1.5;
     margin: 0;
     overflow-x: hidden;
@@ -113,7 +112,7 @@ form {
 input:not([type="radio"]):not([type="checkbox"]),
 textarea,
 select {
-    color: #000;
+    color: #fff;
     font-size: 16px;
     font-family: 'Noto Sans TC', sans-serif;
     letter-spacing: 1px;
@@ -166,4 +165,24 @@ input[type="number"] {
 
 .break-all {
     word-break: break-all;
+}
+
+//共用菜單
+.offcanvas-body {
+    ul {
+        li {
+            list-style: none;
+
+            a {
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: #000000;
+                line-height: 2.5rem;
+
+                &:hover {
+                    color: rgb(255, 208, 0);
+                }
+            }
+        }
+    }
 }

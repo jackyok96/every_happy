@@ -1,3 +1,6 @@
+//==================================================
+// view point setting
+//==================================================
 
 // 中型螢幕-xxl-小於1920
 @media only screen and (max-width: 1920px) {
@@ -67,9 +70,6 @@
             }
 
             // 產品區
-            .products-section {
-                @include section_public;
-            }
 
             // 賽事區
             // .race-team-section {
