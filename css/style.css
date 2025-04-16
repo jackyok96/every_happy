@@ -508,6 +508,52 @@ body .wrapper .login__select-custom .options.active {
 body .wrapper .login__select-custom .options .sumbit_value {
   color: #000;
 }
+body .wrapper .login__member-account {
+  position: relative;
+}
+body .wrapper .login__member-account-warning {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: #7e7e7e;
+  font-size: 0.9rem;
+}
+body .wrapper .login__member-password {
+  position: relative;
+}
+body .wrapper .login__member-password-eye {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+body .wrapper .login__member-password-warning {
+  position: absolute;
+  top: 12px;
+  right: 40px;
+  color: #7e7e7e;
+  font-size: 0.9rem;
+}
+body .wrapper .login__member-auth {
+  position: relative;
+}
+body .wrapper .login__member-auth-bg {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  text-align: center;
+  line-height: 23pt;
+  width: 74px;
+  height: 30px;
+  display: block;
+  background: url("../images/code_bg.png") no-repeat center center/cover;
+}
+body .wrapper .login__member-auth-warning {
+  position: absolute;
+  top: 12px;
+  right: 90px;
+  color: #7e7e7e;
+  font-size: 0.9rem;
+}
 body .wrapper .login__member input {
   margin-bottom: 15px;
   border-radius: 48px;
