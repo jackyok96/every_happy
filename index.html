@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登入頁面</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"
+        integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginSelectCustom = document.querySelector(".login__select-custom");
+            const selected = loginSelectCustom.querySelector(".selected");
+            const options = loginSelectCustom.querySelector(".options");
+            const hiddenInput = loginSelectCustom.querySelector(".sumbit_value");
+
+            // 切換下拉選單顯示/隱藏
+            selected.addEventListener("click", function (e) {
+                e.stopPropagation();
+                options.classList.toggle("active");
+            });
+
+            // 點選選項，更新畫面與隱藏欄位
+            const optionItems = options.querySelectorAll("li");
+            optionItems.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    const img = item.querySelector("img").src;
+                    const text = item.textContent.trim();
+                    const value = item.dataset.value;
+
+                    selected.querySelector("img").src = img;
+                    selected.querySelector("span").textContent = text;
+                    hiddenInput.value = value;
+
+                    options.classList.remove("active");
+                });
+            });
+
+            // 點擊外部時關閉選單
+            document.addEventListener("click", function () {
+                options.classList.remove("active");
+            });
+        });
+    </script>
+
 </head>
+
 <body>
     <div class="wrapper">
         <div class="container login">
@@ -17,11 +59,28 @@
                         <img src="images/logo.png" alt="">
                     </div>
                     <div class="login__select d-flex justify-content-center">
-                        <select class="form-control w-50 my-3 dropdown-toggle login__select-lang" name="">
-                            <option class="option-1" value="">繁體中文</option>
-                            <option value="">English</option>
-                            <option value="">日本語</option>
-                        </select>
+                        <div class="login__select-custom">
+                            <div class="selected">
+                                <img src="../images/flag_TW.png" alt="繁中" />
+                                <span>繁體中文</span>
+                            </div>
+                            <ul class="options">
+                                <li data-value="zh">
+                                    <img src="../images/flag_TW.png" alt="繁中" />
+                                    繁體中文
+                                </li>
+                                <li data-value="en">
+                                    <img src="../images/flag_USA.png" alt="EN" />
+                                    English
+                                </li>
+                                <li data-value="jp">
+                                    <img src="../images/flag_JP.png" alt="日文" />
+                                    日本語
+                                </li>
+                            </ul>
+                            <!-- 隱藏欄位：實際送出語言值 -->
+                            <input style="color: #000;" class="sumbit_value" type="hidden" name="lang" value="zh" />
+                        </div>
                     </div>
                     <div class="login__member">
                         <input type="text" class="form-control login__member-account" placeholder="請輸入會員帳號">
@@ -45,4 +104,5 @@
         </div>
     </div>
 </body>
+
 </html>

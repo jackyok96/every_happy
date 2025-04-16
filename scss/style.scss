@@ -21,23 +21,81 @@ body {
                 text-align: center;
             }
 
-            &__select {
-                &-lang {
+            &__select-custom {
+                margin: 20px 0;
+                position: relative;
+                width: 220px;
+                font-family: Arial, sans-serif;
+                user-select: none;
+                cursor: pointer;
+              
+                .selected {
+                  background-color: #000;
+                  border: 2px solid #7f602b;
+                  border-radius: 48px;
+                  padding: 10px 20px;
+                  color: #fff;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  transition: background-color 0.3s ease;
+              
+                  img {
+                    width: 24px;
+                    height: auto;
+                  }
+              
+                  span {
+                    font-size: 16px;
+                  }
+              
+                  &:after {
+                    content: '∨';
+                    margin-left: auto;
+                    font-size: 14px;
+                  }
+                }
+              
+                .options {
+                  position: absolute;
+                  top: calc(100% + 5px);
+                  left: 0;
+                  right: 0;
+                  background: #1c1c1c;
+                  border: 2px solid #7f602b;
+                  border-radius: 16px;
+                  z-index: 10;
+                  display: none;
+                  flex-direction: column;
+                  overflow: hidden;
+              
+                  li {
+                    padding: 10px 20px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
                     color: #fff;
-                    border: 2px solid #7f602b;
-                    background: #000;
-                    border-radius: 48px;
-                }
+                    transition: background-color 0.2s ease;
+              
+                    img {
+                      width: 24px;
+                      height: auto;
+                    }
+              
+                    &:hover {
+                      background-color: #333;
+                    }
+                  }
+              
+                  &.active {
+                    display: flex;
+                  }
 
-                option {
-                    height: 25px;
-                    text-align: center;
+                  .sumbit_value {
+                    color: #000;
+                  }
                 }
-
-                .option-1 {
-                    background-image: url('../images/flag_TW.png');
-                }
-            }
+              }
 
             &__member {
                 input {
@@ -71,6 +129,7 @@ body {
 
                     &[type=checkbox] {
                         display: none;
+
                         &+span {
                             display: inline-block;
                             padding-left: 26px;
@@ -78,8 +137,9 @@ body {
                             user-select: none;
                             background: url('../images/gogo_none.png') no-repeat 0 0 / 21%;
                         }
+
                         &:checked {
-                            &+span{
+                            &+span {
                                 // border: 1px solid #000;
                                 background: url('../images/gogo.png') no-repeat 0 0 / 21%;
                             }
@@ -98,6 +158,10 @@ body {
 
                     &:hover {
                         box-shadow: 0 0 25px #fff;
+                    }
+
+                    &:active {
+                        background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
                     }
                 }
             }
