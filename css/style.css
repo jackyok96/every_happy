@@ -431,6 +431,22 @@ input[type=number] {
     height: 100vh;
   }
 }
+#forgetModalToggle, #forgetModalToggle2 {
+  color: #000;
+}
+#forgetModalToggle .modal-header, #forgetModalToggle2 .modal-header {
+  background-color: #ccc;
+}
+#forgetModalToggle input, #forgetModalToggle2 input {
+  color: #000;
+}
+#forgetModalToggle input::-moz-placeholder, #forgetModalToggle2 input::-moz-placeholder {
+  color: #ccc;
+}
+#forgetModalToggle input::placeholder, #forgetModalToggle2 input::placeholder {
+  color: #ccc;
+}
+
 /* 共用網頁主體 */
 body {
   background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat;
