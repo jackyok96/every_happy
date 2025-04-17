@@ -1,0 +1,12 @@
+#forgetModalToggle, #forgetModalToggle2 {
+    .modal-header {
+        background-color: #ccc;
+    }
+    color: #000;
+    input {
+        color: #000;
+        &::placeholder {
+            color: #ccc
+        }
+    }
+}
