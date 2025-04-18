@@ -18,6 +18,8 @@
             const selected = loginSelectCustom.querySelector(".selected");
             const options = loginSelectCustom.querySelector(".options");
             const hiddenInput = loginSelectCustom.querySelector(".sumbit_value");
+            const password_eye = document.querySelector('.login__member-password-eye');            
+            const password_code = document.querySelector('.login__member-password-code');            
 
             // 切換下拉選單顯示/隱藏
             selected.addEventListener("click", function (e) {
@@ -47,13 +49,14 @@
             });
 
             //點擊圖片換圖
-            let password_eye = document.querySelector('.login__member-password-eye');
             password_eye.onclick = () => {
                 let mySrc = password_eye.getAttribute('src');
                 if(mySrc == "images/eye_op.png"){
                     password_eye.setAttribute('src','images/eye_ed.png');
+                    password_code.setAttribute('type','password');
                 }else {
                     password_eye.setAttribute('src','images/eye_op.png');
+                    password_code.setAttribute('type','text');
                 }
             }
 
