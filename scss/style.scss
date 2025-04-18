@@ -202,7 +202,8 @@ body {
           border-radius: 48px;
           color: #fff;
           background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
-
+          font-weight: bold;
+          font-size: 1.3rem;
           &:hover {
             box-shadow: 0 0 25px #fff;
           }
