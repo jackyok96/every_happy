@@ -45,6 +45,18 @@
             document.addEventListener("click", function () {
                 options.classList.remove("active");
             });
+
+            //點擊圖片換圖
+            let password_eye = document.querySelector('.login__member-password-eye');
+            password_eye.onclick = () => {
+                let mySrc = password_eye.getAttribute('src');
+                if(mySrc == "images/eye_op.png"){
+                    password_eye.setAttribute('src','images/eye_ed.png');
+                }else {
+                    password_eye.setAttribute('src','images/eye_op.png');
+                }
+            }
+
         });
     </script>
 
