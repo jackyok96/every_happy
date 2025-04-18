@@ -150,24 +150,6 @@ body {
           background-color: #000;
           padding: 8px 10px 8px 50px;
 
-          &:nth-child(1) {
-            background-image: url('../images/icon_id.png');
-            background-repeat: no-repeat;
-            background-position: 15px 5px;
-          }
-
-          &:nth-child(2) {
-            background-image: url('../images/icon_pw.png');
-            background-repeat: no-repeat;
-            background-position: 15px 5px;
-          }
-
-          &:nth-child(3) {
-            background-image: url('../images/icon_key.png');
-            background-repeat: no-repeat;
-            background-position: 15px 10px;
-          }
-
           &::placeholder {
             color: #ccc;
           }
@@ -190,6 +172,25 @@ body {
               }
             }
           }
+        }
+
+
+        &-account-code {
+          background-image: url('../images/icon_id.png');
+          background-repeat: no-repeat;
+          background-position: 15px 5px;
+        }
+
+        &-password-code {
+          background-image: url('../images/icon_pw.png');
+          background-repeat: no-repeat;
+          background-position: 15px 5px;
+        }
+
+        &-auth-code {
+          background-image: url('../images/icon_key.png');
+          background-repeat: no-repeat;
+          background-position: 15px 10px;
         }
 
         &-password-section {
