@@ -19,6 +19,8 @@
             border-color: transparent;
             h5 {
                 width: 100%;
+                font-size: 1.5rem;
+                font-weight: bold;
             }
             .btn-close {
                 filter: invert(100%);
@@ -36,6 +38,7 @@
         &-btn {
             color: #fff;
             font-weight: bold;
+            font-size: 1.1rem;
             background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
             border-radius: 48px;
             width: 100px;
