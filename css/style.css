@@ -497,7 +497,7 @@ input[type=number] {
 
 /* 共用網頁主體 */
 body {
-  background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat;
+  background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center/cover;
 }
 body .wrapper .login .row {
   height: 100vh;
