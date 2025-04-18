@@ -461,6 +461,7 @@ input[type=number] {
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
+  padding-left: 24px;
 }
 #forgetModalToggle .modal-header .btn-close,
 #forgetModalToggle2 .modal-header .btn-close {
