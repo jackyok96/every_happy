@@ -431,20 +431,47 @@ input[type=number] {
     height: 100vh;
   }
 }
-#forgetModalToggle, #forgetModalToggle2 {
+#forgetModalToggle .modal-content, #forgetModalToggle2 .modal-content {
+  border-width: 6px;
+  border-color: rgba(83, 59, 14, 0.5);
   color: #000;
+  background-color: transparent;
+}
+#forgetModalToggle .modal-content input, #forgetModalToggle2 .modal-content input {
+  background-color: #1b1815;
+  color: #9f9f9f;
+}
+#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder {
+  color: #ccc;
+}
+#forgetModalToggle .modal-content input::placeholder, #forgetModalToggle2 .modal-content input::placeholder {
+  color: #ccc;
 }
 #forgetModalToggle .modal-header, #forgetModalToggle2 .modal-header {
-  background-color: #ccc;
+  background: linear-gradient(to top, #523a0d, #463109, #533b0e);
+  color: #fff;
+  border-color: transparent;
 }
-#forgetModalToggle input, #forgetModalToggle2 input {
-  color: #000;
+#forgetModalToggle .modal-header h5, #forgetModalToggle2 .modal-header h5 {
+  width: 100%;
 }
-#forgetModalToggle input::-moz-placeholder, #forgetModalToggle2 input::-moz-placeholder {
-  color: #ccc;
+#forgetModalToggle .modal-header .btn-close, #forgetModalToggle2 .modal-header .btn-close {
+  filter: invert(100%);
 }
-#forgetModalToggle input::placeholder, #forgetModalToggle2 input::placeholder {
-  color: #ccc;
+#forgetModalToggle .modal-body, #forgetModalToggle2 .modal-body {
+  color: #fff;
+  background-color: #2e2a21;
+}
+#forgetModalToggle .modal-footer, #forgetModalToggle2 .modal-footer {
+  background: linear-gradient(to top, #221e15, #2e2a21);
+  border-color: rgba(83, 59, 14, 0.5);
+}
+#forgetModalToggle .modal-btn, #forgetModalToggle2 .modal-btn {
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
+  border-radius: 48px;
+  width: 100px;
 }
 
 /* 共用網頁主體 */
@@ -617,6 +644,8 @@ body .wrapper .login__member-password-section {
   padding: 20px 10px;
 }
 body .wrapper .login__member-btn {
+  line-height: 2rem;
+  font-size: bold;
   border-radius: 48px;
   color: #fff;
   background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);

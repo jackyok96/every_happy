@@ -1,12 +1,44 @@
 #forgetModalToggle, #forgetModalToggle2 {
-    .modal-header {
-        background-color: #ccc;
-    }
-    color: #000;
-    input {
-        color: #000;
-        &::placeholder {
-            color: #ccc
+    .modal {
+        &-content{
+            border-width: 6px;
+            border-color: rgba($color: #533b0e, $alpha: 0.5);
+            color: #000;
+            background-color: transparent;
+            input {
+                background-color: #1b1815;
+                color: #9f9f9f;
+                &::placeholder {
+                    color: #ccc;
+                }
+            }
+        }
+        &-header {
+            background: linear-gradient(to top, #523a0d, #463109, #533b0e);
+            color: #fff;
+            border-color: transparent;
+            h5 {
+                width: 100%;
+            }
+            .btn-close {
+                filter: invert(100%);
+            }
+        }
+        &-body {
+            color: #fff;
+            background-color: #2e2a21;
+        }
+        &-footer {
+            background: linear-gradient(to top, #221e15, #2e2a21);
+            border-color: rgba($color: #533b0e, $alpha: 0.5);
+            
+        }
+        &-btn {
+            color: #fff;
+            font-weight: bold;
+            background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
+            border-radius: 48px;
+            width: 100px;
         }
     }
 }
