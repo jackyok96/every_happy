@@ -18,6 +18,8 @@
             const selected = loginSelectCustom.querySelector(".selected");
             const options = loginSelectCustom.querySelector(".options");
             const hiddenInput = loginSelectCustom.querySelector(".sumbit_value");
+            const password_eye = document.querySelector('.login__member-password-eye');            
+            const password_code = document.querySelector('.login__member-password-code');            
 
             // 切換下拉選單顯示/隱藏
             selected.addEventListener("click", function (e) {
@@ -45,6 +47,19 @@
             document.addEventListener("click", function () {
                 options.classList.remove("active");
             });
+
+            //點擊圖片換圖
+            password_eye.onclick = () => {
+                let mySrc = password_eye.getAttribute('src');
+                if(mySrc == "images/eye_op.png"){
+                    password_eye.setAttribute('src','images/eye_ed.png');
+                    password_code.setAttribute('type','password');
+                }else {
+                    password_eye.setAttribute('src','images/eye_op.png');
+                    password_code.setAttribute('type','text');
+                }
+            }
+
         });
     </script>
 
@@ -61,20 +76,20 @@
                     <div class="login__select d-flex justify-content-center">
                         <div class="login__select-custom">
                             <div class="selected">
-                                <img src="../images/flag_TW.png" alt="繁中" />
+                                <img src="images/flag_TW.png" alt="繁中" />
                                 <span>繁體中文</span>
                             </div>
                             <ul class="options">
                                 <li data-value="zh">
-                                    <img src="../images/flag_TW.png" alt="繁中" />
+                                    <img src="images/flag_TW.png" alt="繁中" />
                                     繁體中文
                                 </li>
                                 <li data-value="en">
-                                    <img src="../images/flag_USA.png" alt="EN" />
+                                    <img src="images/flag_USA.png" alt="EN" />
                                     English
                                 </li>
                                 <li data-value="jp">
-                                    <img src="../images/flag_JP.png" alt="日文" />
+                                    <img src="images/flag_JP.png" alt="日文" />
                                     日本語
                                 </li>
                             </ul>
