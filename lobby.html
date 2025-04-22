@@ -1,22 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大廳</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"
+        integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var triggerEl = document.querySelector("#navId a");
+        bootstrap.Tab.getInstance(triggerEl).show();
+    </script>
 </head>
-<body>
+
+<body class="lobby">
     <div class="wrapper">
-        <div class="containter-full">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col col-md-2"></div>
-                <div class="col-md-10">
+                <!-- 側邊欄 -->
+                <div class="col-md-1 aside">
+                    <div class="img-group text-center">
+                        <!-- logo 圖 -->
+                        <img class="img-fluid m-auto aside__logo" alt="Bootstrap Image Preview" src="images/logo.png" />
+                        <!-- 人像圖 -->
+                        <img class="img-fluid rounded-top m-auto aside__user" src="images/people_pic01.png" alt="" />
+                    </div>
+                    <!-- 登入區 -->
                     <div class="row">
-                        <div class="col col-md-8">
-                            
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control userName" id="userName" />
+                                <input type="number" class="form-control userMoney" id="userMoney" />
+                            </div>
+                            <button type="button" class="form-control btn btn-success"
+                                style="background: url('images/room_blue_btn.png') no-repeat center center / cover;">
+                                經典廳
+                            </button>
+                            <button type="button" class="form-control btn btn-success"
+                                style="background: url('images/room_gray_btn.png') no-repeat center center / cover;">
+                                多桌廳
+                            </button>
                         </div>
-                        <div class="col-md-4">
-                            
+                    </div>
+                    <div class="row rank">
+                        <div class="col-md-12 d-flex flex-column align-items-center">
+                            <!-- 排行榜 -->
+                            <img alt="Bootstrap Image Preview" src="images/cup.png" />
+                            <!-- Nav tabs -->
+                            <img src="images/rank.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 主選單 -->
+                <div class="col-md-11 main">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row main__header">
+                                <div class="col-md-12 d-flex justify-content-end main__header-screen-btn">
+                                    <a class="d-block" href="#">
+                                        <img src="images/fullscreen_btn.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-12 main__header-marquee">
+                                    <a class="main__header-marquee-checkbox" href="#">
+                                        <img class="img-fluids" src="images/check_btn.png" alt="">
+                                    </a>
+                                    <div class="main__header-music d-flex">
+                                        <!-- 聲音 -->
+                                        <img class=" main__header-music-voice" src="images/marquee_icon.png" alt="">
+                                        <!-- 跑馬燈 -->
+                                        <marquee behavior="scroll" direction="right">
+                                            歡迎光臨 / 歡迎光臨 / 歡迎光臨 / 歡迎光臨 / 歡迎光臨 /歡迎光臨 /歡迎光臨 /沒事不要進來，進來請下注才可進來歡迎光臨 /
+                                            歡迎光臨 /
+                                            歡迎光臨事不要進來，進來請下
+                                        </marquee>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row my-3">
+                                <!-- 路珠圖清單 -->
+                                <div class="col-md-10 history scrollbar">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img class="img-fluid w-100" alt="Bootstrap Image Preview"
+                                                src="images/face_pepole.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 菜單按鈕 -->
+                                <div class="col-md-2">
+                                    <ol class="menu">
+                                        <li class="list-item">
+                                            <a href="#">切換路圖</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">遊戲報表</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">音量設置</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">語言設置</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">系統公告</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">遊戲規則</a>
+                                        </li>
+                                        <li class="list-item">
+                                            <a href="#">登出</a>
+                                        </li>
+                                    </ol>
+                                    <!-- 聊天室 -->
+                                    <div class="chat_room">
+                                        <img src="images/chat_room.png" class="img-fluid rounded-top" alt="" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -24,4 +196,5 @@
         </div>
     </div>
 </body>
+
 </html>
