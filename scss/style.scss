@@ -236,7 +236,7 @@ body {
     background: #0f0b00;
 
     .aside {
-      background: linear-gradient(to bottom,#413b2f 0%,#2e2721 10%, #2e2721 100%);
+      background: linear-gradient(to bottom, #413b2f 0%, #2e2721 10%, #2e2721 100%);
 
       &__logo {
         display: block;
@@ -244,20 +244,44 @@ body {
         padding: 15px 10px 25px 10px;
         border-bottom: 5px groove #66584b;
       }
+
       &__user {
         padding: 10px 0;
       }
-      input {
-        color: #fff;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: 2px solid #7f602b;
-        background-color: #000;
-        padding: 0;
+
+      &__member {
+        &-label {
+          position: relative;
+
+          img {
+            position: absolute;
+            right: 5px;
+            top: 40%;
+            transform: translate(0, -50%)
+          }
+
+          input {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #7f602b;
+            background-color: #000;
+            padding-right: 33px;
+
+            &.userName {
+              color: #fff;
+            }
+
+            &.userMoney {
+              color: #eed4a8;
+            }
+          }
+        }
       }
+
       button {
         margin-bottom: 10px;
       }
+
       .rank {
         margin-top: 40%;
       }
@@ -300,18 +324,19 @@ body {
             width: 7px;
             height: 4px;
           }
-  
+
           &::-webkit-scrollbar-track {
             background-color: #352b1b;
             border-radius: 10px;
             margin: 0 130px;
           }
-  
+
           &::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background: linear-gradient(to top, #c09e56, #442c04, #c09e56);
           }
         }
+
         height: 83vh;
         overflow-y: scroll;
       }
@@ -319,18 +344,31 @@ body {
       .menu {
         li {
           &.list-item {
-            text-align: center;
+            border: 1px solid #eed4a8;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0px -50px 36px -58px #fff inset;
+
+            &:hover {
+              background: linear-gradient(to bottom, #3f2606 0%, #5a4225 100%);
+              box-shadow: 0 0 10px #fff;
+            }
 
             a {
-              display: block;
-              margin-bottom: 10px;
-              border-radius: 5px;
+              // display: block;
+              width: 120px;
+              height: 30px;
+              margin: 5px 0;
               color: #eed4a8;
-              border: 1px solid #eed4a8;
-              line-height: 2.1rem;
+              line-height: 2rem;
 
-              &:hover {
-                color: #fff;
+
+              img {
+                display: block;
+                float: left;
+                margin-right: 20px;
               }
             }
           }

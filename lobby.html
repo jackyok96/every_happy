@@ -15,6 +15,31 @@
     <script>
         var triggerEl = document.querySelector("#navId a");
         bootstrap.Tab.getInstance(triggerEl).show();
+
+        function toggleFullScreen(elem) {
+            // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+            if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+                if (elem.requestFullScreen) {
+                    elem.requestFullScreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullScreen) {
+                    elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }        
     </script>
 </head>
 
@@ -33,9 +58,19 @@
                     <!-- 登入區 -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <input type="text" class="form-control userName" id="userName" />
-                                <input type="number" class="form-control userMoney" id="userMoney" />
+                            <div class="form-group aside__member">
+                                <label for="userName" class="aside__member-label">
+                                    <a href="#">
+                                        <img src="images/icon_name.png" alt="">
+                                    </a>
+                                    <input type="text" class="form-control userName" id="userName" />
+                                </label>
+                                <label for="userMoney" class="aside__member-label">
+                                    <a href="#">
+                                        <img src="images/icon_reload.png" alt="">
+                                    </a>
+                                    <input type="number" class="form-control userMoney" id="userMoney" />
+                                </label>
                             </div>
                             <button type="button" class="form-control btn btn-success"
                                 style="background: url('images/room_blue_btn.png') no-repeat center center / cover;">
@@ -63,7 +98,7 @@
                         <div class="col-md-12">
                             <div class="row main__header">
                                 <div class="col-md-12 d-flex justify-content-end main__header-screen-btn">
-                                    <a class="d-block" href="#">
+                                    <a class="d-block" href="#" onclick="toggleFullScreen(document.body)">
                                         <img src="images/fullscreen_btn.png" alt="">
                                     </a>
                                 </div>
@@ -87,72 +122,60 @@
                             <div class="row my-3">
                                 <!-- 路珠圖清單 -->
                                 <div class="col-md-10 history scrollbar">
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                    <div class="row row-cols-2 g-2">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col">
                                             <img class="img-fluid w-100" alt="Bootstrap Image Preview"
                                                 src="images/face_pepole.png" />
                                         </div>
@@ -162,25 +185,25 @@
                                 <div class="col-md-2">
                                     <ol class="menu">
                                         <li class="list-item">
-                                            <a href="#">切換路圖</a>
+                                            <a href="#"><img src="images/roadsw_btn.png" alt=""><p>切換路圖</p></a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">遊戲報表</a>
+                                            <a href="#"><img src="images/icon_paper.png" alt="">遊戲報表</a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">音量設置</a>
+                                            <a href="#"><img src="images/sound_btn.png" alt="">音量設置</a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">語言設置</a>
+                                            <a href="#"><img src="images/languge_btn.png" alt="">語言設置</a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">系統公告</a>
+                                            <a href="#"><img src="images/bell_btn.png" alt="">系統公告</a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">遊戲規則</a>
+                                            <a href="#"><img src="images/game_btn.png" alt="">遊戲規則</a>
                                         </li>
                                         <li class="list-item">
-                                            <a href="#">登出</a>
+                                            <a href="#"><img src="images/logout_icon.png" alt="">登出</a>
                                         </li>
                                     </ol>
                                     <!-- 聊天室 -->

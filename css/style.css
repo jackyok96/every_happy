@@ -478,13 +478,27 @@ body.lobby .aside__logo {
 body.lobby .aside__user {
   padding: 10px 0;
 }
-body.lobby .aside input {
-  color: #fff;
+body.lobby .aside__member-label {
+  position: relative;
+}
+body.lobby .aside__member-label img {
+  position: absolute;
+  right: 5px;
+  top: 40%;
+  transform: translate(0, -50%);
+}
+body.lobby .aside__member-label input {
   margin-bottom: 10px;
   border-radius: 5px;
   border: 2px solid #7f602b;
   background-color: #000;
-  padding: 0;
+  padding-right: 33px;
+}
+body.lobby .aside__member-label input.userName {
+  color: #fff;
+}
+body.lobby .aside__member-label input.userMoney {
+  color: #eed4a8;
 }
 body.lobby .aside button {
   margin-bottom: 10px;
@@ -533,16 +547,26 @@ body.lobby .main .history.scrollbar::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, #c09e56, #442c04, #c09e56);
 }
 body.lobby .main .menu li.list-item {
-  text-align: center;
+  border: 1px solid #eed4a8;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px -50px 36px -58px #fff inset;
+}
+body.lobby .main .menu li.list-item:hover {
+  background: linear-gradient(to bottom, #3f2606 0%, #5a4225 100%);
+  box-shadow: 0 0 10px #fff;
 }
 body.lobby .main .menu li.list-item a {
-  display: block;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  margin: 5px 0;
   color: #eed4a8;
-  border: 1px solid #eed4a8;
-  line-height: 2.1rem;
+  line-height: 2rem;
 }
-body.lobby .main .menu li.list-item a:hover {
-  color: #fff;
+body.lobby .main .menu li.list-item a img {
+  display: block;
+  float: left;
+  margin-right: 20px;
 }
