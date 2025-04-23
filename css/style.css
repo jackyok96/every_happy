@@ -280,6 +280,54 @@ input[type=number] {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 
+.marquee-switch {
+  display: block;
+  float: left;
+  margin-right: 30px;
+}
+.marquee-switch__label {
+  position: relative;
+}
+.marquee-switch__label-text {
+  color: #fff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.marquee-switch__label-btn-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #000;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.13) inset;
+}
+.marquee-switch__label-btn-box .btn {
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-radius: 40%;
+  background: linear-gradient(to bottom, #fed06d 0%, #a2781d 41%, #a3791e 44%, #ffd16e 100%);
+  margin-left: 0;
+  /*動畫從ml為0開始*/
+  transition: 0.5s;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.marquee-switch__label-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.marquee-switch__label-checkbox:checked + .marquee-switch__label-btn-box .btn {
+  margin-left: 60px;
+}
+
 body.login {
   background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center/cover;
 }
@@ -512,21 +560,21 @@ body.lobby .main__header-screen-btn {
 body.lobby .main__header-marquee {
   color: #e9cdaf;
   background-color: #221d15;
-  padding: 10px;
+  padding: 20px;
   position: relative;
 }
 body.lobby .main__header-marquee-checkbox {
   position: absolute;
   left: 3%;
 }
-body.lobby .main__header-music {
-  margin: auto;
-  width: 70%;
-  padding: 5px;
+body.lobby .main__header-marquee-music {
+  display: block;
+  width: 80%;
+  padding: 10px;
   border-radius: 48px;
   background: #191513;
 }
-body.lobby .main__header-music-voice {
+body.lobby .main__header-marquee-music-voice {
   padding-right: 10px;
 }
 body.lobby .main .history {
