@@ -42,6 +42,7 @@
         }        
     </script>
 </head>
+<!-- 大廳區 -->
 
 <body class="lobby">
     <div class="wrapper">
@@ -71,24 +72,243 @@
                                     </a>
                                     <input type="number" class="form-control userMoney" id="userMoney" />
                                 </label>
-                                <button type="button" class="form-control btn btn-success"
-                                    style="background: url('images/room_blue_btn.png') no-repeat center center / cover;">
+                                <button type="button" class="form-control btn aside__member-btn-classic">
                                     經典廳
                                 </button>
-                                <button type="button" class="form-control btn btn-success"
-                                    style="background: url('images/room_gray_btn.png') no-repeat center center / cover;">
+                                <button type="button" class="form-control btn aside__member-btn-multiple">
                                     多桌廳
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="row rank">
-                        <div class="col-md-12 d-flex flex-column align-items-center">
-                            <!-- 排行榜 -->
-                            <img alt="Bootstrap Image Preview" src="images/cup.png" />
-                            <!-- Nav tabs -->
-                            <img src="images/rank.png" alt="">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="rank">
+                                <!-- 排行榜 -->
+                                <div class="rank__image d-flex justify-content-center pb-4">
+                                    <img alt="Bootstrap Image Preview" src="images/cup.png" />
+                                </div>
+                                <!-- Nav tabs -->
+                                <div class="rank__body">
+                                    <ul class="nav d-flex flex-nowrap rank__body-tabs" id="myTab" role="tablist">
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn active" id="home-tab"
+                                                data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+                                                aria-controls="home" aria-selected="true">
+                                                玩家榜
+                                            </button>
+                                        </li>
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn" id="profile-tab"
+                                                data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+                                                aria-controls="profile" aria-selected="false">
+                                                荷官榜
+                                            </button>
+                                        </li>
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn" id="messages-tab"
+                                                data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab"
+                                                aria-controls="messages" aria-selected="false">
+                                                打賞榜
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-around rank__body-badge">
+                                        <button
+                                            class="btn badge rounded-pill bg-danger p-2 w-25 rank__body-badge__red">日榜</button>
+                                        <button
+                                            class="btn badge rounded-pill bg-warning p-2 w-25 rank__body-badge__yellow">周榜</button>
+                                    </div>
 
+                                    <!-- Tab panes -->
+                                    <div class="tab-content d-flex justify-content-center rank__body-contents">
+                                        <div class="tab-pane active" id="home" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="messages" role="tabpanel"
+                                            aria-labelledby="messages-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +332,10 @@
                                             <span class="marquee-switch__label-btn-box">
                                                 <span class="btn"></span>
                                             </span>
-                                            <span class="marquee-switch__label-text"><p>桌次</p> <p>好路</p></span>
+                                            <span class="marquee-switch__label-text">
+                                                <p>桌次</p>
+                                                <p>好路</p>
+                                            </span>
                                         </label>
                                     </div>
 
