@@ -251,6 +251,7 @@ body {
       }
 
       &__member {
+        text-align: center;
         &-label {
           position: relative;
 
@@ -284,7 +285,7 @@ body {
       }
 
       .rank {
-        margin-top: 40%;
+        margin-top: 10px;
       }
     }
 

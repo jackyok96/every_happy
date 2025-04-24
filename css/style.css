@@ -526,6 +526,9 @@ body.lobby .aside__logo {
 body.lobby .aside__user {
   padding: 10px 0;
 }
+body.lobby .aside__member {
+  text-align: center;
+}
 body.lobby .aside__member-label {
   position: relative;
 }
@@ -552,7 +555,7 @@ body.lobby .aside button {
   margin-bottom: 10px;
 }
 body.lobby .aside .rank {
-  margin-top: 40%;
+  margin-top: 10px;
 }
 body.lobby .main__header-screen-btn {
   padding: 10px;
