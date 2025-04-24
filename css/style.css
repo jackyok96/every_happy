@@ -623,6 +623,7 @@ body.lobby .aside .rank__body-contents .tab-pane ul li {
   padding: 10px;
 }
 body.lobby .aside .rank__body-contents__numb {
+  padding: 0 2px;
   display: flex;
   align-items: center;
   font-size: 2rem;
@@ -640,6 +641,13 @@ body.lobby .aside .rank__body-contents__cup {
 }
 body.lobby .aside .rank__body-contents__cup img {
   min-width: 30px;
+}
+body.lobby .aside .rank__body-contents__info {
+  font-size: 1vw;
+}
+body.lobby .aside .rank__body-contents__info-name {
+  word-wrap: break-word;
+  word-break: break-all;
 }
 body.lobby .aside .rank__body-contents__info-money {
   word-wrap: break-word;
