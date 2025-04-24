@@ -51,7 +51,7 @@
 // 資訊標題
 @mixin info {
     height: 100px;
-    background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center / 100% 100%;
+    background: #000 url(./../images/coilover_drag_info_bg.png) no-repeat center / 100% 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@
         h3 {
             margin: 80px auto;
             width: 480px;
-            background: url(../images/coilover_circuit_title_bg.png) no-repeat left / 100% 100%;
+            background: url(./../images/coilover_circuit_title_bg.png) no-repeat left / 100% 100%;
             line-height: 4rem;
         }
 
