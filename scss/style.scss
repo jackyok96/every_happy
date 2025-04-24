@@ -424,7 +424,6 @@ body {
       }
 
       .history {
-
         height: 83vh;
       }
 
@@ -456,6 +455,29 @@ body {
                 display: block;
                 float: left;
                 margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &__contents{
+        &-chat-room {
+          &-title {
+            color: #fff;
+            height: 25px;
+            padding: 2px 0 0 5px;
+            background: #000 url('../images/chat_top.png') no-repeat center center / cover;
+          }
+          &-text {
+            border: 1px solid #eed4a8;
+            &-dl {
+              padding: 10px;
+              &-section {
+                // padding: 10px 10px 5px;
+                // font-size: 0.7rem;
+                // line-height: 30px;
+                background: #000 url('../images/talk frame.png') no-repeat left top / cover;
               }
             }
           }
