@@ -280,7 +280,7 @@ body {
             }
           }
         }
-        
+
         &-btn {
           &-classic {
             color: #fff;
@@ -288,7 +288,7 @@ body {
             height: 60px;
             background: url('../images/room_blue_btn.png') no-repeat center center / 100% 100%;
           }
-          
+
           &-multiple {
             color: #fff;
             height: 60px;
@@ -308,7 +308,8 @@ body {
             &-btn {
               color: #eed4a8;
               font-size: 1vw;
-              background: linear-gradient(to bottom, #f9e574 0%, #645b27 39%, #291d00 67%, #291d00 100%);
+              background: linear-gradient(to bottom, #f9e574 0%, #291d00 67%);
+
               &.active {
                 background: linear-gradient(to bottom, #f97474 0%, #290000 67%);
               }
@@ -323,11 +324,16 @@ body {
             margin: 10px 0;
             text-align: center;
 
+            .btn:hover {
+              color: #fff;
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+
             &__red {
               border: 1px solid #fc6b6b;
               background: linear-gradient(to top, #9d3030 0%, #580b0b 48%, #b33f3f 100%);
             }
-            
+
             &__yellow {
               border: 1px solid #fc6b6b;
               background: linear-gradient(to top, #9d5f30 0%, #582c0b 48%, #b37b3f 100%);
@@ -362,13 +368,14 @@ body {
               background-clip: text;
               -webkit-background-clip: text;
               color: transparent;
-              
+
             }
-            
+
             &__cup {
               display: flex;
               align-items: center;
               padding: 5px;
+
               img {
                 min-width: 30px;
               }
@@ -376,13 +383,15 @@ body {
 
             &__info {
               font-size: 1vw;
+
               &-name {
                 word-wrap: break-word;
-                word-break:break-all; 
+                word-break: break-all;
               }
+
               &-money {
                 word-wrap: break-word;
-                word-break:break-all; 
+                word-break: break-all;
               }
             }
           }
@@ -461,7 +470,7 @@ body {
         }
       }
 
-      &__contents{
+      &__contents {
         &-chat-room {
           &-title {
             color: #fff;
@@ -469,12 +478,37 @@ body {
             padding: 2px 0 0 5px;
             background: #000 url('../images/chat_top.png') no-repeat center center / cover;
           }
+
           &-text {
             border: 1px solid #eed4a8;
+
             &-dl {
+              height: 35vh;
               padding: 10px;
-              &-section {
-                background: #000 url('../images/talk frame.png') no-repeat left top / cover;
+              &-dt {
+                margin-bottom: 5px;
+              }
+              &-dd {
+                &-section {
+                  font-size: 1rem;
+                  padding: 5px 0 5px 8px;
+                  border-radius: 5px;
+                  word-wrap: break-word;
+                  background: #695c41 url('../images/talk frame.png') no-repeat left top / cover;
+                  position: relative;
+                  &::after {
+                    position: absolute;
+                    top: -10px;
+                    left: 5px;
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-bottom: 10px solid #695c41;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                  }
+                }
               }
             }
           }
