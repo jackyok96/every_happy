@@ -589,7 +589,7 @@ body.lobby .aside .rank__body {
 body.lobby .aside .rank__body-tabs-btn {
   color: #eed4a8;
   font-size: 1vw;
-  background: linear-gradient(to bottom, #f9e574 0%, #645b27 39%, #291d00 67%, #291d00 100%);
+  background: linear-gradient(to bottom, #f9e574 0%, #291d00 67%);
 }
 body.lobby .aside .rank__body-tabs-btn.active {
   background: linear-gradient(to bottom, #f97474 0%, #290000 67%);
@@ -600,6 +600,10 @@ body.lobby .aside .rank__body-tabs .nav-link {
 body.lobby .aside .rank__body-badge {
   margin: 10px 0;
   text-align: center;
+}
+body.lobby .aside .rank__body-badge .btn:hover {
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 body.lobby .aside .rank__body-badge__red {
   border: 1px solid #fc6b6b;
@@ -713,8 +717,29 @@ body.lobby .main__contents-chat-room-text {
   border: 1px solid #eed4a8;
 }
 body.lobby .main__contents-chat-room-text-dl {
+  height: 35vh;
   padding: 10px;
 }
-body.lobby .main__contents-chat-room-text-dl-section {
-  background: #000 url("../images/talk frame.png") no-repeat left top/cover;
+body.lobby .main__contents-chat-room-text-dl-dt {
+  margin-bottom: 5px;
+}
+body.lobby .main__contents-chat-room-text-dl-dd-section {
+  font-size: 1rem;
+  padding: 5px 0 5px 8px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  background: #695c41 url("../images/talk frame.png") no-repeat left top/cover;
+  position: relative;
+}
+body.lobby .main__contents-chat-room-text-dl-dd-section::after {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #695c41;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
 }
