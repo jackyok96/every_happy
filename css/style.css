@@ -626,6 +626,15 @@ body.lobby .aside .rank__body-contents .tab-pane ul li {
   border: 1px solid #5b460c;
   padding: 10px;
 }
+body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(1) {
+  box-shadow: inset 1px 10px 10px rgba(105, 92, 65, 0.8);
+}
+body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(2) {
+  box-shadow: inset 1px 10px 10px rgba(190, 190, 190, 0.8);
+}
+body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(3) {
+  box-shadow: inset 1px 10px 10px rgba(105, 0, 121, 0.8);
+}
 body.lobby .aside .rank__body-contents__numb {
   padding: 0 2px;
   display: flex;
