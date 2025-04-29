@@ -20,10 +20,31 @@
 
 // 大型手機-sm-最大於等於768
 @media only screen and (max-width: 768px) {
+    .aside {
+        &__member {
+            &-btn {
+                display: flex;
+            }
+        }
+    }
+    .main {
+        &__header {
+            &-marquee {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            &-screen-btn {
+                a {
+                    display: none !important;
+                }
+            }
+        }
+    }    
 }
 
 // 中型手機-xs-最大於等於576
 @media only screen and (max-width: 576px) {
+
 }
 
 /* 共用網頁主體 */
