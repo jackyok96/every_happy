@@ -215,6 +215,18 @@ input[type=number] {
     -webkit-transform: rotate(360deg);
   }
 }
+@media only screen and (max-width: 768px) {
+  .aside__member-btn {
+    display: flex;
+  }
+  .main__header-marquee {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main__header-screen-btn a {
+    display: none !important;
+  }
+}
 /* 共用網頁主體 */
 #forgetModalToggle .modal-content,
 #forgetModalToggle2 .modal-content {
