@@ -1,32 +1,38 @@
 .main {
     &__header {
+        background: linear-gradient(to bottom, #564f40 0%, #221e15 10%);
         &-screen-btn {
-          padding: 10px;
+            padding: 10px;
         }
 
         &-marquee {
-          color: #e9cdaf;
-          background-color: #221d15;
-          padding: 10px;
-          position: relative;
-
-          &-checkbox {
-            position: absolute;
-            left: 3%;
-          }
-
-          &-music {
-            display: block;
-            // width: 80%;
+            color: #e9cdaf;
+            background-color: #221d15;
             padding: 10px;
-            border-radius: 48px;
-            background: #191513;
+            position: relative;
 
-            &-voice {
-              padding-right: 10px;
+            &-checkbox {
+                position: absolute;
+                left: 3%;
+
             }
-          }
+            
+            &-music {
+                display: block;
+                padding: 10px;
+                border-radius: 48px;
+                background: #191513;
+                
+                &-voice {
+                    padding-right: 10px;
+                }
+            }
+        
+            &-group-btn {
+                li {
+                    padding: 10px;
+                }
+            }            
         }
-
-      }
+    }
 }

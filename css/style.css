@@ -452,6 +452,9 @@ input[type=number] {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 
+.main__header {
+  background: linear-gradient(to bottom, #564f40 0%, #221e15 10%);
+}
 .main__header-screen-btn {
   padding: 10px;
 }
@@ -473,6 +476,9 @@ input[type=number] {
 }
 .main__header-marquee-music-voice {
   padding-right: 10px;
+}
+.main__header-marquee-group-btn li {
+  padding: 10px;
 }
 
 .marquee-switch {
