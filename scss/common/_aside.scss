@@ -1,0 +1,177 @@
+.aside {
+    background: linear-gradient(to bottom, #413b2f 0%, #2e2721 10%, #2e2721 100%);
+
+    &__logo {
+      display: block;
+      height: auto;
+      padding: 15px 10px 25px 10px;
+      border-bottom: 5px groove #66584b;
+    }
+    
+    .user-img {
+        padding: 10px;
+    }
+    &__user {
+        width: 42%;
+        margin: 50px;
+        border-radius: 50%;
+        border: 5px solid #baa480;
+    }
+
+    &__member {
+      text-align: center;
+
+      &-label {
+        position: relative;
+
+        img {
+          position: absolute;
+          right: 5px;
+          top: 40%;
+          transform: translate(0, -50%)
+        }
+
+        input {
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 2px solid #7f602b;
+          background-color: #000;
+          padding-right: 33px;
+
+          &.userName {
+            color: #fff;
+          }
+
+          &.userMoney {
+            color: #eed4a8;
+          }
+        }
+      }
+
+      &-btn {
+        &-classic {
+          color: #fff;
+          margin-bottom: 5px;
+          height: 60px;
+          background: url('../images/room_blue_btn.png') no-repeat center center / 100% 100%;
+        }
+
+        &-multiple {
+          color: #fff;
+          height: 60px;
+          background: url('../images/room_gray_btn.png') no-repeat center center / 100% 100%;
+        }
+      }
+    }
+
+    .rank {
+      margin-top: 10px;
+
+      &__body {
+        border: 4px solid #776648;
+        border-radius: 5px;
+
+        &-tabs {
+          &-btn {
+            color: #eed4a8;
+            font-size: 1vw;
+            background: linear-gradient(to bottom, #f9e574 0%, #291d00 67%);
+
+            &.active {
+              background: linear-gradient(to bottom, #f97474 0%, #290000 67%);
+            }
+          }
+
+          .nav-link {
+            padding: 10px 0;
+          }
+        }
+
+        &-badge {
+          margin: 10px 0;
+          text-align: center;
+
+          .btn:hover {
+            color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+          }
+
+          &__red {
+            border: 1px solid #fc6b6b;
+            background: linear-gradient(to top, #9d3030 0%, #580b0b 48%, #b33f3f 100%);
+          }
+
+          &__yellow {
+            border: 1px solid #fc6b6b;
+            background: linear-gradient(to top, #9d5f30 0%, #582c0b 48%, #b37b3f 100%);
+          }
+        }
+
+        &-contents {
+          .tab-pane {
+            width: 100%;
+
+            ul {
+              display: block;
+              width: 100%;
+              height: 22vh;
+
+              li {
+                display: flex;
+                border: 1px solid #5b460c;
+                padding: 10px;
+                &:nth-child(1) {
+                  box-shadow: inset 1px 10px 10px rgba(105, 92, 65, 0.8);
+                }
+                &:nth-child(2) {
+                  box-shadow: inset 1px 10px 10px rgba(190, 190, 190, 0.8);
+                }
+                &:nth-child(3) {
+                  box-shadow: inset 1px 10px 10px rgba(105, 0, 121, 0.8);
+                }
+              }
+            }
+          }
+
+          &__numb {
+            padding: 0 2px;
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bolder;
+            background: linear-gradient(to top, #cca75e 0%, #fde59b 60%, #fde59b 100%);
+            background: -webkit-linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+          }
+
+          &__cup {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+
+            img {
+              min-width: 30px;
+            }
+          }
+
+          &__info {
+            font-size: 1vw;
+
+            &-name {
+              word-wrap: break-word;
+              word-break: break-all;
+            }
+
+            &-money {
+              word-wrap: break-word;
+              word-break: break-all;
+            }
+          }
+        }
+      }
+
+    }
+  }

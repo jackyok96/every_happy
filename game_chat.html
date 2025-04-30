@@ -5,78 +5,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>遊戲廳-聊天室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"
+        integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <!-- 遊戲廳 -->
 
 <body class="game-chat">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Messages</a>
-                            </li>
-                            <li class="nav-item dropdown ml-md-auto">
-                                <a class="nav-link dropdown-toggle" href="http://example.com"
-                                    id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item"
-                                        href="#">Another action</a> <a class="dropdown-item" href="#">Something else
-                                        here</a>
-                                    <div class="dropdown-divider">
-                                    </div> <a class="dropdown-item" href="#">Separated link</a>
+    <div class="wrapper">
+        <div class="container-fluid g-0">
+            <div class="row g-0">
+                <!-- 側邊欄 -->
+                <div class="col-md-2 aside">
+                    <div class="img-group text-center">
+                        <!-- logo 圖 -->
+                        <a href="lobby.html">
+                            <img class="img-fluid m-auto aside__logo" alt="Bootstrap Image Preview" src="images/logo.png" />
+                        </a>
+                        <!-- 人像圖 -->
+                        <div class="user-img">
+                            <img class="img-fluid m-auto aside__user" src="images/people_pic01.png" alt="" />
+                        </div>
+                    </div>
+                    <!-- 登入區 -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group aside__member">
+                                <label for="userName" class="aside__member-label">
+                                    <a href="#">
+                                        <img src="images/icon_name.png" alt="">
+                                    </a>
+                                    <input type="text" class="form-control userName" id="userName" placeholder="NAGUWAZ" />
+                                </label>
+                                <label for="userMoney" class="aside__member-label">
+                                    <a href="#">
+                                        <img src="images/icon_reload.png" alt="">
+                                    </a>
+                                    <input type="number" class="form-control userMoney" id="userMoney" placeholder="1,000,000.00 " />
+                                </label>
+                                <div class="aside__member-btn">
+                                    <button type="button" class="form-control btn aside__member-btn-classic">
+                                        經典廳
+                                    </button>
+                                    <button type="button" class="form-control btn aside__member-btn-multiple">
+                                        多桌廳
+                                    </button>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="jumbotron">
-                            <h2>
-                                Hello, world!
-                            </h2>
-                            <p>
-                                This is a template for a simple marketing or informational website. It includes a large
-                                callout called the hero unit and three supporting pieces of content. Use it as a
-                                starting point to create something more unique.
-                            </p>
-                            <p>
-                                <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                            </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="btn-group" role="group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="rank d-none d-md-block">
+                                <!-- 排行榜 -->
+                                <div class="rank__image d-flex justify-content-center pb-4">
+                                    <img alt="Bootstrap Image Preview" src="images/cup.png" />
+                                </div>
+                                <!-- Nav tabs -->
+                                <div class="rank__body">
+                                    <ul class="nav d-flex flex-nowrap rank__body-tabs" id="myTab" role="tablist">
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn active" id="home-tab"
+                                                data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+                                                aria-controls="home" aria-selected="true">
+                                                玩家榜
+                                            </button>
+                                        </li>
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn" id="profile-tab"
+                                                data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab"
+                                                aria-controls="profile" aria-selected="false">
+                                                荷官榜
+                                            </button>
+                                        </li>
+                                        <li class="flex-grow-1 nav-item" role="presentation">
+                                            <button class="w-100 nav-link rank__body-tabs-btn" id="messages-tab"
+                                                data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab"
+                                                aria-controls="messages" aria-selected="false">
+                                                打賞榜
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-around rank__body-badge">
+                                        <button
+                                            class="btn badge rounded-pill bg-danger p-2 w-25 rank__body-badge__red">日榜</button>
+                                        <button
+                                            class="btn badge rounded-pill bg-warning p-2 w-25 rank__body-badge__yellow">周榜</button>
+                                    </div>
 
-                            <button class="btn btn-secondary" type="button">
-                                Left
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                                Center
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                                Right
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                                Justify
-                            </button>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content d-flex justify-content-center rank__body-contents">
+                                        <div class="tab-pane active" id="home" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="profile" role="tabpanel"
+                                            aria-labelledby="profile-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="messages" role="tabpanel"
+                                            aria-labelledby="messages-tab">
+                                            <ul class="scrollbar">
+                                                <li>
+                                                    <div class="rank__body-contents__numb">1</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup01.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">2</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup02.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">3</div>
+                                                    <div class="rank__body-contents__cup">
+                                                        <img src="images/cup03.png" alt="">
+                                                    </div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">4</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">5</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="rank__body-contents__numb">6</div>
+                                                    <div class="rank__body-contents__info">
+                                                        <div class="rank__body-contents__info-name">***Aarry </div>
+                                                        <div class="rank__body-contents__info-money">
+                                                            1,000,000,000,000.00</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="images/game_bottom.jpg" alt="" class="img-fuild">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="images/video_img.png" alt="" class="img-fuild">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="images/game_panel.jpg" alt="" class="img-fuild">
+                        </div>
                     </div>
                 </div>
             </div>
