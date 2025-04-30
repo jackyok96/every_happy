@@ -136,7 +136,7 @@ select {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 1px;
   padding: 7px 10px;
-  background: #fff;
+  background: #000;
   border: 1px solid #ccc;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -215,6 +215,148 @@ input[type=number] {
     -webkit-transform: rotate(360deg);
   }
 }
+.aside {
+  background: linear-gradient(to bottom, #413b2f 0%, #2e2721 10%, #2e2721 100%);
+}
+.aside__logo {
+  display: block;
+  height: auto;
+  padding: 15px 10px 25px 10px;
+  border-bottom: 5px groove #66584b;
+}
+.aside .user-img {
+  padding: 10px;
+}
+.aside__user {
+  width: 42%;
+  margin: 50px;
+  border-radius: 50%;
+  border: 5px solid #baa480;
+}
+.aside__member {
+  text-align: center;
+}
+.aside__member-label {
+  position: relative;
+}
+.aside__member-label img {
+  position: absolute;
+  right: 5px;
+  top: 40%;
+  transform: translate(0, -50%);
+}
+.aside__member-label input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #7f602b;
+  background-color: #000;
+  padding-right: 33px;
+}
+.aside__member-label input.userName {
+  color: #fff;
+}
+.aside__member-label input.userMoney {
+  color: #eed4a8;
+}
+.aside__member-btn-classic {
+  color: #fff;
+  margin-bottom: 5px;
+  height: 60px;
+  background: url("../images/room_blue_btn.png") no-repeat center center/100% 100%;
+}
+.aside__member-btn-multiple {
+  color: #fff;
+  height: 60px;
+  background: url("../images/room_gray_btn.png") no-repeat center center/100% 100%;
+}
+.aside .rank {
+  margin-top: 10px;
+}
+.aside .rank__body {
+  border: 4px solid #776648;
+  border-radius: 5px;
+}
+.aside .rank__body-tabs-btn {
+  color: #eed4a8;
+  font-size: 1vw;
+  background: linear-gradient(to bottom, #f9e574 0%, #291d00 67%);
+}
+.aside .rank__body-tabs-btn.active {
+  background: linear-gradient(to bottom, #f97474 0%, #290000 67%);
+}
+.aside .rank__body-tabs .nav-link {
+  padding: 10px 0;
+}
+.aside .rank__body-badge {
+  margin: 10px 0;
+  text-align: center;
+}
+.aside .rank__body-badge .btn:hover {
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.aside .rank__body-badge__red {
+  border: 1px solid #fc6b6b;
+  background: linear-gradient(to top, #9d3030 0%, #580b0b 48%, #b33f3f 100%);
+}
+.aside .rank__body-badge__yellow {
+  border: 1px solid #fc6b6b;
+  background: linear-gradient(to top, #9d5f30 0%, #582c0b 48%, #b37b3f 100%);
+}
+.aside .rank__body-contents .tab-pane {
+  width: 100%;
+}
+.aside .rank__body-contents .tab-pane ul {
+  display: block;
+  width: 100%;
+  height: 22vh;
+}
+.aside .rank__body-contents .tab-pane ul li {
+  display: flex;
+  border: 1px solid #5b460c;
+  padding: 10px;
+}
+.aside .rank__body-contents .tab-pane ul li:nth-child(1) {
+  box-shadow: inset 1px 10px 10px rgba(105, 92, 65, 0.8);
+}
+.aside .rank__body-contents .tab-pane ul li:nth-child(2) {
+  box-shadow: inset 1px 10px 10px rgba(190, 190, 190, 0.8);
+}
+.aside .rank__body-contents .tab-pane ul li:nth-child(3) {
+  box-shadow: inset 1px 10px 10px rgba(105, 0, 121, 0.8);
+}
+.aside .rank__body-contents__numb {
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  background: linear-gradient(to top, #cca75e 0%, #fde59b 60%, #fde59b 100%);
+  background: -webkit-linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.aside .rank__body-contents__cup {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.aside .rank__body-contents__cup img {
+  min-width: 30px;
+}
+.aside .rank__body-contents__info {
+  font-size: 1vw;
+}
+.aside .rank__body-contents__info-name {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.aside .rank__body-contents__info-money {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 @media only screen and (max-width: 768px) {
   .aside__member-btn {
     display: flex;
@@ -543,141 +685,6 @@ body.login .wrapper .login__member-btn:active {
 body.lobby {
   background: #0f0b00;
 }
-body.lobby .aside {
-  background: linear-gradient(to bottom, #413b2f 0%, #2e2721 10%, #2e2721 100%);
-}
-body.lobby .aside__logo {
-  display: block;
-  height: auto;
-  padding: 15px 10px 25px 10px;
-  border-bottom: 5px groove #66584b;
-}
-body.lobby .aside__user {
-  padding: 10px 0;
-}
-body.lobby .aside__member {
-  text-align: center;
-}
-body.lobby .aside__member-label {
-  position: relative;
-}
-body.lobby .aside__member-label img {
-  position: absolute;
-  right: 5px;
-  top: 40%;
-  transform: translate(0, -50%);
-}
-body.lobby .aside__member-label input {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 2px solid #7f602b;
-  background-color: #000;
-  padding-right: 33px;
-}
-body.lobby .aside__member-label input.userName {
-  color: #fff;
-}
-body.lobby .aside__member-label input.userMoney {
-  color: #eed4a8;
-}
-body.lobby .aside__member-btn-classic {
-  color: #fff;
-  margin-bottom: 5px;
-  height: 60px;
-  background: url("../images/room_blue_btn.png") no-repeat center center/100% 100%;
-}
-body.lobby .aside__member-btn-multiple {
-  color: #fff;
-  height: 60px;
-  background: url("../images/room_gray_btn.png") no-repeat center center/100% 100%;
-}
-body.lobby .aside .rank {
-  margin-top: 10px;
-}
-body.lobby .aside .rank__body {
-  border: 4px solid #776648;
-  border-radius: 5px;
-}
-body.lobby .aside .rank__body-tabs-btn {
-  color: #eed4a8;
-  font-size: 1vw;
-  background: linear-gradient(to bottom, #f9e574 0%, #291d00 67%);
-}
-body.lobby .aside .rank__body-tabs-btn.active {
-  background: linear-gradient(to bottom, #f97474 0%, #290000 67%);
-}
-body.lobby .aside .rank__body-tabs .nav-link {
-  padding: 10px 0;
-}
-body.lobby .aside .rank__body-badge {
-  margin: 10px 0;
-  text-align: center;
-}
-body.lobby .aside .rank__body-badge .btn:hover {
-  color: #fff;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-body.lobby .aside .rank__body-badge__red {
-  border: 1px solid #fc6b6b;
-  background: linear-gradient(to top, #9d3030 0%, #580b0b 48%, #b33f3f 100%);
-}
-body.lobby .aside .rank__body-badge__yellow {
-  border: 1px solid #fc6b6b;
-  background: linear-gradient(to top, #9d5f30 0%, #582c0b 48%, #b37b3f 100%);
-}
-body.lobby .aside .rank__body-contents .tab-pane {
-  width: 100%;
-}
-body.lobby .aside .rank__body-contents .tab-pane ul {
-  display: block;
-  width: 100%;
-  height: 22vh;
-}
-body.lobby .aside .rank__body-contents .tab-pane ul li {
-  display: flex;
-  border: 1px solid #5b460c;
-  padding: 10px;
-}
-body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(1) {
-  box-shadow: inset 1px 10px 10px rgba(105, 92, 65, 0.8);
-}
-body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(2) {
-  box-shadow: inset 1px 10px 10px rgba(190, 190, 190, 0.8);
-}
-body.lobby .aside .rank__body-contents .tab-pane ul li:nth-child(3) {
-  box-shadow: inset 1px 10px 10px rgba(105, 0, 121, 0.8);
-}
-body.lobby .aside .rank__body-contents__numb {
-  padding: 0 2px;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bolder;
-  background: linear-gradient(to top, #cca75e 0%, #fde59b 60%, #fde59b 100%);
-  background: -webkit-linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-body.lobby .aside .rank__body-contents__cup {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
-body.lobby .aside .rank__body-contents__cup img {
-  min-width: 30px;
-}
-body.lobby .aside .rank__body-contents__info {
-  font-size: 1vw;
-}
-body.lobby .aside .rank__body-contents__info-name {
-  word-wrap: break-word;
-  word-break: break-all;
-}
-body.lobby .aside .rank__body-contents__info-money {
-  word-wrap: break-word;
-  word-break: break-all;
-}
 body.lobby .main__header-screen-btn {
   padding: 10px;
 }
@@ -761,4 +768,7 @@ body.lobby .main__contents-chat-room-text-dl-dd-section::after {
   border-bottom: 10px solid #695c41;
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
+}
+body.game-chat {
+  background: #0f0b00;
 }
