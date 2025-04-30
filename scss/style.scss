@@ -6,6 +6,7 @@
 @use "common/aside";
 @use "mixin/media";
 @use "widget/modal";
+@use "widget/marquee";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -187,7 +188,6 @@ body {
             }
           }
 
-
           &-account-code {
             background-image: url('../images/icon_id.png');
             background-repeat: no-repeat;
@@ -323,9 +323,11 @@ body {
             &-dl {
               height: 35vh;
               padding: 10px;
+
               &-dt {
                 margin-bottom: 5px;
               }
+
               &-dd {
                 &-section {
                   font-size: 1rem;
@@ -334,6 +336,7 @@ body {
                   word-wrap: break-word;
                   background: #695c41 url('../images/talk frame.png') no-repeat left top / cover;
                   position: relative;
+
                   &::after {
                     position: absolute;
                     top: -10px;
@@ -359,7 +362,17 @@ body {
   &.game-chat {
     background: #0f0b00;
 
+    // .main {
+    //   &__header {
+    //     &-gloup-btn {
+    //       li {
+    //         margin: 0 10px;
+    //       }
+    //     }
+    //   }
+    // }
   }
+
   // ========================= game 游戲廳 end ===========================
 
 }
