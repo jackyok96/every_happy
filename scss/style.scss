@@ -362,15 +362,77 @@ body {
   &.game-chat {
     background: #0f0b00;
 
-    // .main {
-    //   &__header {
-    //     &-gloup-btn {
-    //       li {
-    //         margin: 0 10px;
-    //       }
-    //     }
-    //   }
-    // }
+    .main {
+      &__bet {
+        &-section {
+          position: relative;
+
+          &-video {}
+
+          &-info {
+            position: absolute;
+            right: 50px;
+            bottom: 30px;
+            width: 200px;
+            ul {
+              li {
+                font-size: .8rem;
+                background: #000 ;
+                border-radius: 48px;
+                margin: 10px 0;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 1rem;
+              }
+            }
+          }
+
+          &-group-button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            &-switch {
+              width: 25px;
+              height: 100px;
+              text-align: center;
+              vertical-align: middle;
+              background: transparent url('../images/switch_btn.png') no-repeat center / contain;
+              -webkit-writing-mode: vertical-lr;
+              writing-mode: vertical-lr;
+              a {
+                color: #695c41;
+                text-decoration: none;
+              }
+            }
+
+            &-adjust {
+              position: absolute;
+              color: #695c41;
+              width: 25px;
+              height: 100px;
+              text-align: center;
+              vertical-align: middle;
+              background: transparent url('../images/btn_bg.png') no-repeat center / contain;
+              -webkit-writing-mode: vertical-lr;
+              writing-mode: vertical-lr;
+              ul {
+                display: flex;
+                justify-content: space-evenly;
+                li {
+                  img {
+                    display: block;
+                    width: 19px;
+                    padding-left: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   // ========================= game 游戲廳 end ===========================

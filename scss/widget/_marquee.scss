@@ -1,8 +1,12 @@
 .main {
     &__header {
         background: linear-gradient(to bottom, #564f40 0%, #221e15 10%);
-        &-screen-btn {
-            padding: 10px;
+
+        &-toggle {
+            display: flex;
+            &-user {
+                margin-left: 20px;
+            }
         }
 
         &-marquee {
