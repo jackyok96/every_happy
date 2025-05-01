@@ -460,7 +460,7 @@ input[type=number] {
 }
 .main__header-marquee {
   color: #e9cdaf;
-  background-color: #221d15;
+  background-color: transparent;
   padding: 10px;
   position: relative;
 }
@@ -477,7 +477,7 @@ input[type=number] {
 .main__header-marquee-music-voice {
   padding-right: 10px;
 }
-.main__header-marquee-group-btn li {
+.main__header-group-btn li {
   padding: 10px;
 }
 
