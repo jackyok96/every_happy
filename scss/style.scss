@@ -591,9 +591,23 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-          }
+            .big-text {
+              font-size: 2rem;
+            }
+            
+            .normal-text {
+              font-size: 1.3rem;
+            }
 
-          & > div {
+            .proportion {
+              font-size: 0.8rem;
+            }
+            .info {
+              font-size: 0.8rem;
+            }
+            .numb-Denominator {
+              font-size: 0.8rem;
+            }
           }
           
           @for $i from 1 through 3 {
