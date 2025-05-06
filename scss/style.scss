@@ -509,8 +509,8 @@ body {
                     transition: .3s;
 
                     &:hover {
-                      width: 80px;
-                      line-height: 80px;
+                      width: 70px;
+                      line-height: 70px;
                     }
                   }
                 }
@@ -620,6 +620,7 @@ body {
           background: #d904ec;
           display: flex;
           justify-content: center;
+          padding: 0 20px;
           ul {
             width: 100%;
             display: flex;
