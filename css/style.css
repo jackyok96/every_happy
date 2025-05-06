@@ -1103,6 +1103,21 @@ body.game-chat .main__panel-options div {
   justify-content: center;
   align-items: center;
 }
+body.game-chat .main__panel-options div .big-text {
+  font-size: 2rem;
+}
+body.game-chat .main__panel-options div .normal-text {
+  font-size: 1.3rem;
+}
+body.game-chat .main__panel-options div .proportion {
+  font-size: 0.8rem;
+}
+body.game-chat .main__panel-options div .info {
+  font-size: 0.8rem;
+}
+body.game-chat .main__panel-options div .numb-Denominator {
+  font-size: 0.8rem;
+}
 body.game-chat .main__panel-options--blue-1 {
   border-radius: 10px 0 0 0;
   grid-area: blue-1;
