@@ -1107,37 +1107,45 @@ body.game-chat .main__panel-options--blue-1 {
   border-radius: 10px 0 0 0;
   grid-area: blue-1;
   background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
 }
 body.game-chat .main__panel-options--red-1 {
   border-radius: 0 10px 0 0;
   grid-area: red-1;
   background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
 }
 body.game-chat .main__panel-options--blue-2 {
   border-radius: 0 0 0 10px;
   grid-area: blue-2;
   background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
 }
 body.game-chat .main__panel-options--red-2 {
   grid-area: red-2;
   background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
 }
 body.game-chat .main__panel-options--blue-3 {
   grid-area: blue-3;
   background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
 }
 body.game-chat .main__panel-options--red-3 {
   border-radius: 0 0 10px 0;
   grid-area: red-3;
   background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
 }
 body.game-chat .main__panel-options--green-1 {
   grid-area: green-1;
   background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
+  border: 1px solid #62ac68;
 }
 body.game-chat .main__panel-options--yellow-1 {
   grid-area: yellow-1;
   background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
+  border: 1px solid #ac9362;
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;
