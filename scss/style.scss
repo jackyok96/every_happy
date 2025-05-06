@@ -443,6 +443,7 @@ body {
         display: grid;
         width: 100%;
         height: 325px;
+        background: linear-gradient(to bottom, #393b41 0%, #141721 10%);
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: "switch switch switch btns btns btns btns btns btns chips chips chips"
@@ -456,13 +457,13 @@ body {
 
         &-switch {
           grid-area: switch;
-          background: #0a3ee7;
+          // background: #0a3ee7;
           padding-left: 20px;
         }
 
         &-btns {
           grid-area: btns;
-          background: #caf704;
+          // background: #caf704;
 
           .btn {
             color: #fff;
@@ -470,6 +471,17 @@ body {
             width: 100px;
             height: 35px;
             margin: 0 10px;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+              font-size: 1.3rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+            }
 
             &:nth-child(1) {
               background: linear-gradient(to bottom, #c1565e 0%, #b61e1e 36%, #c08383 100%);
@@ -482,12 +494,20 @@ body {
             &:nth-child(3) {
               background: linear-gradient(to bottom, #74be7b 0%, #298f33 36%, #8ecf94 100%);
             }
+
+            &:hover {
+              box-shadow: 0 0 10px;
+            }
+
+            &:active {
+              box-shadow: inset 0 0 10px;
+            }
           }
         }
 
         &-chips {
           grid-area: chips;
-          background: #f39507;
+          // background: #f39507;
 
           ul {
             font-size: 0.7rem;
@@ -540,20 +560,19 @@ body {
         &-road {
           &--1 {
             grid-area: road-1;
-            background: #03ec9f;
             background: #fff url(../images/left_bg.png) no-repeat center / contain;
           }
 
           &--2 {
             grid-area: road-2;
-            background: #03ec9f;
             background: #fff url(../images/right_bg.png) no-repeat center / contain;
           }
         }
 
         &-options {
           grid-area: options;
-          background: #29068a;
+          // background: #29068a;
+          padding: 0 15px;
           display: grid;
           width: 100%;
           height: 100%;
@@ -566,7 +585,7 @@ body {
             "blue-2 blue-2 blue-3 blue-3 yellow-1 yellow-1 yellow-1 red-2 red-2 red-3 red-3"
           ;
           gap: 5px;
-          
+
           div {
             display: flex;
             flex-direction: column;
@@ -577,36 +596,42 @@ body {
           @for $i from 1 through 3 {
             &--blue {
               &-#{$i} {
-                @if $i == 1 {
+                @if $i ==1 {
                   border-radius: 10px 0 0 0;
                 }
-                @if $i == 2 {
+
+                @if $i ==2 {
                   border-radius: 0 0 0 10px;
                 }
+
                 grid-area: blue-#{$i};
                 background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
               }
             }
+
             &--red {
               &-#{$i} {
-                @if $i == 1 {
+                @if $i ==1 {
                   border-radius: 0 10px 0 0;
                 }
-                @if $i == 3 {
+
+                @if $i ==3 {
                   border-radius: 0 0 10px 0;
                 }
+
                 grid-area: red-#{$i};
                 background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
               }
             }
           }
-          
+
           &--green {
             &-1 {
               grid-area: green-1;
               background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
             }
           }
+
           &--yellow {
             &-1 {
               grid-area: yellow-1;
@@ -617,10 +642,11 @@ body {
 
         &-chat {
           grid-area: chat;
-          background: #d904ec;
+          // background: #d904ec;
           display: flex;
           justify-content: center;
           padding: 0 20px;
+
           ul {
             width: 100%;
             display: flex;
@@ -632,14 +658,25 @@ body {
 
         &-binfo {
           grid-area: binfo;
-          background: #ff0000;
+          // background: #ff0000;
           display: flex;
           justify-content: center;
+          
           ul {
             width: 100%;
             padding: 20px;
             display: flex;
             justify-content: space-between;
+            li {
+              a {
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.3rem;
+                &:hover {
+                  color: yellow;
+                }
+              }
+            }
           }
         }
 
