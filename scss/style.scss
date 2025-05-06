@@ -7,6 +7,7 @@
 @use "mixin/media";
 @use "widget/modal";
 @use "widget/marquee";
+@use "widget/checkbox";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -374,10 +375,12 @@ body {
             right: 50px;
             bottom: 30px;
             width: 200px;
+
             ul {
               li {
+                border: 1px solid #7f602b;
                 font-size: .8rem;
-                background: #000 ;
+                background: #000;
                 border-radius: 48px;
                 margin: 10px 0;
                 padding: 10px;
@@ -401,6 +404,7 @@ body {
               background: transparent url('../images/switch_btn.png') no-repeat center / contain;
               -webkit-writing-mode: vertical-lr;
               writing-mode: vertical-lr;
+
               a {
                 color: #695c41;
                 text-decoration: none;
@@ -417,9 +421,11 @@ body {
               background: transparent url('../images/btn_bg.png') no-repeat center / contain;
               -webkit-writing-mode: vertical-lr;
               writing-mode: vertical-lr;
+
               ul {
                 display: flex;
                 justify-content: space-evenly;
+
                 li {
                   img {
                     display: block;
@@ -436,49 +442,206 @@ body {
       &__panel {
         display: grid;
         width: 100%;
-        height: 325px;        
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns:  repeat(12, 1fr);
+        height: 325px;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         grid-template-areas: "switch switch switch btns btns btns btns btns btns chips chips chips"
-        "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
-        "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
-        "chat chat chat . . . . . . binfo binfo binfo"
+          "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
+          "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
+          "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
+          "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2"
+          "chat chat chat . . . . . . binfo binfo binfo"
         ;
+        align-items: stretch;
+
         &-switch {
           grid-area: switch;
           background: #0a3ee7;
+          padding-left: 20px;
         }
+
         &-btns {
           grid-area: btns;
           background: #caf704;
+
+          .btn {
+            color: #fff;
+            border: 1px solid #fff;
+            width: 100px;
+            height: 35px;
+            margin: 0 10px;
+
+            &:nth-child(1) {
+              background: linear-gradient(to bottom, #c1565e 0%, #b61e1e 36%, #c08383 100%);
+            }
+
+            &:nth-child(2) {
+              background: linear-gradient(to bottom, #dee5ff 0%, #aaaaaa 36%, #ffffff 100%);
+            }
+
+            &:nth-child(3) {
+              background: linear-gradient(to bottom, #74be7b 0%, #298f33 36%, #8ecf94 100%);
+            }
+          }
         }
+
         &-chips {
           grid-area: chips;
           background: #f39507;
+
+          ul {
+            font-size: 0.7rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+              @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                  a {
+                    display: block;
+                    width: 60px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 60px;
+                    background: transparent url(../images/chips_#{$i}_big.png) no-repeat center / 100% 100%;
+                    transition: .3s;
+
+                    &:hover {
+                      width: 80px;
+                      line-height: 80px;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(6) {
+                a {
+                  display: block;
+                  width: 60px;
+                  font-weight: bold;
+                  text-align: center;
+                  line-height: 60px;
+                  background: transparent url(../images/chips_setting.png) no-repeat center / 100% 100%;
+                  transition: .3s;
+
+                  &:hover {
+                    width: 80px;
+                    line-height: 80px;
+                  }
+                }
+              }
+            }
+          }
+
         }
-        &-road{
+
+        &-road {
           &--1 {
             grid-area: road-1;
             background: #03ec9f;
+            background: #fff url(../images/left_bg.png) no-repeat center / contain;
           }
+
           &--2 {
             grid-area: road-2;
             background: #03ec9f;
+            background: #fff url(../images/right_bg.png) no-repeat center / contain;
           }
         }
+
         &-options {
           grid-area: options;
           background: #29068a;
+          display: grid;
+          width: 100%;
+          height: 100%;
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-columns: repeat(11, 1fr);
+          border-radius: 50px;
+          grid-template-areas:
+            "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1"
+            "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1"
+            "blue-2 blue-2 blue-3 blue-3 yellow-1 yellow-1 yellow-1 red-2 red-2 red-3 red-3"
+          ;
+          gap: 5px;
+          
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          @for $i from 1 through 3 {
+            &--blue {
+              &-#{$i} {
+                @if $i == 1 {
+                  border-radius: 10px 0 0 0;
+                }
+                @if $i == 2 {
+                  border-radius: 0 0 0 10px;
+                }
+                grid-area: blue-#{$i};
+                background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+              }
+            }
+            &--red {
+              &-#{$i} {
+                @if $i == 1 {
+                  border-radius: 0 10px 0 0;
+                }
+                @if $i == 3 {
+                  border-radius: 0 0 10px 0;
+                }
+                grid-area: red-#{$i};
+                background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+              }
+            }
+          }
+          
+          &--green {
+            &-1 {
+              grid-area: green-1;
+              background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
+            }
+          }
+          &--yellow {
+            &-1 {
+              grid-area: yellow-1;
+              background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
+            }
+          }
         }
+
         &-chat {
           grid-area: chat;
           background: #d904ec;
+          display: flex;
+          justify-content: center;
+          ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+          }
         }
+
         &-binfo {
-          grid-area: binfo;          
+          grid-area: binfo;
           background: #ff0000;
+          display: flex;
+          justify-content: center;
+          ul {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+          }
         }
-        
+
       }
     }
   }

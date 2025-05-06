@@ -3,9 +3,10 @@
         background: linear-gradient(to bottom, #564f40 0%, #221e15 10%);
 
         &-toggle {
+            padding: 0 10px;
             display: flex;
             &-user {
-                margin-left: 20px;
+                margin-left: 50px;
             }
         }
 
