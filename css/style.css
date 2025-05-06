@@ -502,6 +502,9 @@ input[type=number] {
   justify-content: space-evenly;
   align-items: center;
 }
+.main__panel-switch-section p {
+  font-weight: bolder;
+}
 .main__panel-switch-section input[type=checkbox] {
   height: 0;
   width: 0;
@@ -941,6 +944,7 @@ body.game-chat .main__panel {
   display: grid;
   width: 100%;
   height: 325px;
+  background: linear-gradient(to bottom, #393b41 0%, #141721 10%);
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas: "switch switch switch btns btns btns btns btns btns chips chips chips" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "chat chat chat . . . . . . binfo binfo binfo";
@@ -948,12 +952,10 @@ body.game-chat .main__panel {
 }
 body.game-chat .main__panel-switch {
   grid-area: switch;
-  background: #0a3ee7;
   padding-left: 20px;
 }
 body.game-chat .main__panel-btns {
   grid-area: btns;
-  background: #caf704;
 }
 body.game-chat .main__panel-btns .btn {
   color: #fff;
@@ -961,6 +963,16 @@ body.game-chat .main__panel-btns .btn {
   width: 100px;
   height: 35px;
   margin: 0 10px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.game-chat .main__panel-btns .btn svg {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body.game-chat .main__panel-btns .btn:nth-child(1) {
   background: linear-gradient(to bottom, #c1565e 0%, #b61e1e 36%, #c08383 100%);
@@ -971,9 +983,14 @@ body.game-chat .main__panel-btns .btn:nth-child(2) {
 body.game-chat .main__panel-btns .btn:nth-child(3) {
   background: linear-gradient(to bottom, #74be7b 0%, #298f33 36%, #8ecf94 100%);
 }
+body.game-chat .main__panel-btns .btn:hover {
+  box-shadow: 0 0 10px;
+}
+body.game-chat .main__panel-btns .btn:active {
+  box-shadow: inset 0 0 10px;
+}
 body.game-chat .main__panel-chips {
   grid-area: chips;
-  background: #f39507;
 }
 body.game-chat .main__panel-chips ul {
   font-size: 0.7rem;
@@ -1062,17 +1079,15 @@ body.game-chat .main__panel-chips ul li:nth-child(6) a:hover {
 }
 body.game-chat .main__panel-road--1 {
   grid-area: road-1;
-  background: #03ec9f;
   background: #fff url(../images/left_bg.png) no-repeat center/contain;
 }
 body.game-chat .main__panel-road--2 {
   grid-area: road-2;
-  background: #03ec9f;
   background: #fff url(../images/right_bg.png) no-repeat center/contain;
 }
 body.game-chat .main__panel-options {
   grid-area: options;
-  background: #29068a;
+  padding: 0 15px;
   display: grid;
   width: 100%;
   height: 100%;
@@ -1126,7 +1141,6 @@ body.game-chat .main__panel-options--yellow-1 {
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;
-  background: #d904ec;
   display: flex;
   justify-content: center;
   padding: 0 20px;
@@ -1139,7 +1153,6 @@ body.game-chat .main__panel-chat ul {
 }
 body.game-chat .main__panel-binfo {
   grid-area: binfo;
-  background: #ff0000;
   display: flex;
   justify-content: center;
 }
@@ -1148,4 +1161,12 @@ body.game-chat .main__panel-binfo ul {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+}
+body.game-chat .main__panel-binfo ul li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+body.game-chat .main__panel-binfo ul li a:hover {
+  color: yellow;
 }
