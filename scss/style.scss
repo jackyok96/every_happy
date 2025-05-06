@@ -593,49 +593,56 @@ body {
             align-items: center;
           }
 
+          & > div {
+          }
+          
           @for $i from 1 through 3 {
             &--blue {
               &-#{$i} {
                 @if $i ==1 {
                   border-radius: 10px 0 0 0;
                 }
-
+                
                 @if $i ==2 {
                   border-radius: 0 0 0 10px;
                 }
-
+                
                 grid-area: blue-#{$i};
                 background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+                border: 1px solid #6a78fa;
               }
             }
-
+            
             &--red {
               &-#{$i} {
                 @if $i ==1 {
                   border-radius: 0 10px 0 0;
                 }
-
+                
                 @if $i ==3 {
                   border-radius: 0 0 10px 0;
                 }
-
+                
                 grid-area: red-#{$i};
                 background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+                border: 1px solid #ac6262;
               }
             }
           }
-
+          
           &--green {
             &-1 {
               grid-area: green-1;
               background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
+              border: 1px solid #62ac68;
             }
           }
-
+          
           &--yellow {
             &-1 {
               grid-area: yellow-1;
               background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
+              border: 1px solid #ac9362;
             }
           }
         }
