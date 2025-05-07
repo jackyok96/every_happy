@@ -546,6 +546,10 @@ input[type=number] {
   width: 35px;
 }
 
+.close--active {
+  transform: scale(-1);
+}
+
 .marquee-switch {
   display: block;
   float: left;
