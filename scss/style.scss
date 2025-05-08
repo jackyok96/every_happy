@@ -542,8 +542,7 @@ body {
                     transition: .3s;
 
                     &:hover {
-                      width: 70px;
-                      line-height: 70px;
+                      transform: translateY(-10px);
                     }
                   }
                 }
@@ -560,8 +559,7 @@ body {
                   transition: .3s;
 
                   &:hover {
-                    width: 80px;
-                    line-height: 80px;
+                    transform: translateY(-10px);
                   }
                 }
               }
