@@ -1011,8 +1011,7 @@ body.game-chat .main__panel-chips ul li:nth-child(1) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(1) a:hover {
-  width: 70px;
-  line-height: 70px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-chips ul li:nth-child(2) a {
   display: block;
@@ -1024,8 +1023,7 @@ body.game-chat .main__panel-chips ul li:nth-child(2) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(2) a:hover {
-  width: 70px;
-  line-height: 70px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-chips ul li:nth-child(3) a {
   display: block;
@@ -1037,8 +1035,7 @@ body.game-chat .main__panel-chips ul li:nth-child(3) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(3) a:hover {
-  width: 70px;
-  line-height: 70px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-chips ul li:nth-child(4) a {
   display: block;
@@ -1050,8 +1047,7 @@ body.game-chat .main__panel-chips ul li:nth-child(4) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(4) a:hover {
-  width: 70px;
-  line-height: 70px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-chips ul li:nth-child(5) a {
   display: block;
@@ -1063,8 +1059,7 @@ body.game-chat .main__panel-chips ul li:nth-child(5) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(5) a:hover {
-  width: 70px;
-  line-height: 70px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-chips ul li:nth-child(6) a {
   display: block;
@@ -1076,8 +1071,7 @@ body.game-chat .main__panel-chips ul li:nth-child(6) a {
   transition: 0.3s;
 }
 body.game-chat .main__panel-chips ul li:nth-child(6) a:hover {
-  width: 80px;
-  line-height: 80px;
+  transform: translateY(-10px);
 }
 body.game-chat .main__panel-road--1 {
   grid-area: road-1;
