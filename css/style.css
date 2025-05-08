@@ -541,6 +541,167 @@ input[type=number] {
   transform: scale(-1);
 }
 
+.chips {
+  grid-area: chips;
+}
+.chips ul {
+  font-size: 0.7rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chips ul li:nth-child(1) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_1_big.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(1) a:hover {
+  transform: translateY(-10px);
+}
+.chips ul li:nth-child(2) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_2_big.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(2) a:hover {
+  transform: translateY(-10px);
+}
+.chips ul li:nth-child(3) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_3_big.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(3) a:hover {
+  transform: translateY(-10px);
+}
+.chips ul li:nth-child(4) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_4_big.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(4) a:hover {
+  transform: translateY(-10px);
+}
+.chips ul li:nth-child(5) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_5_big.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(5) a:hover {
+  transform: translateY(-10px);
+}
+.chips ul li:nth-child(6) a {
+  display: block;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  background: transparent url(../images/chips_setting.png) no-repeat center/100% 100%;
+  transition: 0.3s;
+}
+.chips ul li:nth-child(6) a:hover {
+  transform: translateY(-10px);
+}
+
+.options {
+  grid-area: options;
+  padding: 0 15px;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(11, 1fr);
+  border-radius: 50px;
+  grid-template-areas: "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1" "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1" "blue-2 blue-2 blue-3 blue-3 yellow-1 yellow-1 yellow-1 red-2 red-2 red-3 red-3";
+  gap: 5px;
+}
+.options div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options div .big-text {
+  font-size: 2rem;
+}
+.options div .normal-text {
+  font-size: 1.3rem;
+}
+.options div .proportion {
+  font-size: 0.8rem;
+}
+.options div .info {
+  font-size: 0.8rem;
+}
+.options div .numb-Denominator {
+  font-size: 0.8rem;
+}
+.options--blue-1 {
+  border-radius: 10px 0 0 0;
+  grid-area: blue-1;
+  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
+}
+.options--red-1 {
+  border-radius: 0 10px 0 0;
+  grid-area: red-1;
+  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
+}
+.options--blue-2 {
+  border-radius: 0 0 0 10px;
+  grid-area: blue-2;
+  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
+}
+.options--red-2 {
+  grid-area: red-2;
+  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
+}
+.options--blue-3 {
+  grid-area: blue-3;
+  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
+  border: 1px solid #6a78fa;
+}
+.options--red-3 {
+  border-radius: 0 0 10px 0;
+  grid-area: red-3;
+  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
+  border: 1px solid #ac6262;
+}
+.options--green-1 {
+  grid-area: green-1;
+  background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
+  border: 1px solid #62ac68;
+}
+.options--yellow-1 {
+  grid-area: yellow-1;
+  background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
+  border: 1px solid #ac9362;
+}
+
 .marquee-switch {
   display: block;
   float: left;
@@ -991,88 +1152,6 @@ body.game-chat .main__panel-btns .btn:hover {
 body.game-chat .main__panel-btns .btn:active {
   box-shadow: inset 0 0 10px;
 }
-body.game-chat .main__panel-chips {
-  grid-area: chips;
-}
-body.game-chat .main__panel-chips ul {
-  font-size: 0.7rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body.game-chat .main__panel-chips ul li:nth-child(1) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_1_big.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(1) a:hover {
-  transform: translateY(-10px);
-}
-body.game-chat .main__panel-chips ul li:nth-child(2) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_2_big.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(2) a:hover {
-  transform: translateY(-10px);
-}
-body.game-chat .main__panel-chips ul li:nth-child(3) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_3_big.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(3) a:hover {
-  transform: translateY(-10px);
-}
-body.game-chat .main__panel-chips ul li:nth-child(4) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_4_big.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(4) a:hover {
-  transform: translateY(-10px);
-}
-body.game-chat .main__panel-chips ul li:nth-child(5) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_5_big.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(5) a:hover {
-  transform: translateY(-10px);
-}
-body.game-chat .main__panel-chips ul li:nth-child(6) a {
-  display: block;
-  width: 60px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  background: transparent url(../images/chips_setting.png) no-repeat center/100% 100%;
-  transition: 0.3s;
-}
-body.game-chat .main__panel-chips ul li:nth-child(6) a:hover {
-  transform: translateY(-10px);
-}
 body.game-chat .main__panel-road--1 {
   grid-area: road-1;
   background: #fff url(../images/left_bg.png) no-repeat center/contain;
@@ -1080,83 +1159,6 @@ body.game-chat .main__panel-road--1 {
 body.game-chat .main__panel-road--2 {
   grid-area: road-2;
   background: #fff url(../images/right_bg.png) no-repeat center/contain;
-}
-body.game-chat .main__panel-options {
-  grid-area: options;
-  padding: 0 15px;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(11, 1fr);
-  border-radius: 50px;
-  grid-template-areas: "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1" "blue-1 blue-1 blue-1 blue-1 green-1 green-1 green-1 red-1 red-1 red-1 red-1" "blue-2 blue-2 blue-3 blue-3 yellow-1 yellow-1 yellow-1 red-2 red-2 red-3 red-3";
-  gap: 5px;
-}
-body.game-chat .main__panel-options div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body.game-chat .main__panel-options div .big-text {
-  font-size: 2rem;
-}
-body.game-chat .main__panel-options div .normal-text {
-  font-size: 1.3rem;
-}
-body.game-chat .main__panel-options div .proportion {
-  font-size: 0.8rem;
-}
-body.game-chat .main__panel-options div .info {
-  font-size: 0.8rem;
-}
-body.game-chat .main__panel-options div .numb-Denominator {
-  font-size: 0.8rem;
-}
-body.game-chat .main__panel-options--blue-1 {
-  border-radius: 10px 0 0 0;
-  grid-area: blue-1;
-  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
-  border: 1px solid #6a78fa;
-}
-body.game-chat .main__panel-options--red-1 {
-  border-radius: 0 10px 0 0;
-  grid-area: red-1;
-  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
-  border: 1px solid #ac6262;
-}
-body.game-chat .main__panel-options--blue-2 {
-  border-radius: 0 0 0 10px;
-  grid-area: blue-2;
-  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
-  border: 1px solid #6a78fa;
-}
-body.game-chat .main__panel-options--red-2 {
-  grid-area: red-2;
-  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
-  border: 1px solid #ac6262;
-}
-body.game-chat .main__panel-options--blue-3 {
-  grid-area: blue-3;
-  background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
-  border: 1px solid #6a78fa;
-}
-body.game-chat .main__panel-options--red-3 {
-  border-radius: 0 0 10px 0;
-  grid-area: red-3;
-  background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
-  border: 1px solid #ac6262;
-}
-body.game-chat .main__panel-options--green-1 {
-  grid-area: green-1;
-  background: linear-gradient(to bottom, #1b8b1b 0%, #0b5812 20%, #1b8b1b 100%);
-  border: 1px solid #62ac68;
-}
-body.game-chat .main__panel-options--yellow-1 {
-  grid-area: yellow-1;
-  background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
-  border: 1px solid #ac9362;
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;
