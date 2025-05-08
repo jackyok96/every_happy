@@ -7,6 +7,7 @@
 @use "mixin/media";
 @use "widget/modal";
 @use "widget/marquee";
+@use "widget/groupBtn";
 @use "widget/checkbox";
 @use "widget/switch-icon";
 @use "elements/button";
@@ -365,11 +366,21 @@ body {
     background: #0f0b00;
 
     .main {
+
+      &__header {
+        &-toggle {
+          padding: 0 10px;
+          display: flex;
+
+          &-user {
+            margin-left: 50px;
+          }
+        }
+      }
+
       &__bet {
         &-section {
           position: relative;
-
-          &-video {}
 
           &-info {
             position: absolute;
@@ -476,6 +487,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
             svg {
               font-size: 1.3rem;
               display: flex;
@@ -592,10 +604,11 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             .big-text {
               font-size: 2rem;
             }
-            
+
             .normal-text {
               font-size: 1.3rem;
             }
@@ -603,48 +616,50 @@ body {
             .proportion {
               font-size: 0.8rem;
             }
+
             .info {
               font-size: 0.8rem;
             }
+
             .numb-Denominator {
               font-size: 0.8rem;
             }
           }
-          
+
           @for $i from 1 through 3 {
             &--blue {
               &-#{$i} {
                 @if $i ==1 {
                   border-radius: 10px 0 0 0;
                 }
-                
+
                 @if $i ==2 {
                   border-radius: 0 0 0 10px;
                 }
-                
+
                 grid-area: blue-#{$i};
                 background: linear-gradient(to bottom, #1b508b 0%, #0b2f58 20%, #1b508b 100%);
                 border: 1px solid #6a78fa;
               }
             }
-            
+
             &--red {
               &-#{$i} {
                 @if $i ==1 {
                   border-radius: 0 10px 0 0;
                 }
-                
+
                 @if $i ==3 {
                   border-radius: 0 0 10px 0;
                 }
-                
+
                 grid-area: red-#{$i};
                 background: linear-gradient(to bottom, #8b1b1b 0%, #580b0b 20%, #8b1b1b 100%);
                 border: 1px solid #ac6262;
               }
             }
           }
-          
+
           &--green {
             &-1 {
               grid-area: green-1;
@@ -652,7 +667,7 @@ body {
               border: 1px solid #62ac68;
             }
           }
-          
+
           &--yellow {
             &-1 {
               grid-area: yellow-1;
@@ -683,17 +698,19 @@ body {
           // background: #ff0000;
           display: flex;
           justify-content: center;
-          
+
           ul {
             width: 100%;
             padding: 20px;
             display: flex;
             justify-content: space-between;
+
             li {
               a {
                 color: #fff;
                 font-weight: bold;
                 font-size: 1.3rem;
+
                 &:hover {
                   color: yellow;
                 }
