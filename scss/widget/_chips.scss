@@ -1,0 +1,49 @@
+.chips {
+    grid-area: chips;
+    // background: #f39507;
+
+    ul {
+      font-size: 0.7rem;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            a {
+              display: block;
+              width: 60px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 60px;
+              background: transparent url(../images/chips_#{$i}_big.png) no-repeat center / 100% 100%;
+              transition: .3s;
+
+              &:hover {
+                transform: translateY(-10px);
+              }
+            }
+          }
+        }
+
+        &:nth-child(6) {
+          a {
+            display: block;
+            width: 60px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            background: transparent url(../images/chips_setting.png) no-repeat center / 100% 100%;
+            transition: .3s;
+
+            &:hover {
+              transform: translateY(-10px);
+            }
+          }
+        }
+      }
+    }
+
+  }
