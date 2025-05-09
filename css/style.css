@@ -1076,6 +1076,10 @@ body.game-chat .main__header-toggle-user {
 body.game-chat .main__bet-section {
   position: relative;
 }
+body.game-chat .main__bet-section-video img {
+  width: 100vw;
+  height: 92vh;
+}
 body.game-chat .main__bet-section-info {
   position: absolute;
   right: 50px;
@@ -1096,7 +1100,8 @@ body.game-chat .main__bet-section-info ul li {
 body.game-chat .main__bet-section-group-button {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 body.game-chat .main__bet-section-group-button-switch {
   width: 25px;
@@ -1130,6 +1135,9 @@ body.game-chat .main__bet-section-group-button-adjust ul li img {
   padding-left: 5px;
 }
 body.game-chat .main__panel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   display: grid;
   width: 100%;
   height: 325px;
