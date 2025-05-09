@@ -535,7 +535,11 @@ body {
           }
         }
 
-
+        &-chips {
+          grid-area: chips;
+          // background: #f39507;
+      
+        }
 
         &-road {
           &--1 {
