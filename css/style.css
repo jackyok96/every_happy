@@ -476,11 +476,6 @@ input[type=number] {
   padding: 10px;
 }
 
-.switch {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 .switch-section {
   cursor: pointer;
   width: 130px;
@@ -700,6 +695,37 @@ input[type=number] {
   grid-area: yellow-1;
   background: linear-gradient(to bottom, #58410b 0%, #382906 20%, #8b621b 100%);
   border: 1px solid #ac9362;
+}
+
+.chat {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.chat ul {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.binfo {
+  width: 100%;
+  display: flex;
+}
+.binfo ul {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.binfo ul li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.binfo ul li a:hover {
+  color: yellow;
 }
 
 .marquee-switch {
@@ -1115,7 +1141,9 @@ body.game-chat .main__panel {
 }
 body.game-chat .main__panel-switch {
   grid-area: switch;
-  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 body.game-chat .main__panel-btns {
   grid-area: btns;
@@ -1163,31 +1191,9 @@ body.game-chat .main__panel-road--2 {
 body.game-chat .main__panel-chat {
   grid-area: chat;
   display: flex;
-  justify-content: center;
-  padding: 0 20px;
-}
-body.game-chat .main__panel-chat ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 body.game-chat .main__panel-binfo {
   grid-area: binfo;
   display: flex;
   justify-content: center;
-}
-body.game-chat .main__panel-binfo ul {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-body.game-chat .main__panel-binfo ul li a {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-body.game-chat .main__panel-binfo ul li a:hover {
-  color: yellow;
 }

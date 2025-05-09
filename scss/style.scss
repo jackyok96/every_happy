@@ -12,6 +12,8 @@
 @use "widget/switch-icon";
 @use "widget/chips";
 @use "widget/options";
+@use "widget/panelChat";
+@use "widget/binfo";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -472,7 +474,9 @@ body {
         &-switch {
           grid-area: switch;
           // background: #0a3ee7;
-          padding-left: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
         }
 
         &-btns {
@@ -540,16 +544,6 @@ body {
           grid-area: chat;
           // background: #d904ec;
           display: flex;
-          justify-content: center;
-          padding: 0 20px;
-
-          ul {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-          }
         }
 
         &-binfo {
@@ -558,24 +552,7 @@ body {
           display: flex;
           justify-content: center;
 
-          ul {
-            width: 100%;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
 
-            li {
-              a {
-                color: #fff;
-                font-weight: bold;
-                font-size: 1.3rem;
-
-                &:hover {
-                  color: yellow;
-                }
-              }
-            }
-          }
         }
 
       }
