@@ -1080,7 +1080,7 @@ body.game-chat .main__bet-section-video img {
 body.game-chat .main__bet-section-info {
   position: absolute;
   right: 50px;
-  bottom: 30px;
+  top: 30%;
   width: 200px;
 }
 body.game-chat .main__bet-section-info ul li {
@@ -1098,7 +1098,6 @@ body.game-chat .main__bet-section-group-button {
   position: absolute;
   right: 0;
   top: 20%;
-  transform: translateY(50%);
 }
 body.game-chat .main__bet-section-group-button-switch {
   width: 25px;
