@@ -469,7 +469,7 @@ body {
         display: grid;
         width: 100%;
         height: 325px;
-        background: linear-gradient(to bottom, #393b41 0%, #141721 10%);
+        background: transparent linear-gradient(to bottom, transparent 0%, #141721 50%, #141721 100%);
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: "switch switch switch btns btns btns btns btns btns chips chips chips"
