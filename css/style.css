@@ -1097,7 +1097,7 @@ body.game-chat .main__bet-section-info ul li {
 body.game-chat .main__bet-section-group-button {
   position: absolute;
   right: 0;
-  bottom: 50%;
+  top: 20%;
   transform: translateY(50%);
 }
 body.game-chat .main__bet-section-group-button-switch {
