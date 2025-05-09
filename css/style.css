@@ -536,9 +536,6 @@ input[type=number] {
   transform: scale(-1);
 }
 
-.chips {
-  grid-area: chips;
-}
 .chips ul {
   font-size: 0.7rem;
   height: 100%;
@@ -1187,6 +1184,9 @@ body.game-chat .main__panel-btns .btn:hover {
 }
 body.game-chat .main__panel-btns .btn:active {
   box-shadow: inset 0 0 10px;
+}
+body.game-chat .main__panel-chips {
+  grid-area: chips;
 }
 body.game-chat .main__panel-road--1 {
   grid-area: road-1;
