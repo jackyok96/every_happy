@@ -1,0 +1,22 @@
+.binfo {
+    width: 100%;
+    display: flex;
+    ul {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    
+        li {
+          a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3rem;
+    
+            &:hover {
+              color: yellow;
+            }
+          }
+        }
+      }
+}

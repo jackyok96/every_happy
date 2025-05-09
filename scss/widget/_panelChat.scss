@@ -1,0 +1,11 @@
+.chat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    ul {
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+        justify-content: space-between;
+      }
+}
