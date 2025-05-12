@@ -271,6 +271,7 @@ body {
 
             &-voice {
               padding-right: 10px;
+              margin-bottom: 500px;
             }
           }
         }
@@ -385,8 +386,9 @@ body {
       &__bet {
         &-section {
           position: relative;
-
+          height: 92vh;
           &-video {
+            height: 100%;
             img {
               width: 100vw;
               height: 92vh;

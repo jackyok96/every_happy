@@ -998,6 +998,7 @@ body.lobby .main__header-marquee-music {
 }
 body.lobby .main__header-marquee-music-voice {
   padding-right: 10px;
+  margin-bottom: 500px;
 }
 body.lobby .main .history {
   height: 83vh;
@@ -1072,6 +1073,10 @@ body.game-chat .main__header-toggle-user {
 }
 body.game-chat .main__bet-section {
   position: relative;
+  height: 92vh;
+}
+body.game-chat .main__bet-section-video {
+  height: 100%;
 }
 body.game-chat .main__bet-section-video img {
   width: 100vw;
