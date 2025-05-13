@@ -11,4 +11,10 @@ window.onload = () => {
 
         window.location.href = "lobby.html";
     });
+
+    const toggle_switch_btn = document.querySelector('.main__bet-section-content-group-button-switch');
+    const section_content = document.querySelector('.main__bet-section-content');
+    toggle_switch_btn.addEventListener("click",() => {
+        section_content.classList.toggle("show");
+    });
 }
