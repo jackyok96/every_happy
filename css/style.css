@@ -757,7 +757,6 @@ input[type=number] {
   display: inline-block;
   vertical-align: middle;
   width: 120px;
-  height: 40px;
   border-radius: 100px;
   background-color: #000;
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.13) inset;
@@ -765,8 +764,8 @@ input[type=number] {
 .marquee-switch__label-btn-box .btn {
   display: block;
   width: 60px;
-  height: 40px;
-  border-radius: 40%;
+  height: 30px;
+  border-radius: 20px;
   background: linear-gradient(to bottom, #fed06d 0%, #a2781d 41%, #a3791e 44%, #ffd16e 100%);
   margin-left: 0;
   /*動畫從ml為0開始*/
@@ -992,6 +991,8 @@ body.lobby .main__header-marquee {
   background-color: #221d15;
   padding: 10px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 body.lobby .main__header-marquee-checkbox {
   position: absolute;
@@ -1113,6 +1114,7 @@ body.game-chat .main__bet-section-content {
   right: -20vw;
   width: 20vw;
   height: 100vh;
+  padding: 0 10px;
   background: #695c41;
   z-index: 5;
   transition: 0.5s;
@@ -1153,12 +1155,42 @@ body.game-chat .main__bet-section-content-group-button-adjust ul li img {
   width: 19px;
   padding-left: 5px;
 }
+body.game-chat .main__bet-section-content-function-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
 body.game-chat .main__bet-section-content-function-group-btn {
   display: flex;
   justify-content: space-around;
+  justify-items: center;
+}
+body.game-chat .main__bet-section-content-function-group-btn-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #fff;
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(to top, #523a0d 0%, #463109 50%, #735e35 100%);
+  border-radius: 5px;
+  padding: 15px 0;
+  margin: 0 3px;
+  font-size: 0.8rem;
+}
+body.game-chat .main__bet-section-content-function-group-btn-color.btn-active {
+  background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
+}
+body.game-chat .main__bet-section-content-function-group-btn-return {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
 }
 body.game-chat .main__bet-section-content-function-group-tables ul {
-  height: 95vh;
+  height: 93vh;
   overflow-y: scroll;
 }
 body.game-chat .main__bet-section-content.show {
