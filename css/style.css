@@ -694,16 +694,24 @@ input[type=number] {
   border: 1px solid #ac9362;
 }
 
-.chat {
+.chatBar {
   width: 100%;
   display: flex;
   align-items: center;
 }
-.chat ul {
+.chatBar ul {
   width: 100%;
   display: flex;
   padding: 0 20px;
   justify-content: space-between;
+}
+.chatBar ul li {
+  display: flex;
+  align-items: center;
+}
+.chatBar ul li img {
+  display: inline-block;
+  padding-right: 5px;
 }
 
 .binfo {
