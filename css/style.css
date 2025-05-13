@@ -1107,12 +1107,22 @@ body.game-chat .main__bet-section-info ul li {
   justify-content: space-between;
   line-height: 1rem;
 }
-body.game-chat .main__bet-section-group-button {
+body.game-chat .main__bet-section-content {
   position: absolute;
-  right: 0;
+  top: 0;
+  right: -20vw;
+  width: 20vw;
+  height: 100vh;
+  background: #695c41;
+  z-index: 5;
+  transition: 0.5s;
+}
+body.game-chat .main__bet-section-content-group-button {
+  position: absolute;
+  left: -25px;
   top: 20%;
 }
-body.game-chat .main__bet-section-group-button-switch {
+body.game-chat .main__bet-section-content-group-button-switch {
   width: 25px;
   height: 100px;
   text-align: center;
@@ -1120,11 +1130,11 @@ body.game-chat .main__bet-section-group-button-switch {
   background: transparent url("../images/switch_btn.png") no-repeat center/contain;
   writing-mode: vertical-lr;
 }
-body.game-chat .main__bet-section-group-button-switch a {
+body.game-chat .main__bet-section-content-group-button-switch a {
   color: #695c41;
   text-decoration: none;
 }
-body.game-chat .main__bet-section-group-button-adjust {
+body.game-chat .main__bet-section-content-group-button-adjust {
   position: absolute;
   color: #695c41;
   width: 25px;
@@ -1134,14 +1144,25 @@ body.game-chat .main__bet-section-group-button-adjust {
   background: transparent url("../images/btn_bg.png") no-repeat center/contain;
   writing-mode: vertical-lr;
 }
-body.game-chat .main__bet-section-group-button-adjust ul {
+body.game-chat .main__bet-section-content-group-button-adjust ul {
   display: flex;
   justify-content: space-evenly;
 }
-body.game-chat .main__bet-section-group-button-adjust ul li img {
+body.game-chat .main__bet-section-content-group-button-adjust ul li img {
   display: block;
   width: 19px;
   padding-left: 5px;
+}
+body.game-chat .main__bet-section-content-function-group-btn {
+  display: flex;
+  justify-content: space-around;
+}
+body.game-chat .main__bet-section-content-function-group-tables ul {
+  height: 95vh;
+  overflow-y: scroll;
+}
+body.game-chat .main__bet-section-content.show {
+  right: 0;
 }
 body.game-chat .main__panel {
   position: absolute;
