@@ -1,4 +1,4 @@
-.chat {
+.chatBar {
     width: 100%;
     display: flex;
     align-items: center;
@@ -7,5 +7,13 @@
         display: flex;
         padding: 0 20px;
         justify-content: space-between;
+        li {
+          display: flex;
+          align-items: center;
+          img {
+            display: inline-block;
+            padding-right: 5px;
+          }
+        }
       }
 }
