@@ -537,13 +537,23 @@ input[type=number] {
 }
 
 .chips ul {
-  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.chips ul li:nth-child(1) a {
+.chips ul li {
+  position: absolute;
+}
+.chips ul li.element1 {
+  right: 50px;
+}
+.chips ul li.element1 a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -552,10 +562,13 @@ input[type=number] {
   background: transparent url(../images/chips_1_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(1) a:hover {
+.chips ul li.element1 a:hover {
   transform: translateY(-10px);
 }
-.chips ul li:nth-child(2) a {
+.chips ul li.element2 {
+  right: 100px;
+}
+.chips ul li.element2 a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -564,10 +577,13 @@ input[type=number] {
   background: transparent url(../images/chips_2_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(2) a:hover {
+.chips ul li.element2 a:hover {
   transform: translateY(-10px);
 }
-.chips ul li:nth-child(3) a {
+.chips ul li.element3 {
+  right: 150px;
+}
+.chips ul li.element3 a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -576,10 +592,13 @@ input[type=number] {
   background: transparent url(../images/chips_3_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(3) a:hover {
+.chips ul li.element3 a:hover {
   transform: translateY(-10px);
 }
-.chips ul li:nth-child(4) a {
+.chips ul li.element4 {
+  right: 200px;
+}
+.chips ul li.element4 a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -588,10 +607,13 @@ input[type=number] {
   background: transparent url(../images/chips_4_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(4) a:hover {
+.chips ul li.element4 a:hover {
   transform: translateY(-10px);
 }
-.chips ul li:nth-child(5) a {
+.chips ul li.element5 {
+  right: 250px;
+}
+.chips ul li.element5 a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -600,10 +622,14 @@ input[type=number] {
   background: transparent url(../images/chips_5_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(5) a:hover {
+.chips ul li.element5 a:hover {
   transform: translateY(-10px);
 }
-.chips ul li:nth-child(6) a {
+.chips ul li.chips_setting {
+  top: 0;
+  right: 0;
+}
+.chips ul li.chips_setting a {
   display: block;
   width: 60px;
   font-weight: bold;
@@ -612,8 +638,12 @@ input[type=number] {
   background: transparent url(../images/chips_setting.png) no-repeat center/100% 100%;
   transition: 0.3s;
 }
-.chips ul li:nth-child(6) a:hover {
+.chips ul li.chips_setting a:hover {
   transform: translateY(-10px);
+}
+
+.highlight {
+  box-shadow: inset 0 0 20px #ffffff;
 }
 
 .options {
