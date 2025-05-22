@@ -1,6 +1,8 @@
 .chips {
   ul {
-margin:0; padding:0; list-style:none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     width: 100%;
     height: 100%;
     display: flex;
@@ -10,10 +12,11 @@ margin:0; padding:0; list-style:none;
 
     li {
       position: absolute;
+
       @for $i from 1 through 5 {
 
         &.element#{$i} {
-          // top: 0;
+          top: 0;
           right: 50px * $i;
 
           a {
@@ -35,6 +38,7 @@ margin:0; padding:0; list-style:none;
       &.chips_setting {
         top: 0;
         right: 0;
+
         a {
           display: block;
           width: 60px;

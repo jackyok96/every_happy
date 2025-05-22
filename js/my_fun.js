@@ -52,35 +52,24 @@ window.onload = () => {
         newElements = document.querySelectorAll(".chips ul li.chips-bet"), // 新增的可拖曳元素
         thresHold = "50%", // 命中測試閾值
         droppables = document.querySelectorAll(".options div"); // 可放置區
-    let currentID = 0, // 當前元素 ID 編號
-        latest; // 暫存變數
 
     // 設定現有元素的 id
     elements.forEach(function (element, index) { // 針對每個現有元素
         index = index + 1; // 設定索引從 1 開始
         element.className = 'element' + index; // 設定 id
-        currentID++; // ID 編號遞增
     });
 
     // 設定新元素的 id 並建立可拖曳功能
     newElements.forEach(function (element, index) { // 針對每個新元素
         index = index + 1; // 設定索引從 1 開始
         element.className = 'element' + index; // 設定 id
-        // currentID++; // ID 編號遞增
         createDraggable(element); // 建立可拖曳實例
         element.originalOffset = getOffset(element); // 記錄元素的初始位置
     });
 
     // 新增一個可拖曳元素
     function addElement(chip) { // 定義新增元素的函式
-        // const newElement = document.createElement('div'); // 建立 div 元素
-        // newElement.className = 'newElement patchbox'; // 設定 class
-        // newElement.id = 'element' + currentID; // 設定 id
-        // parent.appendChild(newElement); // 加到父容器
-        // createDraggable(newElement); // 建立可拖曳實例
-        // currentID++; // ID 編號遞增
         const newElement = chip.cloneNode(true);
-        console.log(newElement);
         parent.appendChild(newElement); // 加到父容器
         createDraggable(newElement); // 建立可拖曳實例
     }

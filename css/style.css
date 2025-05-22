@@ -551,6 +551,7 @@ input[type=number] {
   position: absolute;
 }
 .chips ul li.element1 {
+  top: 0;
   right: 50px;
 }
 .chips ul li.element1 a {
@@ -566,6 +567,7 @@ input[type=number] {
   transform: translateY(-10px);
 }
 .chips ul li.element2 {
+  top: 0;
   right: 100px;
 }
 .chips ul li.element2 a {
@@ -581,6 +583,7 @@ input[type=number] {
   transform: translateY(-10px);
 }
 .chips ul li.element3 {
+  top: 0;
   right: 150px;
 }
 .chips ul li.element3 a {
@@ -596,6 +599,7 @@ input[type=number] {
   transform: translateY(-10px);
 }
 .chips ul li.element4 {
+  top: 0;
   right: 200px;
 }
 .chips ul li.element4 a {
@@ -611,6 +615,7 @@ input[type=number] {
   transform: translateY(-10px);
 }
 .chips ul li.element5 {
+  top: 0;
   right: 250px;
 }
 .chips ul li.element5 a {
