@@ -1233,7 +1233,7 @@ body.game-chat .main__bet-section-content {
   height: 100vh;
   padding: 0 10px;
   background: #695c41;
-  z-index: 1005;
+  z-index: 2000;
   transition: 0.5s;
 }
 body.game-chat .main__bet-section-content-group-button {
