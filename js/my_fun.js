@@ -136,6 +136,7 @@ window.onload = () => {
     }
 
     //下注歷史記錄
+    //左邊記錄
     (function () {
 
         for (let i = 0; i < 168; i++) {
@@ -154,6 +155,52 @@ window.onload = () => {
         let posBlue = document.querySelectorAll('.box li:nth-child(2n+1)');
         let posRed = document.querySelectorAll('.box li:nth-child(2n+2)');
         let posGreen = document.querySelectorAll('.box li:nth-child(3n+3)');
+        const blue = '<div class="bet-box bet-blue">閒</div>';
+        const red = '<div class="bet-box bet-red">莊</div>';
+        const green = '<div class="bet-box bet-green">和</div>';
+
+        for (let i = 0; i <= posBlue.length - 1; i++) {
+            setTimeout(() => {
+                posBlue[i].insertAdjacentHTML('beforeend', `${blue}`);
+                posBlue[i].lastChild.classList.add('infade');
+            }, i * 400);
+        }
+
+        for (let i = 0; i <= posRed.length - 1; i++) {
+            setTimeout(() => {
+                posRed[i].insertAdjacentHTML('beforeend', `${red}`);
+                posRed[i].lastChild.classList.add('infade');
+            }, i * 400);
+        }
+
+        for (let i = 0; i <= posGreen.length - 1; i++) {
+            setTimeout(() => {
+                posGreen[i].insertAdjacentHTML('beforeend', `${green}`);
+                posGreen[i].lastChild.classList.add('infade');
+            }, i * 800);
+        }
+
+    })();
+
+    //右邊記錄
+    (function () {
+
+        for (let i = 0; i < 168; i++) {
+            document.querySelector('.box2').insertAdjacentHTML('beforeend', '<li></li>');
+            let li = document.querySelector('.box2').lastChild;
+            li.insertAdjacentHTML('beforeend', `<p>${i}</p>`);
+            if (i % 2 === 0) {
+                li.style.background = '#FFF';
+                li.style.color = 'white';
+            } else {
+                li.style.background = '#FFF';
+                li.style.color = 'white';
+            }
+        }
+
+        let posBlue = document.querySelectorAll('.box2 li:nth-child(2n+1)');
+        let posRed = document.querySelectorAll('.box2 li:nth-child(2n+2)');
+        let posGreen = document.querySelectorAll('.box2 li:nth-child(3n+3)');
         const blue = '<div class="bet-box bet-blue">閒</div>';
         const red = '<div class="bet-box bet-red">莊</div>';
         const green = '<div class="bet-box bet-green">和</div>';
