@@ -1,65 +1,66 @@
 .bet-container {
 
-    width: 1000px;
-    position: relative;
-  
-    ul {
-      margin: 0;
-      padding: 0;
+  width: 1000px;
+  position: relative;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &.box {
+      font-size: 0px;
       box-sizing: border-box;
-  
-      &.box {
-        font-size: 0px;
-        box-sizing: border-box;
-        li {
-          border: 1px solid #000;
-          list-style: none;
-          display: inline-block;
-          width: 35px;
-          height: 35px;
-          font-size: 10px;
-          color: red;
-          position: relative;
-  
-          .bet-box {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-  
+
+      li {
+        border: 1px solid #000;
+        list-style: none;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+        color: red;
+        position: relative;
+
+        .bet-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
+
       }
     }
   }
-  
-  .bet-blue {
-    background: rgb(10, 98, 214);
+}
+
+.bet-blue {
+  background: rgb(10, 98, 214);
+}
+
+.bet-red {
+  background: rgb(231, 6, 17);
+}
+
+.bet-green {
+  background: rgb(3, 145, 67);
+}
+
+.infade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
   }
-  
-  .bet-red {
-    background: rgb(231, 6, 17);
+
+  to {
+    opacity: 1;
   }
-  
-  .bet-green {
-    background: rgb(3, 145, 67);
-  }
-  
-  .infade {
-    animation: fade 1s;
-  }
-  
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
+}

@@ -1351,7 +1351,10 @@ body.game-chat .main__panel-road--1 {
   background-color: #fff;
   grid-area: road-1;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: auto;
+}
+body.game-chat .main__panel-road--1::-webkit-scrollbar {
+  display: none;
 }
 body.game-chat .main__panel-road--2 {
   background-color: #fff;
