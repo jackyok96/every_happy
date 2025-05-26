@@ -768,6 +768,65 @@ input[type=number] {
   color: yellow;
 }
 
+.bet-container {
+  width: 1000px;
+  position: relative;
+}
+.bet-container ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bet-container ul.box {
+  font-size: 0px;
+  box-sizing: border-box;
+}
+.bet-container ul.box li {
+  border: 1px solid #000;
+  list-style: none;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  font-size: 10px;
+  color: red;
+  position: relative;
+}
+.bet-container ul.box li .bet-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bet-blue {
+  background: rgb(10, 98, 214);
+}
+
+.bet-red {
+  background: rgb(231, 6, 17);
+}
+
+.bet-green {
+  background: rgb(3, 145, 67);
+}
+
+.infade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .marquee-switch {
   display: block;
   float: left;
@@ -1289,12 +1348,14 @@ body.game-chat .main__panel-chips {
   grid-area: chips;
 }
 body.game-chat .main__panel-road--1 {
+  background-color: #fff;
   grid-area: road-1;
-  background: #fff url(../images/left_bg.png) no-repeat center/contain;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 body.game-chat .main__panel-road--2 {
+  background-color: #fff;
   grid-area: road-2;
-  background: #fff url(../images/right_bg.png) no-repeat center/contain;
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;

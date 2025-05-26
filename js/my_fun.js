@@ -1,3 +1,4 @@
+'use strict';
 window.onload = () => {
     const toggle_btn = document.querySelector('.main__header-toggle-btn');
     toggle_btn.addEventListener("click", () => {
@@ -12,12 +13,14 @@ window.onload = () => {
         window.location.href = "lobby.html";
     });
 
+    //「切換投注視窗」按鈕
     const toggle_switch_btn = document.querySelector('.main__bet-section-content-group-button-switch');
     const section_content = document.querySelector('.main__bet-section-content');
     toggle_switch_btn.addEventListener("click", () => {
         section_content.classList.toggle("show");
     });
 
+    //「直播」視窗
     if (flvjs.isSupported()) {
         const videoElement = document.getElementById('videoPlayer');
         const flvPlayer = flvjs.createPlayer({
@@ -44,104 +47,138 @@ window.onload = () => {
         console.error('您的瀏覽器不支援 FLV 播放');
     }
 
+    const parent = document.querySelector(".chips > ul"),
+        elements = document.querySelectorAll(".chips ul li.chips-bet"),
+        newElements = document.querySelectorAll(".chips ul li.chips-bet"),
+        thresHold = "50%",
+        droppables = document.querySelectorAll(".options div");
 
-    //下注托曳功能
-        // 拖曳相關變數
-    const parent = document.querySelector(".chips > ul"), // 拖曳元素的父容器
-        elements = document.querySelectorAll(".chips ul li.chips-bet"), // 現有可拖曳元素
-        newElements = document.querySelectorAll(".chips ul li.chips-bet"), // 新增的可拖曳元素
-        thresHold = "50%", // 命中測試閾值
-        droppables = document.querySelectorAll(".options div"); // 可放置區
-
-    // 設定現有元素的 id
-    elements.forEach(function (element, index) { // 針對每個現有元素
-        index = index + 1; // 設定索引從 1 開始
-        element.className = 'element' + index; // 設定 id
+    elements.forEach(function (element, index) {
+        index = index + 1;
+        element.className = 'element' + index;
     });
 
-    // 設定新元素的 id 並建立可拖曳功能
-    newElements.forEach(function (element, index) { // 針對每個新元素
-        index = index + 1; // 設定索引從 1 開始
-        element.className = 'element' + index; // 設定 id
-        createDraggable(element); // 建立可拖曳實例
-        element.originalOffset = getOffset(element); // 記錄元素的初始位置
+    newElements.forEach(function (element, index) {
+        index = index + 1;
+        element.className = 'element' + index;
+        createDraggable(element);
+        element.originalOffset = getOffset(element);
     });
 
-    // 新增一個可拖曳元素
-    function addElement(chip) { // 定義新增元素的函式
+    function addElement(chip) {
         const newElement = chip.cloneNode(true);
-        parent.appendChild(newElement); // 加到父容器
-        createDraggable(newElement); // 建立可拖曳實例
+        parent.appendChild(newElement);
+        createDraggable(newElement);
     }
 
-    // 取得元素的 offset（相對於頁面左上角的位置）
-    function getOffset(el) { // 定義取得 offset 的函式
-        const rect = el.getBoundingClientRect(); // 取得元素的 bounding box
+    function getOffset(el) {
+        const rect = el.getBoundingClientRect();
         return {
-            left: rect.left + window.scrollX, // 計算左側距離
-            top: rect.top + window.scrollY // 計算頂部距離
+            left: rect.left + window.scrollX,
+            top: rect.top + window.scrollY
         };
     }
 
     // 建立可拖曳功能
-    function createDraggable(element) { // 定義建立拖曳功能的函式
-        Draggable.create(element, { // 使用 Draggable 建立拖曳
-            type: 'x,y', // 可在 X、Y 軸拖曳
-            bounds: '.main__panel', // 拖曳範圍限制
-            dragClickables: true, // 可點擊拖曳
+    function createDraggable(element) {
+        Draggable.create(element, {
+            type: 'x,y',
+            bounds: '.main__panel',
+            dragClickables: true,
 
-            // 拖曳開始時觸發
-            onDragStart: function () { // 拖曳開始事件
-                gsap.to(this.target, { duration: 0.2, opacity: 1 }); // 動畫：透明度變為 1
-                if (!this.target.classList.contains("dragged")) { // 如果還沒被拖曳過
-                    addElement(this.target); // 新增一個新的可拖曳元素
-                    this.target.classList.add("dragged"); // 標記已拖曳過
+            onDragStart: function () {
+                gsap.to(this.target, { duration: 0.2, opacity: 1 });
+                if (!this.target.classList.contains("dragged")) {
+                    addElement(this.target);
+                    this.target.classList.add("dragged");
                 }
             },
 
-            // 拖曳時觸發
-            onDrag: function () { // 拖曳中事件
-                droppables.forEach(function (dropzone) { // 針對每個可放置區
-                    // 命中測試，若有碰到 dropzone 則加上 highlight 樣式
-                    if (this.hitTest(dropzone, thresHold)) { // 命中測試
-                        dropzone.classList.add("highlight"); // 加上 highlight
+            onDrag: function () {
+                droppables.forEach(function (dropzone) {
+
+                    if (this.hitTest(dropzone, thresHold)) {
+                        dropzone.classList.add("highlight");
                     } else {
-                        dropzone.classList.remove("highlight"); // 移除 highlight
+                        dropzone.classList.remove("highlight");
                     }
                 }, this);
             },
 
-            // 拖曳結束時觸發
-            onDragEnd: function () { // 拖曳結束事件
-                const i = droppables.length, // 可放置區數量
-                    originalOffset = this.target.originalOffset; // 原始位置
-                let snappedEl = false; // 是否有吸附到 dropzone
+            onDragEnd: function () {
+                const i = droppables.length,
+                    originalOffset = this.target.originalOffset;
+                let snappedEl = false;
 
-                // 檢查是否有吸附到任一 dropzone
-                for (let j = 0; j < i; j++) { // 逐一檢查
-                    if (this.hitTest(droppables[j], thresHold)) { // 命中測試
-                        const targetOffset = getOffset(droppables[j]); // 取得 dropzone 位置
+                for (let j = 0; j < i; j++) {
+                    if (this.hitTest(droppables[j], thresHold)) {
+                        const targetOffset = getOffset(droppables[j]);
                         snappedEl = true; // 標記已吸附
-                        this.target.classList.add("snapped"); // 標記已吸附
-                        // 動畫移動到 dropzone 位置
+                        this.target.classList.add("snapped");
+
                         gsap.to(this.target, {
-                            duration: 0.1, // 動畫時間
-                            x: targetOffset.left - originalOffset.left, // X 軸移動
-                            y: targetOffset.top - originalOffset.top // Y 軸移動
+                            duration: 0.1,
+                            x: targetOffset.left - originalOffset.left,
+                            y: targetOffset.top - originalOffset.top
                         });
                     }
                 }
 
-                // 若未吸附到 dropzone，回到原位
                 if (!snappedEl) {
                     gsap.to(this.target, {
-                        duration: 0.2, // 動畫時間
-                        x: 0, // 回到原始 X
-                        y: 0 // 回到原始 Y
+                        duration: 0.2,
+                        x: 0,
+                        y: 0
                     });
                 }
             }
-        }); //draggable instance end
+        });
     }
+
+    //下注歷史記錄
+    (function () {
+
+        for (let i = 0; i < 168; i++) {
+            document.querySelector('.box').insertAdjacentHTML('beforeend', '<li></li>');
+            let li = document.querySelector('.box').lastChild;
+            li.insertAdjacentHTML('beforeend', `<p>${i}</p>`);
+            if (i % 2 === 0) {
+                li.style.background = '#FFF';
+                li.style.color = 'white';
+            } else {
+                li.style.background = '#FFF';
+                li.style.color = 'white';
+            }
+        }
+
+        let posBlue = document.querySelectorAll('.box li:nth-child(2n+1)');
+        let posRed = document.querySelectorAll('.box li:nth-child(2n+2)');
+        let posGreen = document.querySelectorAll('.box li:nth-child(3n+3)');
+        const blue = '<div class="bet-box bet-blue">閒</div>';
+        const red = '<div class="bet-box bet-red">莊</div>';
+        const green = '<div class="bet-box bet-green">和</div>';
+
+        for (let i = 0; i <= posBlue.length - 1; i++) {
+            setTimeout(() => {
+                posBlue[i].insertAdjacentHTML('beforeend', `${blue}`);
+                posBlue[i].lastChild.classList.add('infade');
+            }, i * 400);
+        }
+
+        for (let i = 0; i <= posRed.length - 1; i++) {
+            setTimeout(() => {
+                posRed[i].insertAdjacentHTML('beforeend', `${red}`);
+                posRed[i].lastChild.classList.add('infade');
+            }, i * 400);
+        }
+
+        for (let i = 0; i <= posGreen.length - 1; i++) {
+            setTimeout(() => {
+                posGreen[i].insertAdjacentHTML('beforeend', `${green}`);
+                posGreen[i].lastChild.classList.add('infade');
+            }, i * 800);
+        }
+
+    })();
 
 }
