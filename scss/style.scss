@@ -14,6 +14,7 @@
 @use "widget/options";
 @use "widget/panelChat";
 @use "widget/binfo";
+@use "widget/bet-container";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -610,13 +611,17 @@ body {
 
         &-road {
           &--1 {
+            background-color: #fff;
             grid-area: road-1;
-            background: #fff url(../images/left_bg.png) no-repeat center / contain;
+            box-sizing: border-box;
+            overflow: hidden;
+            // overflow: scroll;
           }
-
+          
           &--2 {
+            background-color: #fff;
             grid-area: road-2;
-            background: #fff url(../images/right_bg.png) no-repeat center / contain;
+            // background: #fff url(../images/right_bg.png) no-repeat center / contain;
           }
         }
 
