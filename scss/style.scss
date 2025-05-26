@@ -627,7 +627,12 @@ body {
           &--2 {
             background-color: #fff;
             grid-area: road-2;
-            // background: #fff url(../images/right_bg.png) no-repeat center / contain;
+            box-sizing: border-box;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
           }
         }
 

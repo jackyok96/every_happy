@@ -788,10 +788,33 @@ input[type=number] {
   width: 35px;
   height: 35px;
   font-size: 10px;
-  color: red;
   position: relative;
 }
 .bet-container ul.box li .bet-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bet-container ul.box2 {
+  font-size: 0px;
+  box-sizing: border-box;
+}
+.bet-container ul.box2 li {
+  border: 1px solid #000;
+  list-style: none;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  font-size: 10px;
+  position: relative;
+}
+.bet-container ul.box2 li .bet-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -1359,6 +1382,11 @@ body.game-chat .main__panel-road--1::-webkit-scrollbar {
 body.game-chat .main__panel-road--2 {
   background-color: #fff;
   grid-area: road-2;
+  box-sizing: border-box;
+  overflow: auto;
+}
+body.game-chat .main__panel-road--2::-webkit-scrollbar {
+  display: none;
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;
