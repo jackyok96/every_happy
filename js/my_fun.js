@@ -228,4 +228,11 @@ window.onload = () => {
 
     })();
 
+
+}
+
+//顯示下注結果
+function dispalyResult() {
+   let playResult = document.querySelector('.play-result');
+   playResult.classList.toggle('fade');
 }
