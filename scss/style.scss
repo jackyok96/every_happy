@@ -634,22 +634,22 @@ body {
             background-color: #fff;
             grid-area: road-1;
             box-sizing: border-box;
-            overflow: auto;
+            overflow-y: hidden;
 
-            &::-webkit-scrollbar {
-              display: none;
-            }
+            // &::-webkit-scrollbar {
+            //   display: none;
+            // }
           }
 
           &--2 {
             background-color: #fff;
             grid-area: road-2;
             box-sizing: border-box;
-            overflow: auto;
+            overflow-y: hidden;
 
-            &::-webkit-scrollbar {
-              display: none;
-            }
+            // &::-webkit-scrollbar {
+            //   display: none;
+            // }
           }
         }
 
