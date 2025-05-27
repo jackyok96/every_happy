@@ -769,7 +769,7 @@ input[type=number] {
 }
 
 .bet-container {
-  width: 1000px;
+  width: 880px;
   position: relative;
 }
 .bet-container ul {
@@ -785,8 +785,8 @@ input[type=number] {
   border: 1px solid #000;
   list-style: none;
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 31px;
+  height: 31px;
   font-size: 10px;
   position: relative;
 }
@@ -809,8 +809,8 @@ input[type=number] {
   border: 1px solid #000;
   list-style: none;
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 31px;
+  height: 31px;
   font-size: 10px;
   position: relative;
 }
@@ -850,6 +850,115 @@ input[type=number] {
     opacity: 1;
   }
 }
+.play-result {
+  position: relative;
+}
+.play-result h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-size: 38px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  font-weight: 900;
+  background: linear-gradient(to bottom, #fff9e0 0%, #fff9e0 40%, #ffd339 50%, #ffd339 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.play-result-info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 35px;
+  width: 100%;
+  height: 60px;
+  font-weight: bold;
+  font-style: italic;
+  background: transparent url(../images/閒家贏.png) no-repeat center center/cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.play-result-content {
+  display: flex;
+  position: relative;
+}
+.play-result-content dl {
+  display: flex;
+  flex-direction: column;
+}
+.play-result-content dl dt {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.play-result-content dl dt p {
+  font-size: 1.5rem;
+}
+.play-result-content dl dt p:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: #000;
+  border-radius: 50%;
+  text-shadow: 0 0 0.5em #f3f3f3;
+}
+.play-result-content dl dt p:nth-child(2) {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+}
+.play-result-content dl dd {
+  height: 260px;
+  padding: 10px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+.play-result-content dl dd .Poker:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.play-result-content dl dd .Poker:nth-child(2) {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.play-result-content dl dd .Poker:nth-child(3) {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0 auto;
+}
+.play-result-content dl dd .Poker:nth-child(3) img {
+  transform: rotate(90deg);
+}
+.play-result-content dl:nth-child(1) dt {
+  background: blue;
+}
+.play-result-content dl:nth-child(1) dd {
+  border-right: 1px solid #fff;
+}
+.play-result-content dl:nth-child(2) dt {
+  background: red;
+  flex-direction: row-reverse;
+}
+
 .marquee-switch {
   display: block;
   float: left;
@@ -1225,6 +1334,21 @@ body.game-chat .main__bet-section-info ul li {
   justify-content: space-between;
   line-height: 1rem;
 }
+body.game-chat .main__bet-section-result {
+  position: absolute;
+  border: 1px solid #7f602b;
+  width: 400px;
+  height: 310px;
+  left: 50px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+body.game-chat .main__bet-section-result h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 body.game-chat .main__bet-section-content {
   position: absolute;
   top: 0;
@@ -1374,19 +1498,13 @@ body.game-chat .main__panel-road--1 {
   background-color: #fff;
   grid-area: road-1;
   box-sizing: border-box;
-  overflow: auto;
-}
-body.game-chat .main__panel-road--1::-webkit-scrollbar {
-  display: none;
+  overflow-y: hidden;
 }
 body.game-chat .main__panel-road--2 {
   background-color: #fff;
   grid-area: road-2;
   box-sizing: border-box;
-  overflow: auto;
-}
-body.game-chat .main__panel-road--2::-webkit-scrollbar {
-  display: none;
+  overflow-y: hidden;
 }
 body.game-chat .main__panel-chat {
   grid-area: chat;

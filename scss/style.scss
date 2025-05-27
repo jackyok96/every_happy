@@ -15,6 +15,7 @@
 @use "widget/panelChat";
 @use "widget/binfo";
 @use "widget/bet-container";
+@use "widget/result";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -421,6 +422,22 @@ body {
             }
           }
 
+          &-result {
+            position: absolute;
+            border: 1px solid #7f602b;
+            width: 400px;
+            height: 310px;
+            left: 50px;
+            top: 10px;
+            background: rgba($color: #000000, $alpha: 0.5);
+
+            h4 {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
 
           &-content {
             position: absolute;
@@ -617,22 +634,22 @@ body {
             background-color: #fff;
             grid-area: road-1;
             box-sizing: border-box;
-            overflow: auto;
+            overflow-y: hidden;
 
-            &::-webkit-scrollbar {
-              display: none;
-            }
+            // &::-webkit-scrollbar {
+            //   display: none;
+            // }
           }
 
           &--2 {
             background-color: #fff;
             grid-area: road-2;
             box-sizing: border-box;
-            overflow: auto;
+            overflow-y: hidden;
 
-            &::-webkit-scrollbar {
-              display: none;
-            }
+            // &::-webkit-scrollbar {
+            //   display: none;
+            // }
           }
         }
 
