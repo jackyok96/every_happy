@@ -1,7 +1,7 @@
 'use strict';
 window.onload = () => {
 
-    //轉跳頁面
+    /* //轉跳頁面 */
     const toggle_btn = document.querySelector('.main__header-toggle-btn');
     toggle_btn.addEventListener("click", () => {
         //縮放側邊欄效果
@@ -12,17 +12,17 @@ window.onload = () => {
         // const switch_img = document.querySelector(".main__header-toggle-btn img");
         // switch_img.classList.toggle("close--active");
 
-        window.location.href = "lobby.html";
+        window.location.href = "index.html";
     });
 
-    //「切換投注視窗」按鈕
+    /* //「切換投注視窗」按鈕 */
     const toggle_switch_btn = document.querySelector('.main__bet-section-content-group-button-switch');
     const section_content = document.querySelector('.main__bet-section-content');
     toggle_switch_btn.addEventListener("click", () => {
         section_content.classList.toggle("show");
     });
 
-    //「直播」視窗
+    /* //「直播」視窗 */
     if (flvjs.isSupported()) {
         const videoElement = document.getElementById('videoPlayer');
         const flvPlayer = flvjs.createPlayer({
@@ -49,6 +49,7 @@ window.onload = () => {
         console.error('您的瀏覽器不支援 FLV 播放');
     }
 
+    /* 托曳下注功能 */
     const parent = document.querySelector(".chips > ul"),
         elements = document.querySelectorAll(".chips ul li.chips-bet"),
         newElements = document.querySelectorAll(".chips ul li.chips-bet"),
@@ -81,7 +82,7 @@ window.onload = () => {
         };
     }
 
-    // 建立可拖曳功能
+    // 建立可拖曳部件
     function createDraggable(element) {
         Draggable.create(element, {
             type: 'x,y',
@@ -137,7 +138,7 @@ window.onload = () => {
         });
     }
 
-    //下注歷史記錄
+    /* 下注歷史記錄 */
     //左邊記錄
     (function () {
 
@@ -234,7 +235,7 @@ window.onload = () => {
 }
 
 
-//放大螢幕效果
+/* 放大螢幕效果 */
 function toggleFullScreen(elem) {
     // ## The below if statement seems to work better ## if ((document.fullScreenElement && document.fullScreenElement !== null) || (document.msfullscreenElement && document.msfullscreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
     if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -260,7 +261,7 @@ function toggleFullScreen(elem) {
     }
 }
 
-//顯示下注結果
+/* 顯示下注結果 */
 function dispalyResult() {
     let playResult = document.querySelector('.play-result');
     playResult.classList.toggle('fade');
