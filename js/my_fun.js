@@ -231,7 +231,10 @@ window.onload = () => {
 
     })();
 
-
+    // var $modal = $('#reportModalToggle');
+    const reportModal = document.querySelector('#reportModalToggle');
+    // reportModal.querySelector('.modal-content').style.width= "80vw";
+    reportModal.querySelector('.modal-content').style.height= "80vh";
 }
 
 

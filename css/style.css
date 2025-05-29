@@ -388,54 +388,55 @@ input[type=number] {
   }
 }
 /* 共用網頁主體 */
+/* 彈跳視窗設定 */
 #forgetModalToggle .modal-content,
-#forgetModalToggle2 .modal-content {
+#forgetModalToggle2 .modal-content, #reportModalToggle .modal-content {
   border-width: 6px;
   border-color: rgba(83, 59, 14, 0.5);
   color: #000;
   background-color: transparent;
 }
 #forgetModalToggle .modal-content input,
-#forgetModalToggle2 .modal-content input {
+#forgetModalToggle2 .modal-content input, #reportModalToggle .modal-content input {
   background-color: #1b1815;
   color: #9f9f9f;
 }
-#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder {
+#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder, #reportModalToggle .modal-content input::-moz-placeholder {
   color: #ccc;
 }
 #forgetModalToggle .modal-content input::placeholder,
-#forgetModalToggle2 .modal-content input::placeholder {
+#forgetModalToggle2 .modal-content input::placeholder, #reportModalToggle .modal-content input::placeholder {
   color: #ccc;
 }
 #forgetModalToggle .modal-header,
-#forgetModalToggle2 .modal-header {
+#forgetModalToggle2 .modal-header, #reportModalToggle .modal-header {
   background: linear-gradient(to top, #523a0d, #463109, #533b0e);
   color: #fff;
   border-color: transparent;
 }
 #forgetModalToggle .modal-header h5,
-#forgetModalToggle2 .modal-header h5 {
+#forgetModalToggle2 .modal-header h5, #reportModalToggle .modal-header h5 {
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 24px;
 }
 #forgetModalToggle .modal-header .btn-close,
-#forgetModalToggle2 .modal-header .btn-close {
+#forgetModalToggle2 .modal-header .btn-close, #reportModalToggle .modal-header .btn-close {
   filter: invert(100%);
 }
 #forgetModalToggle .modal-body,
-#forgetModalToggle2 .modal-body {
+#forgetModalToggle2 .modal-body, #reportModalToggle .modal-body {
   color: #fff;
   background-color: #2e2a21;
 }
 #forgetModalToggle .modal-footer,
-#forgetModalToggle2 .modal-footer {
+#forgetModalToggle2 .modal-footer, #reportModalToggle .modal-footer {
   background: linear-gradient(to top, #221e15, #2e2a21);
   border-color: rgba(83, 59, 14, 0.5);
 }
 #forgetModalToggle .modal-btn,
-#forgetModalToggle2 .modal-btn {
+#forgetModalToggle2 .modal-btn, #reportModalToggle .modal-btn {
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
@@ -444,11 +445,11 @@ input[type=number] {
   width: 100px;
 }
 #forgetModalToggle .modal-btn:hover,
-#forgetModalToggle2 .modal-btn:hover {
+#forgetModalToggle2 .modal-btn:hover, #reportModalToggle .modal-btn:hover {
   box-shadow: 0 0 15px #fff;
 }
 #forgetModalToggle .modal-btn:active,
-#forgetModalToggle2 .modal-btn:active {
+#forgetModalToggle2 .modal-btn:active, #reportModalToggle .modal-btn:active {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 
