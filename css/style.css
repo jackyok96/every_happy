@@ -97,9 +97,10 @@ h2.seo {
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 a:hover, a:focus, a:active {
-  color: #191919;
+  color: #787160;
 }
 
 p {
@@ -388,54 +389,154 @@ input[type=number] {
   }
 }
 /* 共用網頁主體 */
+/* 彈跳視窗設定 */
 #forgetModalToggle .modal-content,
-#forgetModalToggle2 .modal-content {
+#forgetModalToggle2 .modal-content,
+#reportModalToggle .modal-content {
   border-width: 6px;
   border-color: rgba(83, 59, 14, 0.5);
   color: #000;
   background-color: transparent;
+  position: relative;
+}
+#forgetModalToggle .modal-content .Bureau,
+#forgetModalToggle2 .modal-content .Bureau,
+#reportModalToggle .modal-content .Bureau {
+  color: #ffd696;
+  font-weight: bold;
+}
+#forgetModalToggle .modal-content .res,
+#forgetModalToggle2 .modal-content .res,
+#reportModalToggle .modal-content .res {
+  color: #ff0000;
+}
+#forgetModalToggle .modal-content .green,
+#forgetModalToggle2 .modal-content .green,
+#reportModalToggle .modal-content .green {
+  color: #00ff00;
+}
+#forgetModalToggle .modal-content-dateBtn,
+#forgetModalToggle2 .modal-content-dateBtn,
+#reportModalToggle .modal-content-dateBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+#forgetModalToggle .modal-content-dateBtn li a,
+#forgetModalToggle2 .modal-content-dateBtn li a,
+#reportModalToggle .modal-content-dateBtn li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(to top, #523a0d 0%, #463109 50%, #735e35 100%);
+  width: 100px;
+  margin-right: 10px;
+}
+#forgetModalToggle .modal-content-dateBtn li a:hover,
+#forgetModalToggle2 .modal-content-dateBtn li a:hover,
+#reportModalToggle .modal-content-dateBtn li a:hover {
+  background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
+}
+#forgetModalToggle .modal-content-dateBtn li a.active,
+#forgetModalToggle2 .modal-content-dateBtn li a.active,
+#reportModalToggle .modal-content-dateBtn li a.active {
+  background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
 }
 #forgetModalToggle .modal-content input,
-#forgetModalToggle2 .modal-content input {
+#forgetModalToggle2 .modal-content input,
+#reportModalToggle .modal-content input {
   background-color: #1b1815;
   color: #9f9f9f;
 }
-#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder {
+#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder, #reportModalToggle .modal-content input::-moz-placeholder {
   color: #ccc;
 }
 #forgetModalToggle .modal-content input::placeholder,
-#forgetModalToggle2 .modal-content input::placeholder {
+#forgetModalToggle2 .modal-content input::placeholder,
+#reportModalToggle .modal-content input::placeholder {
   color: #ccc;
 }
 #forgetModalToggle .modal-header,
-#forgetModalToggle2 .modal-header {
+#forgetModalToggle2 .modal-header,
+#reportModalToggle .modal-header {
   background: linear-gradient(to top, #523a0d, #463109, #533b0e);
   color: #fff;
   border-color: transparent;
 }
 #forgetModalToggle .modal-header h5,
-#forgetModalToggle2 .modal-header h5 {
+#forgetModalToggle2 .modal-header h5,
+#reportModalToggle .modal-header h5 {
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 24px;
 }
 #forgetModalToggle .modal-header .btn-close,
-#forgetModalToggle2 .modal-header .btn-close {
+#forgetModalToggle2 .modal-header .btn-close,
+#reportModalToggle .modal-header .btn-close {
   filter: invert(100%);
 }
 #forgetModalToggle .modal-body,
-#forgetModalToggle2 .modal-body {
+#forgetModalToggle2 .modal-body,
+#reportModalToggle .modal-body {
   color: #fff;
   background-color: #2e2a21;
 }
+#forgetModalToggle .modal-body .nav-tabs,
+#forgetModalToggle2 .modal-body .nav-tabs,
+#reportModalToggle .modal-body .nav-tabs {
+  border: none;
+  margin-bottom: 10px;
+}
+#forgetModalToggle .modal-body .nav-link,
+#forgetModalToggle2 .modal-body .nav-link,
+#reportModalToggle .modal-body .nav-link {
+  border: none;
+}
+#forgetModalToggle .modal-body .nav-link a,
+#forgetModalToggle2 .modal-body .nav-link a,
+#reportModalToggle .modal-body .nav-link a {
+  color: #fff;
+}
+#forgetModalToggle .modal-body .nav-link.active,
+#forgetModalToggle2 .modal-body .nav-link.active,
+#reportModalToggle .modal-body .nav-link.active {
+  background: none;
+  font-weight: bold;
+}
+#forgetModalToggle .modal-body .nav-link.active a,
+#forgetModalToggle2 .modal-body .nav-link.active a,
+#reportModalToggle .modal-body .nav-link.active a {
+  display: block;
+  color: #f7c967;
+  border-bottom: 1px solid #ffd696;
+  padding-bottom: 0.2rem;
+}
+#forgetModalToggle .modal-body .tab-pane .table-dark,
+#forgetModalToggle2 .modal-body .tab-pane .table-dark,
+#reportModalToggle .modal-body .tab-pane .table-dark {
+  border-color: #7b6237;
+}
+#forgetModalToggle .modal-body .tab-pane .table tbody,
+#forgetModalToggle2 .modal-body .tab-pane .table tbody,
+#reportModalToggle .modal-body .tab-pane .table tbody {
+  color: #aaaaaa;
+}
+#forgetModalToggle .modal-body .tab-pane .table tbody td,
+#forgetModalToggle2 .modal-body .tab-pane .table tbody td,
+#reportModalToggle .modal-body .tab-pane .table tbody td {
+  background-color: transparent;
+}
 #forgetModalToggle .modal-footer,
-#forgetModalToggle2 .modal-footer {
+#forgetModalToggle2 .modal-footer,
+#reportModalToggle .modal-footer {
   background: linear-gradient(to top, #221e15, #2e2a21);
   border-color: rgba(83, 59, 14, 0.5);
 }
 #forgetModalToggle .modal-btn,
-#forgetModalToggle2 .modal-btn {
+#forgetModalToggle2 .modal-btn,
+#reportModalToggle .modal-btn {
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
@@ -444,11 +545,13 @@ input[type=number] {
   width: 100px;
 }
 #forgetModalToggle .modal-btn:hover,
-#forgetModalToggle2 .modal-btn:hover {
+#forgetModalToggle2 .modal-btn:hover,
+#reportModalToggle .modal-btn:hover {
   box-shadow: 0 0 15px #fff;
 }
 #forgetModalToggle .modal-btn:active,
-#forgetModalToggle2 .modal-btn:active {
+#forgetModalToggle2 .modal-btn:active,
+#reportModalToggle .modal-btn:active {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 
@@ -562,6 +665,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_1_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element1 a:hover {
   transform: translateY(-10px);
@@ -578,6 +682,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_2_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element2 a:hover {
   transform: translateY(-10px);
@@ -594,6 +699,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_3_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element3 a:hover {
   transform: translateY(-10px);
@@ -610,6 +716,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_4_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element4 a:hover {
   transform: translateY(-10px);
@@ -626,6 +733,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_5_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element5 a:hover {
   transform: translateY(-10px);
