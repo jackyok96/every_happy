@@ -2,14 +2,53 @@
 // Modals setting
 //==================================================
 
+/* ¼u¸õµøµ¡³]©w */
 #forgetModalToggle,
-#forgetModalToggle2 {
+#forgetModalToggle2,
+#reportModalToggle {
     .modal {
         &-content {
             border-width: 6px;
             border-color: rgba($color: #533b0e, $alpha: 0.5);
             color: #000;
             background-color: transparent;
+            position: relative;
+            .Bureau {
+                color: #ffd696;
+                font-weight: bold;
+            }
+            .res {
+                color: #ff0000;
+            }
+            .green {
+                color: #00ff00;
+            }
+            &-dateBtn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+
+                li {
+                    a {
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                        background: linear-gradient(to top, #523a0d 0%, #463109 50%, #735e35 100%);
+                        // border-radius: 48px;
+                        width: 100px;
+                        margin-right: 10px;
+
+                        &:hover {
+                            background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
+                        }
+
+                        &.active {
+                            background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
+                        }
+                    }
+                }
+            }
 
             input {
                 background-color: #1b1815;
@@ -41,6 +80,46 @@
         &-body {
             color: #fff;
             background-color: #2e2a21;
+
+            .nav {
+                &-tabs {
+                    border: none;
+                    margin-bottom: 10px;
+                }
+                &-link {
+                    border: none;
+                    a {
+                        color: #fff;
+                    }
+                    &.active {
+                        a {
+                            display: block;
+                            color: #f7c967;
+                            border-bottom: 1px solid #ffd696;
+                            padding-bottom: 0.2rem;
+
+                        }
+                        background: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .tab {
+                &-pane {
+                    .table {
+                        &-dark {
+                            border-color: #7b6237;
+                        }
+                        tbody {
+                            color: #aaaaaa;
+                            td {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &-footer {
