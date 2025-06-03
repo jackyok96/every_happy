@@ -1,4 +1,11 @@
 /* 所有設定檔 */
+@use "sass:selectors";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:map";
+@use "sass:color";
+@use "sass:list";
+@use "sass:math";
 @use "basic/varsetting";
 @use "basic/fonts";
 @use "basic/normal";
