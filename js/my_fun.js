@@ -72,6 +72,7 @@ window.onload = () => {
         const newElement = chip.cloneNode(true);
         parent.appendChild(newElement);
         createDraggable(newElement);
+        return newElement;
     }
 
     function getOffset(el) {
@@ -84,6 +85,9 @@ window.onload = () => {
 
     // 建立可拖曳部件
     function createDraggable(element) {
+        // 建立可拖曳物件時儲存原始偏移量
+        const originalOffset = getOffset(element);
+        
         Draggable.create(element, {
             type: 'x,y',
             bounds: '.main__panel',
@@ -92,7 +96,7 @@ window.onload = () => {
             onDragStart: function () {
                 gsap.to(this.target, { duration: 0.2, opacity: 1 });
                 if (!this.target.classList.contains("dragged")) {
-                    addElement(this.target);
+                    const newElement = addElement(this.target);
                     this.target.classList.add("dragged");
                 }
             },
@@ -109,8 +113,7 @@ window.onload = () => {
             },
 
             onDragEnd: function () {
-                const i = droppables.length,
-                    originalOffset = this.target.originalOffset;
+                const i = droppables.length;
                 let snappedEl = false;
 
                 for (let j = 0; j < i; j++) {
