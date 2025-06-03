@@ -389,42 +389,107 @@ input[type=number] {
   }
 }
 /* 共用網頁主體 */
-/* 彈跳視窗設定 */
-#forgetModalToggle .modal-content,
-#forgetModalToggle2 .modal-content,
-#reportModalToggle .modal-content {
+/* 彈跳視窗 */
+.ModalToggle .modal-content, #reportModalToggle .modal-content, #forgetModalToggle2 .modal-content, #forgetModalToggle .modal-content {
   border-width: 6px;
   border-color: rgba(83, 59, 14, 0.5);
   color: #000;
   background-color: transparent;
   position: relative;
 }
-#forgetModalToggle .modal-content .Bureau,
-#forgetModalToggle2 .modal-content .Bureau,
+.ModalToggle .modal-header, #reportModalToggle .modal-header, #forgetModalToggle2 .modal-header, #forgetModalToggle .modal-header {
+  background: linear-gradient(to top, #523a0d, #463109, #533b0e);
+  color: #fff;
+  border-color: transparent;
+}
+.ModalToggle .modal-header h5, #reportModalToggle .modal-header h5, #forgetModalToggle2 .modal-header h5, #forgetModalToggle .modal-header h5 {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 24px;
+}
+.ModalToggle .modal-header .btn-close, #reportModalToggle .modal-header .btn-close, #forgetModalToggle2 .modal-header .btn-close, #forgetModalToggle .modal-header .btn-close {
+  filter: invert(100%);
+}
+.ModalToggle .modal-body, #reportModalToggle .modal-body, #forgetModalToggle2 .modal-body, #forgetModalToggle .modal-body {
+  color: #fff;
+  background-color: #2e2a21;
+}
+.ModalToggle .modal-body .nav-tabs, #reportModalToggle .modal-body .nav-tabs, #forgetModalToggle2 .modal-body .nav-tabs, #forgetModalToggle .modal-body .nav-tabs {
+  border: none;
+  margin-bottom: 10px;
+}
+.ModalToggle .modal-body .nav-link, #reportModalToggle .modal-body .nav-link, #forgetModalToggle2 .modal-body .nav-link, #forgetModalToggle .modal-body .nav-link {
+  border: none;
+}
+.ModalToggle .modal-body .nav-link a, #reportModalToggle .modal-body .nav-link a, #forgetModalToggle2 .modal-body .nav-link a, #forgetModalToggle .modal-body .nav-link a {
+  color: #fff;
+}
+.ModalToggle .modal-body .nav-link.active, #reportModalToggle .modal-body .nav-link.active, #forgetModalToggle2 .modal-body .nav-link.active, #forgetModalToggle .modal-body .nav-link.active {
+  background: none;
+  font-weight: bold;
+}
+.ModalToggle .modal-body .nav-link.active a, #reportModalToggle .modal-body .nav-link.active a, #forgetModalToggle2 .modal-body .nav-link.active a, #forgetModalToggle .modal-body .nav-link.active a {
+  display: block;
+  color: #f7c967;
+  border-bottom: 1px solid #ffd696;
+  padding-bottom: 0.2rem;
+}
+.ModalToggle .modal-body .tab-pane .table-dark, #reportModalToggle .modal-body .tab-pane .table-dark, #forgetModalToggle2 .modal-body .tab-pane .table-dark, #forgetModalToggle .modal-body .tab-pane .table-dark {
+  border-color: #7b6237;
+}
+.ModalToggle .modal-body .tab-pane .table tbody, #reportModalToggle .modal-body .tab-pane .table tbody, #forgetModalToggle2 .modal-body .tab-pane .table tbody, #forgetModalToggle .modal-body .tab-pane .table tbody {
+  color: #aaaaaa;
+}
+.ModalToggle .modal-body .tab-pane .table tbody td, #reportModalToggle .modal-body .tab-pane .table tbody td, #forgetModalToggle2 .modal-body .tab-pane .table tbody td, #forgetModalToggle .modal-body .tab-pane .table tbody td {
+  background-color: transparent;
+}
+.ModalToggle .modal-footer, #reportModalToggle .modal-footer, #forgetModalToggle2 .modal-footer, #forgetModalToggle .modal-footer {
+  background: linear-gradient(to top, #221e15, #2e2a21);
+  border-color: rgba(83, 59, 14, 0.5);
+}
+.ModalToggle .modal-btn, #reportModalToggle .modal-btn, #forgetModalToggle2 .modal-btn, #forgetModalToggle .modal-btn {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
+  border-radius: 48px;
+  width: 100px;
+}
+.ModalToggle .modal-btn:hover, #reportModalToggle .modal-btn:hover, #forgetModalToggle2 .modal-btn:hover, #forgetModalToggle .modal-btn:hover {
+  box-shadow: 0 0 15px #fff;
+}
+.ModalToggle .modal-btn:active, #reportModalToggle .modal-btn:active, #forgetModalToggle2 .modal-btn:active, #forgetModalToggle .modal-btn:active {
+  background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
+}
+
+#forgetModalToggle input {
+  background-color: #1b1815;
+  color: #9f9f9f;
+}
+#forgetModalToggle input::-moz-placeholder {
+  color: #ccc;
+}
+#forgetModalToggle input::placeholder {
+  color: #ccc;
+}
+
+#reportModalToggle .modal-content .res {
+  color: #ff0000;
+}
+#reportModalToggle .modal-content .green {
+  color: #00ff00;
+}
 #reportModalToggle .modal-content .Bureau {
   color: #ffd696;
   font-weight: bold;
 }
-#forgetModalToggle .modal-content .res,
-#forgetModalToggle2 .modal-content .res,
-#reportModalToggle .modal-content .res {
-  color: #ff0000;
-}
-#forgetModalToggle .modal-content .green,
-#forgetModalToggle2 .modal-content .green,
-#reportModalToggle .modal-content .green {
-  color: #00ff00;
-}
-#forgetModalToggle .modal-content-dateBtn,
-#forgetModalToggle2 .modal-content-dateBtn,
 #reportModalToggle .modal-content-dateBtn {
   position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
 }
-#forgetModalToggle .modal-content-dateBtn li a,
-#forgetModalToggle2 .modal-content-dateBtn li a,
 #reportModalToggle .modal-content-dateBtn li a {
   color: #fff;
   font-weight: bold;
@@ -433,126 +498,11 @@ input[type=number] {
   width: 100px;
   margin-right: 10px;
 }
-#forgetModalToggle .modal-content-dateBtn li a:hover,
-#forgetModalToggle2 .modal-content-dateBtn li a:hover,
 #reportModalToggle .modal-content-dateBtn li a:hover {
   background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
 }
-#forgetModalToggle .modal-content-dateBtn li a.active,
-#forgetModalToggle2 .modal-content-dateBtn li a.active,
 #reportModalToggle .modal-content-dateBtn li a.active {
   background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
-}
-#forgetModalToggle .modal-content input,
-#forgetModalToggle2 .modal-content input,
-#reportModalToggle .modal-content input {
-  background-color: #1b1815;
-  color: #9f9f9f;
-}
-#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder, #reportModalToggle .modal-content input::-moz-placeholder {
-  color: #ccc;
-}
-#forgetModalToggle .modal-content input::placeholder,
-#forgetModalToggle2 .modal-content input::placeholder,
-#reportModalToggle .modal-content input::placeholder {
-  color: #ccc;
-}
-#forgetModalToggle .modal-header,
-#forgetModalToggle2 .modal-header,
-#reportModalToggle .modal-header {
-  background: linear-gradient(to top, #523a0d, #463109, #533b0e);
-  color: #fff;
-  border-color: transparent;
-}
-#forgetModalToggle .modal-header h5,
-#forgetModalToggle2 .modal-header h5,
-#reportModalToggle .modal-header h5 {
-  width: 100%;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-left: 24px;
-}
-#forgetModalToggle .modal-header .btn-close,
-#forgetModalToggle2 .modal-header .btn-close,
-#reportModalToggle .modal-header .btn-close {
-  filter: invert(100%);
-}
-#forgetModalToggle .modal-body,
-#forgetModalToggle2 .modal-body,
-#reportModalToggle .modal-body {
-  color: #fff;
-  background-color: #2e2a21;
-}
-#forgetModalToggle .modal-body .nav-tabs,
-#forgetModalToggle2 .modal-body .nav-tabs,
-#reportModalToggle .modal-body .nav-tabs {
-  border: none;
-  margin-bottom: 10px;
-}
-#forgetModalToggle .modal-body .nav-link,
-#forgetModalToggle2 .modal-body .nav-link,
-#reportModalToggle .modal-body .nav-link {
-  border: none;
-}
-#forgetModalToggle .modal-body .nav-link a,
-#forgetModalToggle2 .modal-body .nav-link a,
-#reportModalToggle .modal-body .nav-link a {
-  color: #fff;
-}
-#forgetModalToggle .modal-body .nav-link.active,
-#forgetModalToggle2 .modal-body .nav-link.active,
-#reportModalToggle .modal-body .nav-link.active {
-  background: none;
-  font-weight: bold;
-}
-#forgetModalToggle .modal-body .nav-link.active a,
-#forgetModalToggle2 .modal-body .nav-link.active a,
-#reportModalToggle .modal-body .nav-link.active a {
-  display: block;
-  color: #f7c967;
-  border-bottom: 1px solid #ffd696;
-  padding-bottom: 0.2rem;
-}
-#forgetModalToggle .modal-body .tab-pane .table-dark,
-#forgetModalToggle2 .modal-body .tab-pane .table-dark,
-#reportModalToggle .modal-body .tab-pane .table-dark {
-  border-color: #7b6237;
-}
-#forgetModalToggle .modal-body .tab-pane .table tbody,
-#forgetModalToggle2 .modal-body .tab-pane .table tbody,
-#reportModalToggle .modal-body .tab-pane .table tbody {
-  color: #aaaaaa;
-}
-#forgetModalToggle .modal-body .tab-pane .table tbody td,
-#forgetModalToggle2 .modal-body .tab-pane .table tbody td,
-#reportModalToggle .modal-body .tab-pane .table tbody td {
-  background-color: transparent;
-}
-#forgetModalToggle .modal-footer,
-#forgetModalToggle2 .modal-footer,
-#reportModalToggle .modal-footer {
-  background: linear-gradient(to top, #221e15, #2e2a21);
-  border-color: rgba(83, 59, 14, 0.5);
-}
-#forgetModalToggle .modal-btn,
-#forgetModalToggle2 .modal-btn,
-#reportModalToggle .modal-btn {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
-  border-radius: 48px;
-  width: 100px;
-}
-#forgetModalToggle .modal-btn:hover,
-#forgetModalToggle2 .modal-btn:hover,
-#reportModalToggle .modal-btn:hover {
-  box-shadow: 0 0 15px #fff;
-}
-#forgetModalToggle .modal-btn:active,
-#forgetModalToggle2 .modal-btn:active,
-#reportModalToggle .modal-btn:active {
-  background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 
 .marquee {
