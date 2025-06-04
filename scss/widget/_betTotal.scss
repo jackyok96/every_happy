@@ -6,7 +6,7 @@
     left: 2%;
 
     &-btn {
-        width: 180px;
+        width: 160px;
         background: linear-gradient(to bottom, #1a150e 0%, #57482b 100%);
         color: #eed4a8;
 
@@ -33,6 +33,7 @@
     &-numb {
         display: flex;
         line-height: 2rem;
+
         p {
             flex-grow: 1;
             font-size: 0.5 rem;
@@ -71,18 +72,9 @@
             }
         }
     }
-
-    .dropdown-toggle {
-
-
-        &::before {
-            width: 30px;
-            height: 30px;
-            background: #fff;
-            border: 1px solid red;
-        }
+    .btn {
+        font-size: 0.8rem;
     }
-
     .dropdown-menu {
         padding: 0;
         color: #fff;

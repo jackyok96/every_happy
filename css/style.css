@@ -914,7 +914,7 @@ input[type=number] {
   width: 400px;
   height: 310px;
   top: 10px;
-  left: 12%;
+  left: 200px;
   background: rgba(0, 0, 0, 0.5);
 }
 .play-result h4 {
@@ -1037,7 +1037,7 @@ input[type=number] {
   left: 2%;
 }
 .bet-total-btn {
-  width: 180px;
+  width: 160px;
   background: linear-gradient(to bottom, #1a150e 0%, #57482b 100%);
   color: #eed4a8;
 }
@@ -1092,11 +1092,8 @@ input[type=number] {
   text-align: right;
   display: block;
 }
-.bet-total .dropdown-toggle::before {
-  width: 30px;
-  height: 30px;
-  background: #fff;
-  border: 1px solid red;
+.bet-total .btn {
+  font-size: 0.8rem;
 }
 .bet-total .dropdown-menu {
   padding: 0;
