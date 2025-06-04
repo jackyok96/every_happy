@@ -909,7 +909,19 @@ input[type=number] {
   }
 }
 .play-result {
-  position: relative;
+  position: absolute;
+  border: 1px solid #7f602b;
+  width: 400px;
+  height: 310px;
+  top: 10px;
+  left: 12%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.play-result h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .play-result h3 {
   font-family: "Noto Sans", sans-serif;
@@ -1015,6 +1027,84 @@ input[type=number] {
 .play-result-content dl:nth-child(2) dt {
   background: red;
   flex-direction: row-reverse;
+}
+
+.bet-total {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: 10px;
+  left: 2%;
+}
+.bet-total-btn {
+  width: 180px;
+  background: linear-gradient(to bottom, #1a150e 0%, #57482b 100%);
+  color: #eed4a8;
+}
+.bet-total-btn:hover {
+  color: #fff;
+}
+.bet-total-img {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.bet-total-title {
+  color: #eed4a8;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.bet-total-numb {
+  display: flex;
+  line-height: 2rem;
+}
+.bet-total-numb p {
+  flex-grow: 1;
+  font-size: 0.5 rem;
+  text-align: center;
+  color: #fff;
+}
+.bet-total-numb p:nth-child(1) {
+  background: linear-gradient(to right, #008aeb 0%, #002497 100%);
+  font-weight: bold;
+}
+.bet-total-numb p:nth-child(2) {
+  background: linear-gradient(to right, #eb0000 0%, #970000 100%);
+  font-weight: bold;
+}
+.bet-total-binfo {
+  display: flex;
+}
+.bet-total-binfo dl {
+  flex-grow: 1;
+  padding: 10px 15px;
+  margin: 0;
+}
+.bet-total-binfo dl dt {
+  display: block;
+  float: left;
+  color: #eed4a8;
+}
+.bet-total-binfo dl dd {
+  text-align: right;
+  display: block;
+}
+.bet-total .dropdown-toggle::before {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid red;
+}
+.bet-total .dropdown-menu {
+  padding: 0;
+  color: #fff;
+  min-width: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #eed4a8;
+  border-radius: 0;
 }
 
 .marquee-switch {
@@ -1391,21 +1481,6 @@ body.game-chat .main__bet-section-info ul li {
   display: flex;
   justify-content: space-between;
   line-height: 1rem;
-}
-body.game-chat .main__bet-section-result {
-  position: absolute;
-  border: 1px solid #7f602b;
-  width: 400px;
-  height: 310px;
-  left: 50px;
-  top: 10px;
-  background: rgba(0, 0, 0, 0.5);
-}
-body.game-chat .main__bet-section-result h4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 body.game-chat .main__bet-section-content {
   position: absolute;

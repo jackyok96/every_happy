@@ -1,5 +1,5 @@
 /* 所有設定檔 */
-@use "sass:selectors";
+@use "sass:selector";
 @use "sass:meta";
 @use "sass:string";
 @use "sass:map";
@@ -16,13 +16,14 @@
 @use "widget/marquee";
 @use "widget/groupBtn";
 @use "widget/checkbox";
-@use "widget/switch-icon";
+@use "widget/switchIcon";
 @use "widget/chips";
 @use "widget/options";
 @use "widget/panelChat";
 @use "widget/binfo";
-@use "widget/bet-container";
+@use "widget/betContainer";
 @use "widget/result";
+@use "widget/betTotal";
 @use "elements/button";
 @use "elements/scrollbar";
 
@@ -428,22 +429,13 @@ body {
             }
           }
 
-          &-result {
-            position: absolute;
-            border: 1px solid #7f602b;
-            width: 400px;
-            height: 310px;
-            left: 50px;
-            top: 10px;
-            background: rgba($color: #000000, $alpha: 0.5);
+          // &-total {
+          //   position: absolute;
+          // }
 
-            h4 {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-          }
+          // &-result {
+
+          // }
 
           &-content {
             position: absolute;

@@ -87,7 +87,7 @@ window.onload = () => {
     function createDraggable(element) {
         // 建立可拖曳物件時儲存原始偏移量
         const originalOffset = getOffset(element);
-        
+
         Draggable.create(element, {
             type: 'x,y',
             bounds: '.main__panel',
@@ -237,7 +237,41 @@ window.onload = () => {
     // var $modal = $('#reportModalToggle');
     const reportModal = document.querySelector('#reportModalToggle');
     // reportModal.querySelector('.modal-content').style.width= "80vw";
-    reportModal.querySelector('.modal-content').style.height= "80vh";
+    reportModal.querySelector('.modal-content').style.height = "80vh";
+
+    /* 彩池下拉式清單 */
+    // Variables
+    const dropdown = document.querySelector('.dropdown');
+    const input = document.querySelector('input');
+    const listOfOptions = document.querySelectorAll('.option');
+    const body = document.body;
+
+    // Functions
+    const toggleDropdown = (event) => {
+        event.stopPropagation();
+        dropdown.classList.toggle('opened');
+    };
+
+    const selectOption = (event) => {
+        input.value = event.currentTarget.textContent;
+    };
+
+    const closeDropdownFromOutside = () => {
+        if (dropdown.classList.contains('opened')) {
+            dropdown.classList.remove('opened');
+        }
+    };
+
+    // Event Listeners
+    body.addEventListener('click', closeDropdownFromOutside);
+
+    listOfOptions.forEach((option) => {
+        option.addEventListener('click', selectOption);
+    });
+
+    dropdown.addEventListener('click', toggleDropdown);
+
+
 }
 
 
