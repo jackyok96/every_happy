@@ -18,7 +18,7 @@
     &-img {
         position: absolute;
         top: 50%;
-        left: 20px;
+        left: 15px;
         transform: translateY(-50%);
     }
 
@@ -72,9 +72,25 @@
             }
         }
     }
+
     .btn {
         font-size: 0.8rem;
     }
+
+
+    .dropdown-toggle {
+        &:after {
+            display: none;
+        }
+
+        .bi-chevron-down {
+            margin-left: 5px;
+            padding: 1px 3px;
+            box-shadow: 0 0 5px #fff inset;
+            background: url('../images/arrow_bg.png') no-repeat center center;
+        }
+    }
+
     .dropdown-menu {
         padding: 0;
         color: #fff;
