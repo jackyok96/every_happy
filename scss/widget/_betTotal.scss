@@ -79,15 +79,30 @@
 
 
     .dropdown-toggle {
+        display: flex;
+        justify-content: center;
+
         &:after {
             display: none;
         }
 
-        .bi-chevron-down {
-            margin-left: 5px;
-            padding: 1px 3px;
-            box-shadow: 0 0 5px #fff inset;
-            background: url('../images/arrow_bg.png') no-repeat center center;
+        .icon-section {
+            position: relative;
+
+            .bi-chevron-up {
+                display: block;
+                margin-left: 5px;
+                padding: 1px 3px;
+                box-shadow: 0 0 5px #fff inset;
+            }
+        }
+
+        &.show {
+            .icon-section {
+                .bi-chevron-up {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 

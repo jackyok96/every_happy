@@ -1095,14 +1095,24 @@ input[type=number] {
 .bet-total .btn {
   font-size: 0.8rem;
 }
+.bet-total .dropdown-toggle {
+  display: flex;
+  justify-content: center;
+}
 .bet-total .dropdown-toggle:after {
   display: none;
 }
-.bet-total .dropdown-toggle .bi-chevron-down {
+.bet-total .dropdown-toggle .icon-section {
+  position: relative;
+}
+.bet-total .dropdown-toggle .icon-section .bi-chevron-up {
+  display: block;
   margin-left: 5px;
   padding: 1px 3px;
   box-shadow: 0 0 5px #fff inset;
-  background: url("../images/arrow_bg.png") no-repeat center center;
+}
+.bet-total .dropdown-toggle.show .icon-section .bi-chevron-up {
+  transform: rotate(180deg);
 }
 .bet-total .dropdown-menu {
   padding: 0;
