@@ -27,6 +27,7 @@
             line-height: 60px;
             background: transparent url(../images/chips_#{$i}_big.png) no-repeat center / 100% 100%;
             transition: .3s;
+            color: #000;
 
             &:hover {
               transform: translateY(-10px);

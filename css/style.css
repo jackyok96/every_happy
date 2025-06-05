@@ -97,9 +97,10 @@ h2.seo {
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 a:hover, a:focus, a:active {
-  color: #191919;
+  color: #787160;
 }
 
 p {
@@ -388,55 +389,66 @@ input[type=number] {
   }
 }
 /* 共用網頁主體 */
-/* 彈跳視窗設定 */
-#forgetModalToggle .modal-content,
-#forgetModalToggle2 .modal-content, #reportModalToggle .modal-content {
+/* 彈跳視窗 */
+.ModalToggle .modal-content, #reportModalToggle .modal-content, #forgetModalToggle2 .modal-content, #forgetModalToggle .modal-content {
   border-width: 6px;
   border-color: rgba(83, 59, 14, 0.5);
   color: #000;
   background-color: transparent;
+  position: relative;
 }
-#forgetModalToggle .modal-content input,
-#forgetModalToggle2 .modal-content input, #reportModalToggle .modal-content input {
-  background-color: #1b1815;
-  color: #9f9f9f;
-}
-#forgetModalToggle .modal-content input::-moz-placeholder, #forgetModalToggle2 .modal-content input::-moz-placeholder, #reportModalToggle .modal-content input::-moz-placeholder {
-  color: #ccc;
-}
-#forgetModalToggle .modal-content input::placeholder,
-#forgetModalToggle2 .modal-content input::placeholder, #reportModalToggle .modal-content input::placeholder {
-  color: #ccc;
-}
-#forgetModalToggle .modal-header,
-#forgetModalToggle2 .modal-header, #reportModalToggle .modal-header {
+.ModalToggle .modal-header, #reportModalToggle .modal-header, #forgetModalToggle2 .modal-header, #forgetModalToggle .modal-header {
   background: linear-gradient(to top, #523a0d, #463109, #533b0e);
   color: #fff;
   border-color: transparent;
 }
-#forgetModalToggle .modal-header h5,
-#forgetModalToggle2 .modal-header h5, #reportModalToggle .modal-header h5 {
+.ModalToggle .modal-header h5, #reportModalToggle .modal-header h5, #forgetModalToggle2 .modal-header h5, #forgetModalToggle .modal-header h5 {
   width: 100%;
   font-size: 1.5rem;
   font-weight: bold;
   padding-left: 24px;
 }
-#forgetModalToggle .modal-header .btn-close,
-#forgetModalToggle2 .modal-header .btn-close, #reportModalToggle .modal-header .btn-close {
+.ModalToggle .modal-header .btn-close, #reportModalToggle .modal-header .btn-close, #forgetModalToggle2 .modal-header .btn-close, #forgetModalToggle .modal-header .btn-close {
   filter: invert(100%);
 }
-#forgetModalToggle .modal-body,
-#forgetModalToggle2 .modal-body, #reportModalToggle .modal-body {
+.ModalToggle .modal-body, #reportModalToggle .modal-body, #forgetModalToggle2 .modal-body, #forgetModalToggle .modal-body {
   color: #fff;
   background-color: #2e2a21;
 }
-#forgetModalToggle .modal-footer,
-#forgetModalToggle2 .modal-footer, #reportModalToggle .modal-footer {
+.ModalToggle .modal-body .nav-tabs, #reportModalToggle .modal-body .nav-tabs, #forgetModalToggle2 .modal-body .nav-tabs, #forgetModalToggle .modal-body .nav-tabs {
+  border: none;
+  margin-bottom: 10px;
+}
+.ModalToggle .modal-body .nav-link, #reportModalToggle .modal-body .nav-link, #forgetModalToggle2 .modal-body .nav-link, #forgetModalToggle .modal-body .nav-link {
+  border: none;
+}
+.ModalToggle .modal-body .nav-link a, #reportModalToggle .modal-body .nav-link a, #forgetModalToggle2 .modal-body .nav-link a, #forgetModalToggle .modal-body .nav-link a {
+  color: #fff;
+}
+.ModalToggle .modal-body .nav-link.active, #reportModalToggle .modal-body .nav-link.active, #forgetModalToggle2 .modal-body .nav-link.active, #forgetModalToggle .modal-body .nav-link.active {
+  background: none;
+  font-weight: bold;
+}
+.ModalToggle .modal-body .nav-link.active a, #reportModalToggle .modal-body .nav-link.active a, #forgetModalToggle2 .modal-body .nav-link.active a, #forgetModalToggle .modal-body .nav-link.active a {
+  display: block;
+  color: #f7c967;
+  border-bottom: 1px solid #ffd696;
+  padding-bottom: 0.2rem;
+}
+.ModalToggle .modal-body .tab-pane .table-dark, #reportModalToggle .modal-body .tab-pane .table-dark, #forgetModalToggle2 .modal-body .tab-pane .table-dark, #forgetModalToggle .modal-body .tab-pane .table-dark {
+  border-color: #7b6237;
+}
+.ModalToggle .modal-body .tab-pane .table tbody, #reportModalToggle .modal-body .tab-pane .table tbody, #forgetModalToggle2 .modal-body .tab-pane .table tbody, #forgetModalToggle .modal-body .tab-pane .table tbody {
+  color: #aaaaaa;
+}
+.ModalToggle .modal-body .tab-pane .table tbody td, #reportModalToggle .modal-body .tab-pane .table tbody td, #forgetModalToggle2 .modal-body .tab-pane .table tbody td, #forgetModalToggle .modal-body .tab-pane .table tbody td {
+  background-color: transparent;
+}
+.ModalToggle .modal-footer, #reportModalToggle .modal-footer, #forgetModalToggle2 .modal-footer, #forgetModalToggle .modal-footer {
   background: linear-gradient(to top, #221e15, #2e2a21);
   border-color: rgba(83, 59, 14, 0.5);
 }
-#forgetModalToggle .modal-btn,
-#forgetModalToggle2 .modal-btn, #reportModalToggle .modal-btn {
+.ModalToggle .modal-btn, #reportModalToggle .modal-btn, #forgetModalToggle2 .modal-btn, #forgetModalToggle .modal-btn {
   color: #fff;
   font-weight: bold;
   font-size: 1.1rem;
@@ -444,13 +456,53 @@ input[type=number] {
   border-radius: 48px;
   width: 100px;
 }
-#forgetModalToggle .modal-btn:hover,
-#forgetModalToggle2 .modal-btn:hover, #reportModalToggle .modal-btn:hover {
+.ModalToggle .modal-btn:hover, #reportModalToggle .modal-btn:hover, #forgetModalToggle2 .modal-btn:hover, #forgetModalToggle .modal-btn:hover {
   box-shadow: 0 0 15px #fff;
 }
-#forgetModalToggle .modal-btn:active,
-#forgetModalToggle2 .modal-btn:active, #reportModalToggle .modal-btn:active {
+.ModalToggle .modal-btn:active, #reportModalToggle .modal-btn:active, #forgetModalToggle2 .modal-btn:active, #forgetModalToggle .modal-btn:active {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
+}
+
+#forgetModalToggle input {
+  background-color: #1b1815;
+  color: #9f9f9f;
+}
+#forgetModalToggle input::-moz-placeholder {
+  color: #ccc;
+}
+#forgetModalToggle input::placeholder {
+  color: #ccc;
+}
+
+#reportModalToggle .modal-content .res {
+  color: #ff0000;
+}
+#reportModalToggle .modal-content .green {
+  color: #00ff00;
+}
+#reportModalToggle .modal-content .Bureau {
+  color: #ffd696;
+  font-weight: bold;
+}
+#reportModalToggle .modal-content-dateBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+#reportModalToggle .modal-content-dateBtn li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(to top, #523a0d 0%, #463109 50%, #735e35 100%);
+  width: 100px;
+  margin-right: 10px;
+}
+#reportModalToggle .modal-content-dateBtn li a:hover {
+  background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
+}
+#reportModalToggle .modal-content-dateBtn li a.active {
+  background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
 }
 
 .marquee {
@@ -563,6 +615,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_1_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element1 a:hover {
   transform: translateY(-10px);
@@ -579,6 +632,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_2_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element2 a:hover {
   transform: translateY(-10px);
@@ -595,6 +649,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_3_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element3 a:hover {
   transform: translateY(-10px);
@@ -611,6 +666,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_4_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element4 a:hover {
   transform: translateY(-10px);
@@ -627,6 +683,7 @@ input[type=number] {
   line-height: 60px;
   background: transparent url(../images/chips_5_big.png) no-repeat center/100% 100%;
   transition: 0.3s;
+  color: #000;
 }
 .chips ul li.element5 a:hover {
   transform: translateY(-10px);
@@ -852,7 +909,20 @@ input[type=number] {
   }
 }
 .play-result {
-  position: relative;
+  position: absolute;
+  border: 1px solid #7f602b;
+  width: 400px;
+  height: 310px;
+  top: 10px;
+  left: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.play-result h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .play-result h3 {
   font-family: "Noto Sans", sans-serif;
@@ -958,6 +1028,100 @@ input[type=number] {
 .play-result-content dl:nth-child(2) dt {
   background: red;
   flex-direction: row-reverse;
+}
+
+.bet-total {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: 10px;
+  left: 2%;
+}
+.bet-total-btn {
+  width: 160px;
+  background: linear-gradient(to bottom, #1a150e 0%, #57482b 100%);
+  color: #eed4a8;
+}
+.bet-total-btn:hover {
+  color: #fff;
+}
+.bet-total-img {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.bet-total-title {
+  color: #eed4a8;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.bet-total-numb {
+  display: flex;
+  line-height: 2rem;
+}
+.bet-total-numb p {
+  flex-grow: 1;
+  font-size: 0.5 rem;
+  text-align: center;
+  color: #fff;
+}
+.bet-total-numb p:nth-child(1) {
+  background: linear-gradient(to right, #008aeb 0%, #002497 100%);
+  font-weight: bold;
+}
+.bet-total-numb p:nth-child(2) {
+  background: linear-gradient(to right, #eb0000 0%, #970000 100%);
+  font-weight: bold;
+}
+.bet-total-binfo {
+  display: flex;
+}
+.bet-total-binfo dl {
+  flex-grow: 1;
+  padding: 10px 15px;
+  margin: 0;
+}
+.bet-total-binfo dl dt {
+  display: block;
+  float: left;
+  color: #eed4a8;
+}
+.bet-total-binfo dl dd {
+  text-align: right;
+  display: block;
+}
+.bet-total .btn {
+  font-size: 0.8rem;
+}
+.bet-total .dropdown-toggle {
+  display: flex;
+  justify-content: center;
+}
+.bet-total .dropdown-toggle:after {
+  display: none;
+}
+.bet-total .dropdown-toggle .icon-section {
+  position: relative;
+}
+.bet-total .dropdown-toggle .icon-section .bi-chevron-up {
+  display: block;
+  margin-left: 5px;
+  padding: 1px 3px;
+  box-shadow: 0 0 5px #fff inset;
+}
+.bet-total .dropdown-toggle.show .icon-section .bi-chevron-up {
+  transform: rotate(180deg);
+}
+.bet-total .dropdown-menu {
+  padding: 0;
+  color: #fff;
+  min-width: 500px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #eed4a8;
+  border-radius: 0;
 }
 
 .marquee-switch {
@@ -1334,21 +1498,6 @@ body.game-chat .main__bet-section-info ul li {
   display: flex;
   justify-content: space-between;
   line-height: 1rem;
-}
-body.game-chat .main__bet-section-result {
-  position: absolute;
-  border: 1px solid #7f602b;
-  width: 400px;
-  height: 310px;
-  left: 50px;
-  top: 10px;
-  background: rgba(0, 0, 0, 0.5);
-}
-body.game-chat .main__bet-section-result h4 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 body.game-chat .main__bet-section-content {
   position: absolute;
