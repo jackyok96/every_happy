@@ -1047,7 +1047,7 @@ input[type=number] {
 .bet-total-img {
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 15px;
   transform: translateY(-50%);
 }
 .bet-total-title {
@@ -1094,6 +1094,15 @@ input[type=number] {
 }
 .bet-total .btn {
   font-size: 0.8rem;
+}
+.bet-total .dropdown-toggle:after {
+  display: none;
+}
+.bet-total .dropdown-toggle .bi-chevron-down {
+  margin-left: 5px;
+  padding: 1px 3px;
+  box-shadow: 0 0 5px #fff inset;
+  background: url("../images/arrow_bg.png") no-repeat center center;
 }
 .bet-total .dropdown-menu {
   padding: 0;
