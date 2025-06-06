@@ -23,6 +23,7 @@
 @use "widget/binfo";
 @use "widget/betContainer";
 @use "widget/result";
+@use "widget/pageLoading";
 @use "widget/betTotal";
 @use "elements/button";
 @use "elements/scrollbar";
@@ -429,13 +430,6 @@ body {
             }
           }
 
-          // &-total {
-          //   position: absolute;
-          // }
-
-          // &-result {
-
-          // }
 
           &-content {
             position: absolute;

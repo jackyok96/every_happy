@@ -1030,6 +1030,35 @@ input[type=number] {
   flex-direction: row-reverse;
 }
 
+/* 每個區段的尺寸和背景圖片設定 */
+/* 零件集合 */
+.play-pageLoading, .play-counter img, .play-counter p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-pageLoading {
+  width: 622px;
+  height: 60px;
+  background: url(../images/play_poker_bg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-counter {
+  width: 142px;
+  height: 142px;
+  background: transparent;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+.play-counter p {
+  font-size: 3rem;
+}
+
 .bet-total {
   position: absolute;
   background-color: #000;
