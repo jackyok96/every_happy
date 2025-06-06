@@ -271,7 +271,17 @@ window.onload = () => {
 
     dropdown.addEventListener('click', toggleDropdown);
 
-
+    //   按下 start 後 id 為 timer 的 DIV 內容可以開始倒數到到 0。 
+    let timer = document.querySelector(".play-numb");
+    let number = timer.innerHTML;
+    let tmpTimer = Number(number);
+    setInterval(function () {
+        number--;
+        if (number <= 0) {
+            number = tmpTimer;
+        }
+        timer.innerText = number.toString().padStart(2, 0);
+    }, 1000);
 }
 
 
@@ -302,7 +312,7 @@ function toggleFullScreen(elem) {
 }
 
 /* 顯示下注結果 */
-function dispalyResult() {
-    let playResult = document.querySelector('.play-result');
+function dispalyResult($playObject) {
+    let playResult = document.querySelector($playObject);
     playResult.classList.toggle('fade');
 }
