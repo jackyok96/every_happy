@@ -1,0 +1,37 @@
+@use "../mixin/mixin";
+.play{
+    &-pageLoading {
+        width: 622px;
+        height: 60px;
+        background: url(../images/play_poker_bg.png);
+        @extend %place-vh-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-pageLoading2 {
+        width: 622px;
+        height: 60px;
+        background: url(../images/play_bet_bg.png);
+        @extend %place-vh-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-counter {
+        width: 142px;
+        height: 142px;
+        background: transparent;
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        img {
+            animation: rotation linear 5s infinite;
+        }
+        p {
+            @extend %place-vh-center;
+            font-size: 3rem;
+        }
+    }
+}
+

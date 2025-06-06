@@ -471,6 +471,16 @@
                                         </dl>
                                     </div>
                                 </div>
+                                <div class="main__bet-section-pageLoading play-pageLoading">
+                                    <img src="images/play_poker.png" alt="">
+                                </div>
+                                <div class="main__bet-section-pageLoading play-pageLoading2">
+                                    <img src="images/play_bet.png" alt="">
+                                </div>
+                                <div class="main__bet-section-pageLoading play-counter">
+                                    <img src="images/time_bg.png" alt="">
+                                    <p class="play-numb">15</p>
+                                </div>
                                 <div class="col-md-12 main__panel">
                                     <div class="main__panel-switch">
                                         <div class="switch">
@@ -483,13 +493,13 @@
                                     </div>
                                     <div class="main__panel-btns">
                                         <div class="h-100 d-flex justify-content-center align-items-center">
-                                            <div class="btn rounded-pill">
+                                            <div class="btn rounded-pill" onClick="dispalyResult('.play-pageLoading2');">
                                                 <i class="fa-solid fa-xmark"></i>
                                             </div>
-                                            <div class="btn rounded-pill">
-                                                <i class="fa-solid fa-xmark"></i> 2
+                                            <div class="btn rounded-pill" onClick="dispalyResult('.play-pageLoading');">
+                                                <i class="fa-solid fa-xmark"></i>
                                             </div>
-                                            <div class="btn rounded-pill" onClick="dispalyResult();">
+                                            <div class="btn rounded-pill" onClick="dispalyResult('.play-result');">
                                                 <i class="fa-solid fa-check"></i>
                                             </div>
                                         </div>
