@@ -208,7 +208,7 @@ input[type=number] {
 }
 
 /* 動畫功能 */
-@keyframes rotation {
+@keyframes kf-rotation {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -389,6 +389,8 @@ input[type=number] {
   }
 }
 /* 共用網頁主體 */
+/* 每個區段的尺寸和背景圖片設定 */
+/* 零件集合 */
 /* 彈跳視窗 */
 .ModalToggle .modal-content, #reportModalToggle .modal-content, #forgetModalToggle2 .modal-content, #forgetModalToggle .modal-content {
   border-width: 6px;
@@ -1030,8 +1032,6 @@ input[type=number] {
   flex-direction: row-reverse;
 }
 
-/* 每個區段的尺寸和背景圖片設定 */
-/* 零件集合 */
 .play-pageLoading, .play-pageLoading2, .play-counter p {
   position: absolute;
   top: 50%;
@@ -1064,7 +1064,7 @@ input[type=number] {
   left: 60%;
 }
 .play-counter img {
-  animation: rotation linear 5s infinite;
+  animation: kf-rotation linear 5s infinite;
 }
 .play-counter p {
   font-size: 3rem;
@@ -1397,13 +1397,18 @@ body.login .wrapper .login__member-password-section {
   padding: 20px 10px;
 }
 body.login .wrapper .login__member-btn {
-  line-height: 2rem;
-  font-size: bold;
-  border-radius: 48px;
+  background: linear-gradient(to bottom, #f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
   color: #fff;
-  background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
   font-weight: bold;
+  border-radius: 48px;
   font-size: 1.3rem;
+  line-height: 2rem;
+}
+body.login .wrapper .login__member-btn:hover {
+  box-shadow: 0 0 15px #fff;
+}
+body.login .wrapper .login__member-btn:active {
+  background: linear-gradient(to bottom, #ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
 body.login .wrapper .login__member-btn:hover {
   box-shadow: 0 0 15px #fff;
