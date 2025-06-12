@@ -1228,16 +1228,16 @@ input[type=number] {
   background: linear-gradient(to top, #c09e56, #442c04, #c09e56);
 }
 
-body.login {
+body .login.wrapper {
   background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center/cover;
 }
-body.login .wrapper .login .row {
+body .login.wrapper .login .row {
   height: 100vh;
 }
-body.login .wrapper .login__logo {
+body .login.wrapper .login__logo {
   text-align: center;
 }
-body.login .wrapper .login__select-custom {
+body .login.wrapper .login__select-custom {
   margin: 20px 0;
   position: relative;
   width: 220px;
@@ -1247,7 +1247,7 @@ body.login .wrapper .login__select-custom {
           user-select: none;
   cursor: pointer;
 }
-body.login .wrapper .login__select-custom .selected {
+body .login.wrapper .login__select-custom .selected {
   background-color: #000;
   border: 2px solid #7f602b;
   border-radius: 48px;
@@ -1258,19 +1258,19 @@ body.login .wrapper .login__select-custom .selected {
   gap: 10px;
   transition: background-color 0.3s ease;
 }
-body.login .wrapper .login__select-custom .selected img {
+body .login.wrapper .login__select-custom .selected img {
   width: 24px;
   height: auto;
 }
-body.login .wrapper .login__select-custom .selected span {
+body .login.wrapper .login__select-custom .selected span {
   font-size: 16px;
 }
-body.login .wrapper .login__select-custom .selected:after {
+body .login.wrapper .login__select-custom .selected:after {
   content: "∨";
   margin-left: auto;
   font-size: 14px;
 }
-body.login .wrapper .login__select-custom .options {
+body .login.wrapper .login__select-custom .options {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
@@ -1283,7 +1283,7 @@ body.login .wrapper .login__select-custom .options {
   flex-direction: column;
   overflow: hidden;
 }
-body.login .wrapper .login__select-custom .options li {
+body .login.wrapper .login__select-custom .options li {
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -1291,48 +1291,48 @@ body.login .wrapper .login__select-custom .options li {
   color: #fff;
   transition: background-color 0.2s ease;
 }
-body.login .wrapper .login__select-custom .options li img {
+body .login.wrapper .login__select-custom .options li img {
   width: 24px;
   height: auto;
 }
-body.login .wrapper .login__select-custom .options li:hover {
+body .login.wrapper .login__select-custom .options li:hover {
   background-color: #333;
 }
-body.login .wrapper .login__select-custom .options.active {
+body .login.wrapper .login__select-custom .options.active {
   display: flex;
 }
-body.login .wrapper .login__select-custom .options .sumbit_value {
+body .login.wrapper .login__select-custom .options .sumbit_value {
   color: #000;
 }
-body.login .wrapper .login__member-account {
+body .login.wrapper .login__member-account {
   position: relative;
 }
-body.login .wrapper .login__member-account-warning {
+body .login.wrapper .login__member-account-warning {
   position: absolute;
   top: 12px;
   right: 20px;
   color: #7e7e7e;
   font-size: 0.9rem;
 }
-body.login .wrapper .login__member-password {
+body .login.wrapper .login__member-password {
   position: relative;
 }
-body.login .wrapper .login__member-password-eye {
+body .login.wrapper .login__member-password-eye {
   position: absolute;
   top: 15px;
   right: 15px;
 }
-body.login .wrapper .login__member-password-warning {
+body .login.wrapper .login__member-password-warning {
   position: absolute;
   top: 12px;
   right: 40px;
   color: #7e7e7e;
   font-size: 0.9rem;
 }
-body.login .wrapper .login__member-auth {
+body .login.wrapper .login__member-auth {
   position: relative;
 }
-body.login .wrapper .login__member-auth-bg {
+body .login.wrapper .login__member-auth-bg {
   position: absolute;
   top: 7px;
   right: 7px;
@@ -1343,30 +1343,30 @@ body.login .wrapper .login__member-auth-bg {
   display: block;
   background: url("../images/code_bg.png") no-repeat center center/cover;
 }
-body.login .wrapper .login__member-auth-warning {
+body .login.wrapper .login__member-auth-warning {
   position: absolute;
   top: 12px;
   right: 90px;
   color: #7e7e7e;
   font-size: 0.9rem;
 }
-body.login .wrapper .login__member input {
+body .login.wrapper .login__member input {
   margin-bottom: 15px;
   border-radius: 48px;
   border: 2px solid #7f602b;
   background-color: #000;
   padding: 8px 10px 8px 50px;
 }
-body.login .wrapper .login__member input::-moz-placeholder {
+body .login.wrapper .login__member input::-moz-placeholder {
   color: #ccc;
 }
-body.login .wrapper .login__member input::placeholder {
+body .login.wrapper .login__member input::placeholder {
   color: #ccc;
 }
-body.login .wrapper .login__member input[type=checkbox] {
+body .login.wrapper .login__member input[type=checkbox] {
   display: none;
 }
-body.login .wrapper .login__member input[type=checkbox] + span {
+body .login.wrapper .login__member input[type=checkbox] + span {
   display: inline-block;
   padding-left: 26px;
   line-height: 20px;
@@ -1375,28 +1375,28 @@ body.login .wrapper .login__member input[type=checkbox] + span {
           user-select: none;
   background: url("../images/gogo_none.png") no-repeat 0 0/21%;
 }
-body.login .wrapper .login__member input[type=checkbox]:checked + span {
+body .login.wrapper .login__member input[type=checkbox]:checked + span {
   background: url("../images/gogo.png") no-repeat 0 0/21%;
 }
-body.login .wrapper .login__member-account-code {
+body .login.wrapper .login__member-account-code {
   background-image: url("../images/icon_id.png");
   background-repeat: no-repeat;
   background-position: 15px 5px;
 }
-body.login .wrapper .login__member-password-code {
+body .login.wrapper .login__member-password-code {
   background-image: url("../images/icon_pw.png");
   background-repeat: no-repeat;
   background-position: 15px 5px;
 }
-body.login .wrapper .login__member-auth-code {
+body .login.wrapper .login__member-auth-code {
   background-image: url("../images/icon_key.png");
   background-repeat: no-repeat;
   background-position: 15px 10px;
 }
-body.login .wrapper .login__member-password-section {
+body .login.wrapper .login__member-password-section {
   padding: 20px 10px;
 }
-body.login .wrapper .login__member-btn {
+body .login.wrapper .login__member-btn {
   background: linear-gradient(to bottom, #f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
   color: #fff;
   font-weight: bold;
@@ -1404,25 +1404,25 @@ body.login .wrapper .login__member-btn {
   font-size: 1.3rem;
   line-height: 2rem;
 }
-body.login .wrapper .login__member-btn:hover {
+body .login.wrapper .login__member-btn:hover {
   box-shadow: 0 0 15px #fff;
 }
-body.login .wrapper .login__member-btn:active {
+body .login.wrapper .login__member-btn:active {
   background: linear-gradient(to bottom, #ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
-body.login .wrapper .login__member-btn:hover {
+body .login.wrapper .login__member-btn:hover {
   box-shadow: 0 0 15px #fff;
 }
-body.login .wrapper .login__member-btn:active {
+body .login.wrapper .login__member-btn:active {
   background: linear-gradient(#ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
 }
-body.lobby {
+body .lobby.wrapper {
   background: #0f0b00;
 }
-body.lobby .main__header-screen-btn {
+body .lobby.wrapper .main__header-screen-btn {
   padding: 10px;
 }
-body.lobby .main__header-marquee {
+body .lobby.wrapper .main__header-marquee {
   color: #e9cdaf;
   background-color: #221d15;
   padding: 10px;
@@ -1430,25 +1430,25 @@ body.lobby .main__header-marquee {
   display: flex;
   align-items: center;
 }
-body.lobby .main__header-marquee-checkbox {
+body .lobby.wrapper .main__header-marquee-checkbox {
   position: absolute;
   left: 3%;
 }
-body.lobby .main__header-marquee-music {
+body .lobby.wrapper .main__header-marquee-music {
   display: block;
   width: 80%;
   padding: 10px;
   border-radius: 48px;
   background: #191513;
 }
-body.lobby .main__header-marquee-music-voice {
+body .lobby.wrapper .main__header-marquee-music-voice {
   padding-right: 10px;
   margin-bottom: 500px;
 }
-body.lobby .main .history {
+body .lobby.wrapper .main .history {
   height: 83vh;
 }
-body.lobby .main .menu li.list-item {
+body .lobby.wrapper .main .menu li.list-item {
   border: 1px solid #eed4a8;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -1456,39 +1456,39 @@ body.lobby .main .menu li.list-item {
   justify-content: center;
   box-shadow: 0px -50px 36px -58px #fff inset;
 }
-body.lobby .main .menu li.list-item:hover {
+body .lobby.wrapper .main .menu li.list-item:hover {
   background: linear-gradient(to bottom, #3f2606 0%, #5a4225 100%);
   box-shadow: 0 0 10px #fff;
 }
-body.lobby .main .menu li.list-item a {
+body .lobby.wrapper .main .menu li.list-item a {
   width: 120px;
   height: 30px;
   margin: 5px 0;
   color: #eed4a8;
   line-height: 2rem;
 }
-body.lobby .main .menu li.list-item a img {
+body .lobby.wrapper .main .menu li.list-item a img {
   display: block;
   float: left;
   margin-right: 20px;
 }
-body.lobby .main__contents-chat-room-title {
+body .lobby.wrapper .main__contents-chat-room-title {
   color: #fff;
   height: 25px;
   padding: 2px 0 0 5px;
   background: #000 url("../images/chat_top.png") no-repeat center center/cover;
 }
-body.lobby .main__contents-chat-room-text {
+body .lobby.wrapper .main__contents-chat-room-text {
   border: 1px solid #eed4a8;
 }
-body.lobby .main__contents-chat-room-text-dl {
+body .lobby.wrapper .main__contents-chat-room-text-dl {
   height: 35vh;
   padding: 10px;
 }
-body.lobby .main__contents-chat-room-text-dl-dt {
+body .lobby.wrapper .main__contents-chat-room-text-dl-dt {
   margin-bottom: 5px;
 }
-body.lobby .main__contents-chat-room-text-dl-dd-section {
+body .lobby.wrapper .main__contents-chat-room-text-dl-dd-section {
   font-size: 1rem;
   padding: 5px 0 5px 8px;
   border-radius: 5px;
@@ -1496,7 +1496,7 @@ body.lobby .main__contents-chat-room-text-dl-dd-section {
   background: #695c41 url("../images/talk frame.png") no-repeat left top/cover;
   position: relative;
 }
-body.lobby .main__contents-chat-room-text-dl-dd-section::after {
+body .lobby.wrapper .main__contents-chat-room-text-dl-dd-section::after {
   position: absolute;
   top: -10px;
   left: 5px;
@@ -1506,34 +1506,34 @@ body.lobby .main__contents-chat-room-text-dl-dd-section::after {
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
 }
-body.game-chat {
+body .game-chat.wrapper {
   background: #0f0b00;
 }
-body.game-chat .main__header-toggle {
+body .game-chat.wrapper .main__header-toggle {
   padding: 0 10px;
   display: flex;
 }
-body.game-chat .main__header-toggle-user {
+body .game-chat.wrapper .main__header-toggle-user {
   margin-left: 50px;
 }
-body.game-chat .main__bet-section {
+body .game-chat.wrapper .main__bet-section {
   position: relative;
   height: 92vh;
 }
-body.game-chat .main__bet-section-video {
+body .game-chat.wrapper .main__bet-section-video {
   height: 100%;
 }
-body.game-chat .main__bet-section-video img {
+body .game-chat.wrapper .main__bet-section-video img {
   width: 100vw;
   height: 92vh;
 }
-body.game-chat .main__bet-section-info {
+body .game-chat.wrapper .main__bet-section-info {
   position: absolute;
   right: 50px;
   top: 30%;
   width: 200px;
 }
-body.game-chat .main__bet-section-info ul li {
+body .game-chat.wrapper .main__bet-section-info ul li {
   border: 1px solid #7f602b;
   font-size: 0.8rem;
   background: #000;
@@ -1544,7 +1544,7 @@ body.game-chat .main__bet-section-info ul li {
   justify-content: space-between;
   line-height: 1rem;
 }
-body.game-chat .main__bet-section-content {
+body .game-chat.wrapper .main__bet-section-content {
   position: absolute;
   top: 0;
   right: -415px;
@@ -1555,12 +1555,12 @@ body.game-chat .main__bet-section-content {
   z-index: 2000;
   transition: 0.5s;
 }
-body.game-chat .main__bet-section-content-group-button {
+body .game-chat.wrapper .main__bet-section-content-group-button {
   position: absolute;
   left: -25px;
   top: 20%;
 }
-body.game-chat .main__bet-section-content-group-button-switch {
+body .game-chat.wrapper .main__bet-section-content-group-button-switch {
   width: 25px;
   height: 100px;
   text-align: center;
@@ -1568,11 +1568,11 @@ body.game-chat .main__bet-section-content-group-button-switch {
   background: transparent url("../images/switch_btn.png") no-repeat center/contain;
   writing-mode: vertical-lr;
 }
-body.game-chat .main__bet-section-content-group-button-switch a {
+body .game-chat.wrapper .main__bet-section-content-group-button-switch a {
   color: #695c41;
   text-decoration: none;
 }
-body.game-chat .main__bet-section-content-group-button-adjust {
+body .game-chat.wrapper .main__bet-section-content-group-button-adjust {
   position: absolute;
   color: #695c41;
   width: 25px;
@@ -1582,27 +1582,27 @@ body.game-chat .main__bet-section-content-group-button-adjust {
   background: transparent url("../images/btn_bg.png") no-repeat center/contain;
   writing-mode: vertical-lr;
 }
-body.game-chat .main__bet-section-content-group-button-adjust ul {
+body .game-chat.wrapper .main__bet-section-content-group-button-adjust ul {
   display: flex;
   justify-content: space-evenly;
 }
-body.game-chat .main__bet-section-content-group-button-adjust ul li img {
+body .game-chat.wrapper .main__bet-section-content-group-button-adjust ul li img {
   display: block;
   width: 19px;
   padding-left: 5px;
 }
-body.game-chat .main__bet-section-content-function-group {
+body .game-chat.wrapper .main__bet-section-content-function-group {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
 }
-body.game-chat .main__bet-section-content-function-group-btn {
+body .game-chat.wrapper .main__bet-section-content-function-group-btn {
   display: flex;
   justify-content: space-around;
   justify-items: center;
 }
-body.game-chat .main__bet-section-content-function-group-btn-color {
+body .game-chat.wrapper .main__bet-section-content-function-group-btn-color {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1616,23 +1616,23 @@ body.game-chat .main__bet-section-content-function-group-btn-color {
   margin: 0 3px;
   font-size: 0.8rem;
 }
-body.game-chat .main__bet-section-content-function-group-btn-color.btn-active {
+body .game-chat.wrapper .main__bet-section-content-function-group-btn-color.btn-active {
   background: linear-gradient(to top, #ad8b4f 0%, #805e22 50%, #ae8c50 100%);
 }
-body.game-chat .main__bet-section-content-function-group-btn-return {
+body .game-chat.wrapper .main__bet-section-content-function-group-btn-return {
   display: flex;
   align-items: center;
   width: 50px;
   height: 50px;
 }
-body.game-chat .main__bet-section-content-function-group-tables ul {
+body .game-chat.wrapper .main__bet-section-content-function-group-tables ul {
   height: 93vh;
   overflow-y: scroll;
 }
-body.game-chat .main__bet-section-content.show {
+body .game-chat.wrapper .main__bet-section-content.show {
   right: 0;
 }
-body.game-chat .main__panel {
+body .game-chat.wrapper .main__panel {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1645,16 +1645,16 @@ body.game-chat .main__panel {
   grid-template-areas: "switch switch switch btns btns btns btns btns btns chips chips chips" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "road-1 road-1 road-1 options options options options options options road-2 road-2 road-2" "chat chat chat . . . . . . binfo binfo binfo";
   align-items: stretch;
 }
-body.game-chat .main__panel-switch {
+body .game-chat.wrapper .main__panel-switch {
   grid-area: switch;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-body.game-chat .main__panel-btns {
+body .game-chat.wrapper .main__panel-btns {
   grid-area: btns;
 }
-body.game-chat .main__panel-btns .btn {
+body .game-chat.wrapper .main__panel-btns .btn {
   color: #fff;
   border: 1px solid #fff;
   width: 100px;
@@ -1665,47 +1665,47 @@ body.game-chat .main__panel-btns .btn {
   justify-content: center;
   align-items: center;
 }
-body.game-chat .main__panel-btns .btn svg {
+body .game-chat.wrapper .main__panel-btns .btn svg {
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body.game-chat .main__panel-btns .btn:nth-child(1) {
+body .game-chat.wrapper .main__panel-btns .btn:nth-child(1) {
   background: linear-gradient(to bottom, #c1565e 0%, #b61e1e 36%, #c08383 100%);
 }
-body.game-chat .main__panel-btns .btn:nth-child(2) {
+body .game-chat.wrapper .main__panel-btns .btn:nth-child(2) {
   background: linear-gradient(to bottom, #dee5ff 0%, #aaaaaa 36%, #ffffff 100%);
 }
-body.game-chat .main__panel-btns .btn:nth-child(3) {
+body .game-chat.wrapper .main__panel-btns .btn:nth-child(3) {
   background: linear-gradient(to bottom, #74be7b 0%, #298f33 36%, #8ecf94 100%);
 }
-body.game-chat .main__panel-btns .btn:hover {
+body .game-chat.wrapper .main__panel-btns .btn:hover {
   box-shadow: 0 0 10px;
 }
-body.game-chat .main__panel-btns .btn:active {
+body .game-chat.wrapper .main__panel-btns .btn:active {
   box-shadow: inset 0 0 10px;
 }
-body.game-chat .main__panel-chips {
+body .game-chat.wrapper .main__panel-chips {
   grid-area: chips;
 }
-body.game-chat .main__panel-road--1 {
+body .game-chat.wrapper .main__panel-road--1 {
   background-color: #fff;
   grid-area: road-1;
   box-sizing: border-box;
   overflow-y: hidden;
 }
-body.game-chat .main__panel-road--2 {
+body .game-chat.wrapper .main__panel-road--2 {
   background-color: #fff;
   grid-area: road-2;
   box-sizing: border-box;
   overflow-y: hidden;
 }
-body.game-chat .main__panel-chat {
+body .game-chat.wrapper .main__panel-chat {
   grid-area: chat;
   display: flex;
 }
-body.game-chat .main__panel-binfo {
+body .game-chat.wrapper .main__panel-binfo {
   grid-area: binfo;
   display: flex;
   justify-content: center;

@@ -32,10 +32,8 @@
 body {
 
   // ========================= index 登入頁面 start =========================
-  &.login {
-    background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center / cover;
-
-    .wrapper {
+    .login.wrapper {
+      background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center / cover;
       .login {
         .row {
           height: 100vh;
@@ -239,12 +237,11 @@ body {
         }
       }
     }
-  }
 
   // ========================= index 登入頁面 end ===========================
 
   // ========================= lobby 大廳 start =========================
-  &.lobby {
+  .lobby.wrapper {
     background: #0f0b00;
 
     .main {
@@ -371,7 +368,7 @@ body {
   // ========================= lobby 大廳 end =========================
 
   // ========================= game 游戲廳 start ===========================
-  &.game-chat {
+  .game-chat.wrapper {
     background: #0f0b00;
 
     .main {
