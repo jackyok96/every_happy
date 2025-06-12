@@ -1,90 +1,202 @@
 /* 每個區段的尺寸和背景圖片設定 */
 @mixin section_public {
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* 零件集合 */
 // 撐開區段
 @mixin components_pubic {
-    ul {
-        display: inline-block;
+  ul {
+    display: inline-block;
 
-        li {
-            list-style-type: none;
+    li {
+      list-style-type: none;
 
-            a {
-                color: #ffffff;
-                display: flex;
-                text-decoration: none;
-                text-align: center;
+      a {
+        color: #ffffff;
+        display: flex;
+        text-decoration: none;
+        text-align: center;
 
-                span {
-                    -webkit-writing-mode: vertical-lr;
-                    writing-mode: vertical-lr;
-                }
-            }
+        span {
+          -webkit-writing-mode: vertical-lr;
+          writing-mode: vertical-lr;
         }
+      }
     }
+  }
 }
 
 // 圖片分割
 @mixin image_segmentation {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-two {
+    height: auto;
+    gap: 20px;
+
     img {
-        width: 100%;
-        height: 100%;
+      width: 100%;
+      height: 97%;
     }
-
-    &-two {
-        height: auto;
-        gap: 20px;
-
-        img {
-            width: 100%;
-            height: 97%;
-        }
-    }
+  }
 }
 
 // 資訊標題
 @mixin info {
-    height: 100px;
-    background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center / 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 150px;
-    padding-top: 30px;
+  height: 100px;
+  background: #000 url(../images/coilover_drag_info_bg.png) no-repeat center / 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+  padding-top: 30px;
 
-    .row {
-        width: 100%;
-        text-align: left;
-    }
+  .row {
+    width: 100%;
+    text-align: left;
+  }
 }
 
+// 內容頁樣式
 @mixin content_page {
-    background: #000;
+  background: #000;
 
-    &__pro {
-        h3 {
-            margin: 80px auto;
-            width: 480px;
-            background: url(../images/coilover_circuit_title_bg.png) no-repeat left / 100% 100%;
-            line-height: 4rem;
-        }
-
-        &-row {
-            margin: 150px 0;
-        }
+  &__pro {
+    h3 {
+      margin: 80px auto;
+      width: 480px;
+      background: url(../images/coilover_circuit_title_bg.png) no-repeat left / 100% 100%;
+      line-height: 4rem;
     }
+
+    &-row {
+      margin: 150px 0;
+    }
+  }
 }
 
-// 水平垂直置中
-%place-vh-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+// 漸層背景 Mixin
+@mixin gradient($direction, $color-stops...) {
+  background: linear-gradient($direction, $color-stops);
+}
+
+// 按鈕基本樣式
+@mixin button-base($padding: 8px 15px) {
+  padding: $padding;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+// 黃金按鈕樣式
+@mixin golden-button {
+  @include gradient(to bottom, #f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 48px;
+
+  &:hover {
+    box-shadow: 0 0 15px #fff;
+  }
+
+  &:active {
+    @include gradient(to bottom, #ffffff 0%, #444342 40%, #2e2d2d 60%, #ffffff 100%);
+  }
+}
+
+// 彈性布局
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 文字漸層
+@mixin text-gradient($gradient...) {
+  background: linear-gradient($gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+// 自定義滾動條
+@mixin custom-scrollbar($width: 7px, $track-color: #352b1b, $thumb-color: linear-gradient(to top, #c09e56, #442c04, #c09e56)) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $track-color;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $thumb-color;
+  }
+}
+
+// 邊框樣式
+@mixin custom-border($color: #7f602b, $width: 2px) {
+  border: $width solid $color;
+  border-radius: 48px;
+}
+
+// 動畫旋轉
+@mixin auto-rotation($duration: 5s) {
+  animation: kf-rotation linear $duration infinite;
+}
+
+// Functions
+@function calculate-brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// 背景圖片設定
+@mixin background-setup($url, $position: center, $size: cover, $repeat: no-repeat) {
+  background: url($url) $repeat $position / $size;
+}
+
+// 輸入框圖示設定
+@mixin input-icon($icon-path, $x: 15px, $y: 5px) {
+  background: {
+    image: url($icon-path);
+    repeat: no-repeat;
+    position: $x $y;
+  }
+}
+
+// 絕對定位
+@mixin absolute-position($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// 彈性布局
+@mixin flex-setup($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// 按鈕基本樣式
+@mixin button-base($bg-gradient, $hover-shadow: #fff) {
+  background: linear-gradient($bg-gradient);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px $hover-shadow;
+  }
 }

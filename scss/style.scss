@@ -12,6 +12,7 @@
 @use "basic/animation";
 @use "common/aside";
 @use "mixin/media";
+@use "mixin/mixin";
 @use "widget/modal";
 @use "widget/marquee";
 @use "widget/groupBtn";
@@ -31,10 +32,8 @@
 body {
 
   // ========================= index 登入頁面 start =========================
-  &.login {
-    background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center / cover;
-
-    .wrapper {
+    .login.wrapper {
+      background: #a4a4a4 url(../images/login_bg01.jpg) no-repeat center center / cover;
       .login {
         .row {
           height: 100vh;
@@ -207,21 +206,15 @@ body {
           }
 
           &-account-code {
-            background-image: url('../images/icon_id.png');
-            background-repeat: no-repeat;
-            background-position: 15px 5px;
+            @include mixin.input-icon('../images/icon_id.png');
           }
 
           &-password-code {
-            background-image: url('../images/icon_pw.png');
-            background-repeat: no-repeat;
-            background-position: 15px 5px;
+            @include mixin.input-icon('../images/icon_pw.png');
           }
 
           &-auth-code {
-            background-image: url('../images/icon_key.png');
-            background-repeat: no-repeat;
-            background-position: 15px 10px;
+            @include mixin.input-icon('../images/icon_key.png', 15px, 10px);
           }
 
           &-password-section {
@@ -229,13 +222,9 @@ body {
           }
 
           &-btn {
-            line-height: 2rem;
-            font-size: bold;
-            border-radius: 48px;
-            color: #fff;
-            background: linear-gradient(#f7c967 0%, #a3791e 40%, #a3791e 60%, #f7c967 100%);
-            font-weight: bold;
+            @include mixin.golden-button;
             font-size: 1.3rem;
+            line-height: 2rem;
 
             &:hover {
               box-shadow: 0 0 15px #fff;
@@ -248,12 +237,11 @@ body {
         }
       }
     }
-  }
 
   // ========================= index 登入頁面 end ===========================
 
   // ========================= lobby 大廳 start =========================
-  &.lobby {
+  .lobby.wrapper {
     background: #0f0b00;
 
     .main {
@@ -380,8 +368,9 @@ body {
   // ========================= lobby 大廳 end =========================
 
   // ========================= game 游戲廳 start ===========================
-  &.game-chat {
+  .game-chat.wrapper {
     background: #0f0b00;
+
     .main {
 
       &__header {
